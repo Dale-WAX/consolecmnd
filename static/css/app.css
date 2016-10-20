@@ -1,0 +1,71 @@
+.fullWidth {
+   width: 100%;
+   margin-left: auto;
+   margin-right: auto;
+   max-width: initial;
+}
+.fullWidth .columns {
+    padding: 0;
+}
+img {
+/*    position: absolute;*/
+/*
+    clip-path: polygon(0.67px 54.00px,1.33px 336.47px,107.00px 325.47px,256.67px 282.47px,359.33px 219.00px,248.67px 115.53px,110.33px 69.53px);
+    border: 1px solid red;
+*/
+/*
+    transition: 0.4s cubic-bezier(1, -1, 0, 2);
+    clip-path: polygon(50% 5%, 0% 100%, 100% 100%);
+*/
+/*
+    width: 75%;
+    height: 90vh;
+    object-fit: cover;
+    object-position: top left;
+*/
+/*    shape-outside: polygon(30px 438px, 11px 408px, 15px 361px, 36px 310px, 84px 281px, 112px 254px, 218px 3px, 286px 38px, 151px 270px, 145px 307px, 156px 363px, 128px 420px, 102px 444px, 66px 453px);*/
+/*
+    background-position: top center;
+    background-size: cover;
+    background-repeat: no-repeat;
+*/
+    -webkit-clip-path: polygon(0% 0%, 100% 3%, 98% 99%, 3% 93%);
+    clip-path: polygon(0% 0%, 100% 3%, 98% 99%, 3% 93%);
+    transform: rotate(20deg);
+}
+/*
+.seattle {
+    background-image: url(../img/WAX-in-Seattle.jpg);
+}
+*/
+
+h1 {
+    color: #666;
+}
+article {
+    column-width: 200px;
+    column-gap: 2em;
+    column-rule: 1px solid #444;
+    column-count: 3;
+    column-fill: balance;
+    
+    -moz-column-width: 200px;
+    -moz-column-gap: 2em;
+    -moz-column-rule: 1px solid #444;
+    -moz-column-count: 3;
+}
+.clip-me {  
+  
+/*
+  position: absolute; 
+  clip: rect(110px, 160px, 170px, 60px);
+*/
+/*-webkit-clip-path: polygon(0px 374px ,68px 379px,151px 381px,258px 377px,392px 365px,534px 339px,635px 314px,731px 284px,807px 241px,856px 200px,795px 154px,715px 113px,648px 80px,542px 42px,445px 16px,333px 0px,0px 0px);*/
+
+/*Firefox*/
+/*clip-path: url("#clipPolygon");*/
+    
+/*  clip-path: inset(10px 20px 30px 40px);*/
+
+/*    clip-path: polygon (0% 0%, 100% 3%, 98% 99%, 3% 93%);*/
+}

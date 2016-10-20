@@ -1,0 +1,31 @@
+---
+Name: myfluentconfig
+After: '#fluentconfig'
+---
+Fluent:
+  disable_default_prefix: true
+  default_locale: en_CA
+  locales:
+    - en_CA
+    - ja_JP
+  aliases:
+    en_CA: en
+    ja_JP: jp 
+SiteTree:
+  translate:
+    - 'Title'
+    - 'MenuTitle'
+    - 'Content'
+    - 'URLSegment'
+    - 'MetaDescription'
+    - 'CustomMetaTags'
+  extensions:
+    - 'FluentMenuExtension'
+---
+Name: myfluenti18nconfig
+After: '#fluenti18nconfig'
+---
+i18n:
+  default_locale: en_CA
+Fluent:
+  remember_locale: true

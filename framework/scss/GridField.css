@@ -1,0 +1,39 @@
+/*
+Error: Invalid US-ASCII character "\xE2"
+        on line 570 of /Users/Dale/Documents/sandbox/consolecmnd/framework/scss/GridField.scss
+
+565: 				input {
+566: 					&.ss-gridfield-sort {
+567: 						height:25px;
+568: 						padding: 4px;
+569: 						// Placeholder styling done with an each loop because when a browser
+570: 						// doesn’t understand a selector, it invalidates the entire line of selectors.
+571: 						// This avoids that, and keeps the scss tidy
+572: 						$browserPlaceholder: "::-webkit-input-placeholder", ":-moz-placeholder", ":-ms-input-placeholder",	":placeholder";
+573: 						border: 1px solid #313232;
+574: 
+575: 						@each $browser in $browserPlaceholder {
+
+Backtrace:
+/Users/Dale/Documents/sandbox/consolecmnd/framework/scss/GridField.scss:570
+/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.9/lib/sass/util.rb:1323:in `rescue in block in find_encoding_error'
+/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.9/lib/sass/util.rb:1320:in `block in find_encoding_error'
+/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.9/lib/sass/util.rb:1319:in `each'
+/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.9/lib/sass/util.rb:1319:in `each_with_index'
+/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.9/lib/sass/util.rb:1319:in `find_encoding_error'
+/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.9/lib/sass/util.rb:896:in `check_sass_encoding'
+/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.9/lib/sass/engine.rb:423:in `check_encoding!'
+/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.9/lib/sass/engine.rb:379:in `_to_tree'
+/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.9/lib/sass/engine.rb:268:in `render'
+/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.9/lib/sass/exec/sass_scss.rb:404:in `run'
+/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.9/lib/sass/exec/sass_scss.rb:62:in `process_result'
+/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.9/lib/sass/exec/base.rb:52:in `parse'
+/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.9/lib/sass/exec/base.rb:19:in `parse!'
+/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.9/bin/sass:13:in `<top (required)>'
+/Applications/Koala.app/Contents/Resources/app.nw/bin/sass:18:in `load'
+/Applications/Koala.app/Contents/Resources/app.nw/bin/sass:18:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Invalid US-ASCII character \"\xE2\"\A         on line 570 of /Users/Dale/Documents/sandbox/consolecmnd/framework/scss/GridField.scss\A \A 565: 				input {\A 566: 					&.ss-gridfield-sort {\A 567: 						height:25px;\A 568: 						padding: 4px;\A 569: 						// Placeholder styling done with an each loop because when a browser\A 570: 						// doesn’t understand a selector, it invalidates the entire line of selectors.\A 571: 						// This avoids that, and keeps the scss tidy\A 572: 						$browserPlaceholder: \"::-webkit-input-placeholder\", \":-moz-placeholder\", \":-ms-input-placeholder\",	\":placeholder\";\A 573: 						border: 1px solid #313232;\A 574: \A 575: 						@each $browser in $browserPlaceholder {"; }

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.4, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="1200px" height="850px" viewBox="0 0 1200 850" enable-background="new 0 0 1200 850" xml:space="preserve">
+<g id="square" display="none">
+	<path display="inline" fill="none" stroke="#000000" stroke-width="16" stroke-miterlimit="10" d="M1004.318,359.291
+		c0,0-367.896-303.729-690.164-75.576c-59.398,42.054-240.984,319.413-68.446,380.73c172.539,61.316,172.541,61.316,172.541,61.316
+		s146.876-263.802,248.119-222.449s74.148,51.335,145.447,47.057C883.112,546.09,988.634,637.352,1004.318,359.291z"/>
+</g>
+<g id="circle" display="none">
+	<path display="inline" fill="none" stroke="#000000" stroke-width="16" stroke-miterlimit="10" d="M568.69,97.857
+		c10.309,4.124,358.724,160.808,358.724,160.808l-6.185,317.492L611.983,786.445L253.26,619.451v-303.06L568.69,97.857z"/>
+</g>
+<g id="speaker" display="none">
+	<polygon display="inline" fill="none" stroke="#000000" stroke-width="16" stroke-miterlimit="10" points="171.5,140.5 
+		358.5,669.5 596.501,669.501 781.501,141.499 	"/>
+	<polygon display="inline" fill="none" stroke="#000000" stroke-width="16" stroke-miterlimit="10" points="844.5,421.499 
+		1014.501,421.498 1013.5,749.5 765.5,749.5 765.5,575.5 	"/>
+</g>
+</svg>
