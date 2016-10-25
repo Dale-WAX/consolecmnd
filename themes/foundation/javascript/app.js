@@ -12,6 +12,41 @@ if (theLanguage == 'ja-JP') {
 }
 
 
+// NAV
+
+function NavDrop() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// $("#somebutton").click(function () {
+//   $("#container").append('<div class="module_holder"><div class="module_item"><img src="images/i-5.png" alt="Sweep Stakes"><br>sendSMS</div></div>');
+// });
+
+// function menuAngle() {
+//     var toggleShow = document.getElementById("myDropdown");
+
+//     $('toggleShow').click(function() {
+//       'toggleShow'.classList.toggle("show");
+//     })
+
+// }
+
+// Close the dropdown menu if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+
+
 // PAGE ID
 
 if ($('body').hasClass('ArticlePage')) {
@@ -35,7 +70,7 @@ if ($('body').hasClass('ArticlePage')) {
         } else if (winScrPos + winHeight < itemBot + itemTop) {
             $('#shapes').addClass('visible');
         }
-        console.log(winScrPos, winHeight, itemHeight, itemTop, itemBot);
+        // console.log(winScrPos, winHeight, itemHeight, itemTop, itemBot);
     });
 });
  
@@ -80,9 +115,9 @@ window.onload = function () {
       selDuration = document.getElementById('selDuration'),
       selRotation = document.getElementById('selRotation'),
       icons={        
-        'speaker':'Speaker',
-        'circle':'Circle',
-        'square':'Square'
+        'cookieStop':'CookieStop',
+        'cookieTallStop':'CookieTallStop',
+        'coffinPill':'CoffinPill'
       },
       easings={
         'circ-in': 'Circ In','circ-out': 'Circ Out','circ-in-out': 'Circ In/Out',

@@ -14,7 +14,8 @@ class ArticlePage extends Page {
 	);
 
 	private static $many_many = array (
-		'Categories' => 'ArticleCategory'
+		'Categories' => 'ArticleCategory',
+		'GalleryImage' => 'Image'
 	);
 
 	private static $can_be_root = false;
@@ -28,12 +29,24 @@ class ArticlePage extends Page {
 		$fields->addFieldToTab('Root.Main', TextField::create('Author', 'Author of Article'), 'Content');
 		$fields->addFieldToTab('Root.Main', TextareaField::create('Teaser'), 'Content');
 
+		$fields->addFieldToTab('Root.Gallery',
+			$uploadField = new UploadField(
+				$name = 'GalleryImage',
+				$title = 'Upload one or more images (max 10 in total)'
+			)
+		);
+		$uploadField->setAllowedMaxFileNumber(10);		
+		$uploadField->setFolderName('ProjectGalleryImages');
+		$uploadField->setAllowedExtensions(array('jpg', 'jpeg', 'png', 'gif', 'svg'));
+		$uploadField->setPreviewMaxWidth(100);
+		$uploadField->setPreviewMaxHeight(100);
+
 		$fields->addFieldToTab('Root.Categories', CheckboxSetField::create(
 			'Categories',
 			'Selected Categories',
 			$this->Parent()->Categories()->map('ID','Title')
 		));
-
+		
 		return $fields;
 	}
 

@@ -11,3 +11,6 @@ SSViewer:
   theme: 'foundation'
 Debug:
   friendly_error_httpcode: true
+Image:
+  extensions:
+    - GalleryImage

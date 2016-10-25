@@ -3,9 +3,9 @@
 <body class="$ClassName.ATT">
 
 	<header class="header" role="banner">
-		<div class="fixed contain-to-grid">
+		<!--<div class="fixed contain-to-grid">-->
 			<% include TopBar %>
-		</div>
+		<!--</div>-->
 	</header>
 
     <div id="main" class="main-wrapper">
