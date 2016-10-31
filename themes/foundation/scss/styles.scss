@@ -378,49 +378,65 @@ img.logo {
         NAVIGATION
 ****************************/
 
-/* Dropdown Button */
 .dropbtn {
     background-color: transparent;
     color: $black;
     padding: 26px 16px;
-    font-size: 25px;
+    font-size: 24px;
     border: none;
     cursor: pointer;
     z-index: 1;
 }
-
-/* Dropdown button on hover & focus */
-.dropbtn:hover, .dropbtn:focus {
-    background-color: transparent;
-    color: $black;
+.button-position {
+    right: 30px;
+    width: 56px;
 }
 
 .dropdown {
     position: relative;
     display: inline-block;
-    z-index: 1;
+    z-index: 2;
     width: 100%;
     button {
         margin: 0;
-        bottom: 30px;
-        position: fixed;
-        right: 31px;
-        padding: 0px;
         border-radius: 70px 70px;
-        width: 55px;
-        height: 55px;
+        width: 56px;
+        height: 56px;
         text-align: center;
         background-color: rgba(0, 0, 0, 1);
+        transition-timing-function: ease-out;
+        transition: 0.25s;
         color: $white;
-        box-shadow: 0px 2px 0 #fff;
-        -webkit-transition: all .5s ease-in-out;
-        -moz-transition: all .5s ease-in-out;
-        -ms-transition: all .5s ease-in-out;
-        -o-transition: all .5s ease-in-out;
-        transition: all .5s ease-in-out;
-        &:hover {
-            background-color: red;
+        &.is-active {
+            background-color: $white;
         }
+        &:hover {
+            box-shadow: 0 1px 13px -2px black;
+
+        }
+        &.right {
+            top: 60px;
+            transform: scale(0);
+            position: fixed;
+            @media only screen and (min-width: 641px) {
+                transition-timing-function: ease-out;
+                transition: 0.25s;
+                transform: scale(1); 
+            }
+        }
+        &.bottom {
+            bottom: 25px;
+            transform: scale(1);
+            position: fixed;
+            &.stick {
+                position: absolute;
+            }
+            @media only screen and (min-width: 641px) {
+                transition-timing-function: ease-out;
+                transition: 0.25s;
+                transform: scale(0);
+            }
+        }        
     }
     ul {
         margin: 1rem 120px 1rem 1rem;
@@ -430,59 +446,43 @@ img.logo {
         }
     }
 }
-@media only screen and (min-width: 640px) {
+@media only screen and (min-width: 641px) {
 
     .dropdown {
         position: relative;
         display: inline-block;
-        z-index: 1;
+        
         width: 100%;
-        button {
-            margin: 0;
-            bottom: inherit;
-            position: inherit;
-            right: 0px;
-            padding: 0px;
-            border: none;
-            background-color: transparent;
-            color: $black;
-            box-shadow: none;
-            &:hover {
-                background-color: transparent;
-            }            
-        }
     }
 
 }
 
 .dropdown-content {
-    position: absolute;
-    min-width: 160px;
-    margin: 0 auto;
-    background-color: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.9);
     width: 100%;
-    transition: .15s ease-in-out;
-    transform: translateY(-300px);
-    border-top: 6px solid black;  
+    transition-timing-function: ease-in;
+    transition: 0.2s;
+    transform: translateY(-140%);
+    height: 100%;
+    z-index: 1;
     &.show {
-        display:block;
-        -webkit-transition: all 0.15s ease-in-out;
-        -moz-transition: all 0.15s ease-in-out;
-        -ms-transition: all 0.15s ease-in-out;
-        -o-transition: all 0.15s ease-in-out;
-        transition: all 0.15s ease-in-out;
-        transform:skew(0deg,-5deg) translateY(0);
-        -ms-transform:skew(0deg,-10deg) translateY(0);
-        -webkit-transform:skew(0deg,-5deg) translateY(0);
+        display: block;
         height: 100vh;
         position: fixed;
-        margin-top: -32px;
+        margin-top: -125px;
+        transition-timing-function: ease-out;
+        transition: 0.25s;
+        transform: skew(0deg, -5deg) translateY(0%);
+        -ms-transform: skew(0deg, -5deg) translateY(0%);
+        -webkit-transform: skew(0deg, -5deg) translateY(0%);     
+        z-index: 1;  
     }
     ul {
         margin: 0 auto;
         width: 100%;
         text-align: center;
-        top: 50%;
+        top: 30%;
         position: relative;
         li {
             display: initial;
@@ -492,39 +492,42 @@ img.logo {
             font-weight: 600;
             text-transform: uppercase;
             color: white;
-            padding: 10px 10px;
+            padding: 15px 0px;
+            font-size: 4vh;
             width: 100%;
             text-decoration: none;
             display: block;
+            text-align: center;
             &:hover {
                 border-bottom: 27px solid black;
             }
         }
     }
 }
-@media only screen and (min-width: 961px) {
-    .dropdown-content {
-        &.show {
-            transform:skew(0deg,-5deg) translateY(0);
-            -ms-transform:skew(0deg,-10deg) translateY(0);
-            -webkit-transform:skew(0deg,-5deg) translateY(0);
+    @media only screen and (min-width: 961px) {
+        .dropdown-content {
             height: initial;
-            margin-top: 0;
-        }
-        ul {
-            margin: 0 auto;
-            li {
-                display: inline-block;
+            &.show {
+                transform: skew(0deg, -5deg) translateY(18%);
+                -ms-transform: skew(0deg, -5deg) translateY(18%);
+                -webkit-transform: skew(0deg, -5deg) translateY(18%); 
+                height: initial;
+                margin-top: 0;
             }
-            a {
-                padding: 102px 40px;
-                &:hover {
-                    border-bottom: 12px solid black;
+            ul {
+                margin: 0 auto;
+                li {
+                    display: inline-block;
+                }
+                a {
+                    padding: 100px 34px;
+                    &:hover {
+                        border-bottom: 12px solid black;
+                    }
                 }
             }
         }
-    }
-} 
+    } 
 
 /****************************
     FOUNDATION OVERWRITES
@@ -692,7 +695,7 @@ button, .button {
 
 
 
-
+  
 
 
 

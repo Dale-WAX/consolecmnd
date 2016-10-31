@@ -18,6 +18,7 @@
 	<% end_if %>
 	<link rel="icon" type="image/png" href="$ThemeDir/favicon.ico" />
 	<%--See [Requirements](http://doc.silverstripe.org/framework/en/reference/requirements) for loading from controller--%>
+	<link rel="stylesheet" href="$ThemeDir/css/hamburger.css" />
 	<link rel="stylesheet" href="$ThemeDir/css/app.css" />
 	<script src="$ThemeDir/bower_components/modernizr/modernizr.js"></script>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">  

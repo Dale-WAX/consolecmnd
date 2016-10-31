@@ -2,13 +2,10 @@
 
 <body class="$ClassName.ATT">
 
-	<header class="header" role="banner">
-		<!--<div class="fixed contain-to-grid">-->
-			<% include TopBar %>
-		<!--</div>-->
-	</header>
-
     <div id="main" class="main-wrapper">
+
+        
+
         <div id="container">
             <div class="row">
                 <div class="large-9 columns"></div>
@@ -24,6 +21,9 @@
                     <% end_if %> 
                 </div>
             </div>
+
+            <% include TopBar %>            
+
             $Layout
 	   </div>
     </div>

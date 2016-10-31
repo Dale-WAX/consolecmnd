@@ -1,5 +1,23 @@
-<div class="dropdown right">
-	<button onclick="NavDrop()" class="dropbtn right"><i class="fa fa-bars" aria-hidden="true"></i></button>
+<!--<div class="dropdown">-->
+    <div class="row collapse">
+		<div class="small-1 columns"></div>
+		<div class="small-2 small-offset-9 columns button-position">
+			<span class="dropdown">
+				<button onclick="NavDrop()" id="dropbtn" class="dropbtn right hamburger hamburger--spin" type="button">
+					<span class="hamburger-box">
+						<span class="hamburger-inner"></span>
+					</span>
+				</button>
+
+				<button onclick="NavDrop()" id="dropbtn" class="dropbtn bottom hamburger hamburger--spin" type="button">
+					<span class="hamburger-box">
+						<span class="hamburger-inner"></span>
+					</span>
+				</button>
+			</span>
+		</div>
+	</div>
+
 	<div id="myDropdown" class="dropdown-content">
 		<ul>
 		<% loop Menu(1) %>
@@ -8,8 +26,6 @@
 				<!--
 				<% if $Children %>
 				<ul class="dropdown">
-					<li><label>$MenuTitle</label></li>
-					
 					<% loop $Children %>
 					<li class="<% if $LinkingMode == "current" || $LinkingMode == "section" %>active<% end_if %><% if $Children %> has-dropdown<% end_if %>">
 						<a href="$Link" title="Go to the $Title.ATT">$MenuTitle</a>
@@ -22,7 +38,6 @@
 						<% end_if %>
 					</li>
 					<% end_loop %>
-					<li><a href="$Link">See all &rarr;</a></li>
 				</ul>
 				<% end_if %>
 				-->
@@ -31,106 +46,4 @@
 		<% end_loop %>
 		</ul>
 	</div>
-
-	<!--<div class="bottom-menu-angle"></div>-->
-
-</div>
-
-<!--
-
-<nav class="top-bar" role="navigation" data-topbar>
-	<ul class="title-area">
-		<li class="name">
-			<h1><a href="{$baseUrl}">$SiteConfig.Title</a></h1>
-		</li>
-		<li class="toggle-topbar menu-icon"><a href=""><span>Menu</span></a></li>
-	</ul>
-	<section class="top-bar-section">
-		<%-- Right Nav Section --%>
-		<ul class="right">
-			<% loop Menu(1) %>
-			<li class="<% if $LinkingMode == "current" || $LinkingMode == "section" %>active<% end_if %><% if $Children %> has-dropdown<% end_if %>">
-				<a href="$Link" title="Go to the $Title.ATT">$MenuTitle</a>
-				<% if $Children %>
-				<ul class="dropdown">
-					<li><label>$MenuTitle</label></li>
-					<% loop $Children %>
-					<li class="<% if $LinkingMode == "current" || $LinkingMode == "section" %>active<% end_if %><% if $Children %> has-dropdown<% end_if %>">
-						<a href="$Link" title="Go to the $Title.ATT">$MenuTitle</a>
-						<% if $Children %>
-						<ul class="dropdown">
-							<% loop $Children %>
-							<li class="<% if $LinkingMode == "current" || $LinkingMode == "section" %>active<% end_if %>"><a href="$Link" title="Go to the $Title.ATT">$MenuTitle</a></li>
-							<% end_loop %>
-						</ul>
-						<% end_if %>
-					</li>
-					<% end_loop %>
-					<li><a href="$Link">See all &rarr;</a></li>
-				</ul>
-				<% end_if %>
-			</li>
-			<% if not $Last %><li class="divider"></li><% end_if %>
-			<% end_loop %>
-		</ul>
-	</section>
-</nav>
-
-
-
-<nav class="top-bar" role="navigation" data-topbar>
-	<ul class="title-area">
-		<li class="name">
-			<h1><a href="{$baseUrl}">$SiteConfig.Title</a></h1>
-		</li>
-		<li class="toggle-topbar menu-icon"><a href=""><span>Menu</span></a></li>
-	</ul>
-	<section class="top-bar-section">
-		<%-- Left Nav Section --%>
-		<ul class="left">
-			<% loop Menu(1) %>
-			<li class="<% if $LinkingMode == "current" || $LinkingMode == "section" %>active<% end_if %><% if $Children %> has-dropdown<% end_if %>">
-				<a href="$Link" title="Go to the $Title.ATT">$MenuTitle</a>
-				<% if $Children %>
-				<ul class="dropdown">
-					<li><label>$MenuTitle</label></li>
-					<% loop $Children %>
-					<li class="<% if $LinkingMode == "current" || $LinkingMode == "section" %>active<% end_if %><% if $Children %> has-dropdown<% end_if %>">
-						<a href="$Link" title="Go to the $Title.ATT">$MenuTitle</a>
-						<% if $Children %>
-						<ul class="dropdown">
-							<% loop $Children %>
-							<li class="<% if $LinkingMode == "current" || $LinkingMode == "section" %>active<% end_if %>"><a href="$Link" title="Go to the $Title.ATT">$MenuTitle</a></li>
-							<% end_loop %>
-						</ul>
-						<% end_if %>
-					</li>
-					<% end_loop %>
-					<li><a href="$Link">See all &rarr;</a></li>
-				</ul>
-				<% end_if %>
-			</li>
-			<% if not $Last %><li class="divider"></li><% end_if %>
-			<% end_loop %>
-		</ul>
-		<%-- Right Nav Section --%>
-		<ul class="right">
-			<% if $CurrentMember %>
-			<li class="has-dropdown">
-				<a href="admin/myprofile">Hi $CurrentMember.FirstName</a>
-				<ul class="dropdown">
-					<li><a href="admin/">Admin</a></li>
-					<li><a href="admin/myprofile">My Profile</a></li>
-					<li><a href="Security/logout">Logout</a></li>
-				</ul>
-			</li>
-			<% else %>
-			<li><a href="Security/login?BackURL=%2Fadmin" data-reveal-id="login-form-modal">Login</a></li>
-			<% end_if %>
-		</ul>
-	</section>
-</nav>
-
--->
-
-
+<!--</div>-->

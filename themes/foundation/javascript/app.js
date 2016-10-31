@@ -18,18 +18,6 @@ function NavDrop() {
     document.getElementById("myDropdown").classList.toggle("show");
 }
 
-// $("#somebutton").click(function () {
-//   $("#container").append('<div class="module_holder"><div class="module_item"><img src="images/i-5.png" alt="Sweep Stakes"><br>sendSMS</div></div>');
-// });
-
-// function menuAngle() {
-//     var toggleShow = document.getElementById("myDropdown");
-
-//     $('toggleShow').click(function() {
-//       'toggleShow'.classList.toggle("show");
-//     })
-
-// }
 
 // Close the dropdown menu if the user clicks outside of it
 window.onclick = function(event) {
@@ -44,6 +32,7 @@ window.onclick = function(event) {
       }
     }
   }
+
 }
 
 
@@ -54,9 +43,9 @@ if ($('body').hasClass('ArticlePage')) {
 };
 
 
-// ADD and REMOVE BG SHAPES WHEN THE FOOTER IS IN TOWN
-
  $(document).scroll(function () {
+
+    // ADD and REMOVE BG SHAPES WHEN THE FOOTER IS IN TOWN
     var winScrPos = $(window).scrollTop(),
         winHeight = $(window).height();
 
@@ -70,14 +59,52 @@ if ($('body').hasClass('ArticlePage')) {
         } else if (winScrPos + winHeight < itemBot + itemTop) {
             $('#shapes').addClass('visible');
         }
-        // console.log(winScrPos, winHeight, itemHeight, itemTop, itemBot);
+        
     });
+
+
+    // STOP MOBILE BUTTON AT BOTTOM OF MAIN PANEL
+    $('.panel').each(function () {
+        var itemHeight = $(this).height(),
+            itemTop = $(this).offset().top,
+            itemBot = itemTop + itemHeight;
+
+        if (winScrPos + winHeight > itemBot + itemTop) {
+            console.log('stick');
+            $('.dropbtn.bottom').addClass('stick').css({'top': itemBot});
+        } else if (winScrPos + winHeight < itemBot + itemTop) {
+          console.log('2');
+            $('.dropbtn.bottom').removeClass('stick').css({'top': 'inherit'});
+        }
+        console.log(winScrPos, winHeight, itemBot, itemTop, itemHeight);
+    });
+
 });
- 
+
+
+$(document).ready(function() {
+
+    // HAMBURGER ANIMATION
+    $('.hamburger, .hamburger-inner:before').click(function() {
+        if ($('.hamburger').hasClass('is-active')) {
+            $('.hamburger').removeClass('is-active');
+            console.log("is there");
+        } else {
+            $('.hamburger').addClass('is-active');
+            console.log("is not there");
+        }
+    });
+
+});
+
 
 // ANIMATIONS
 
 $(document).ready(
+
+
+
+
 
 	function(){
 		setInterval(function() {
