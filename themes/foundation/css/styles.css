@@ -112,7 +112,9 @@ img.logo {
         CONTENT
 **********************/
 .visible {
-  opacity: 1 !important; }
+  display: block !important;
+  opacity: 1 !important;
+  transition: opacity .5s ease; }
 
 #main.main-wrapper {
   position: relative;
@@ -126,7 +128,7 @@ img.logo {
   width: inherit;
   height: 100%;
   min-height: 100vh;
-  padding: 0 0 60px 0;
+  padding: 25px 0 60px 0;
   z-index: 2;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
   margin: 0 -5px; }
@@ -136,6 +138,19 @@ img.logo {
   #container.about-palette {
     background-color: #81E5C9;
     color: #000; }
+  #container .project-info {
+    margin-top: 90px; }
+  #container .project-count {
+    font-family: formata-condensed, sans-serif;
+    color: #000;
+    font-weight: bold;
+    padding: 20px 0 0;
+    display: inline-block;
+    width: 100%; }
+    #container .project-count span {
+      float: right; }
+    #container .project-count span:first-child {
+      float: left; }
   #container .main-panel {
     transform: translate3d(0, 0, 0);
     z-index: 0;
@@ -218,6 +233,7 @@ img.logo {
   right: 0;
   bottom: 0;
   opacity: 0;
+  display: none;
   top: 50%;
   margin-top: -19%;
   transition: opacity .5s ease; }
@@ -279,14 +295,35 @@ img.logo {
   left: 0;
   width: 100%;
   z-index: -1;
-  background: #1A1A1A;
-  color: #ddd;
   padding: 60px 0 40px;
-  height: 430px; }
+  height: 430px;
+  text-transform: uppercase;
+  font-size: 1.2em;
+  background: #1A1A1A url("../images/console-cmnd-bud.svg") no-repeat 20px 210px;
+  background-size: 200px; }
+  .footer h1 {
+    color: #fff; }
+  .footer ul {
+    color: #fff;
+    margin-top: 13px; }
+    .footer ul li {
+      display: inline-block;
+      margin: 0 15px; }
+      .footer ul li a {
+        color: #fff;
+        font-weight: bold;
+        transition: .15s ease;
+        border-bottom: 0px solid #3d3d3d; }
+        .footer ul li a:hover {
+          border-bottom: 6px solid #fff; }
 
 /****************************
         NAVIGATION
 ****************************/
+.logo img {
+  width: 160px;
+  min-width: 130px; }
+
 .dropbtn {
   background-color: transparent;
   color: #3d3d3d;
@@ -320,7 +357,7 @@ img.logo {
     .dropdown button:hover {
       box-shadow: 0 1px 13px -2px black; }
     .dropdown button.right {
-      top: 60px;
+      top: 99px;
       transform: scale(0);
       position: fixed; }
       @media only screen and (min-width: 641px) {
@@ -356,9 +393,10 @@ img.logo {
   width: 100%;
   transition-timing-function: ease-in;
   transition: 0.2s;
-  transform: translateY(-140%);
+  transform: translateY(-160%);
   height: 100%;
-  z-index: 1; }
+  z-index: 1;
+  left: 0; }
   .dropdown-content.show {
     display: block;
     height: 100vh;

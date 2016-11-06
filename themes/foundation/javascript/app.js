@@ -70,13 +70,13 @@ if ($('body').hasClass('ArticlePage')) {
             itemBot = itemTop + itemHeight;
 
         if (winScrPos + winHeight > itemBot + itemTop) {
-            console.log('stick');
+            // console.log('stick');
             $('.dropbtn.bottom').addClass('stick').css({'top': itemBot});
         } else if (winScrPos + winHeight < itemBot + itemTop) {
-          console.log('2');
+          // console.log('2');
             $('.dropbtn.bottom').removeClass('stick').css({'top': 'inherit'});
         }
-        console.log(winScrPos, winHeight, itemBot, itemTop, itemHeight);
+        // console.log(winScrPos, winHeight, itemBot, itemTop, itemHeight);
     });
 
 });
@@ -88,10 +88,10 @@ $(document).ready(function() {
     $('.hamburger, .hamburger-inner:before').click(function() {
         if ($('.hamburger').hasClass('is-active')) {
             $('.hamburger').removeClass('is-active');
-            console.log("is there");
+            // console.log("is there");
         } else {
             $('.hamburger').addClass('is-active');
-            console.log("is not there");
+            // console.log("is not there");
         }
     });
 
@@ -142,9 +142,10 @@ window.onload = function () {
       selDuration = document.getElementById('selDuration'),
       selRotation = document.getElementById('selRotation'),
       icons={        
-        'cookieStop':'CookieStop',
-        'cookieTallStop':'CookieTallStop',
-        'coffinPill':'CoffinPill'
+        'C':'C',
+        'M':'M',
+        'N':'N',
+        'D':'D'
       },
       easings={
         'circ-in': 'Circ In','circ-out': 'Circ Out','circ-in-out': 'Circ In/Out',
@@ -208,7 +209,7 @@ window.onload = function () {
     onIconChange();
   }
   function launchTimer() {
-    timeoutInstance=setTimeout(timerTick, 2000);
+    timeoutInstance=setTimeout(timerTick, 8000);
   }
   selIcon.addEventListener('change', onIconChange);
   selIcon.addEventListener('click',function(){

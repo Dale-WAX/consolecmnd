@@ -3,13 +3,10 @@
 <body class="$ClassName.ATT">
 
     <div id="main" class="main-wrapper">
-
-        
-
         <div id="container">
             <div class="row">
-                <div class="large-9 columns"></div>
-                <div class="large-3 columns">
+                <div class="small-4 columns logo"><img src="$ThemeDir/images/console-cmnd-logo.svg" /></div>
+                <div class="small-8 columns">
                     <% if $Locales %>
                         <ul class="langSelect">
                             <% loop $Locales %>

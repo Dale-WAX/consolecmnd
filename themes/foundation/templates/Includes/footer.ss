@@ -1,8 +1,30 @@
 	
 	<footer class="footer" role="contentinfo">
+	
 		<div class="row">
-			<div class="large-12 columns">
-				<p>&copy; $Now.Year $SiteConfig.Title</p>
+			<div class="large-3 columns">
+				<h1>Other Projects</h1>
+			</div>
+			<div class="large-9 columns">
+				<% loop Menu(1) %>
+					<% if $Children %>
+					<ul>
+						<% loop $Children %>
+						<li class="<% if $LinkingMode == "current" || $LinkingMode == "section" %>active<% end_if %><% if $Children %> has-dropdown<% end_if %>" data-equalizer>
+							<a href="$Link" title="Go to the $Title.ATT" data-equalizer-watch>$MenuTitle</a>
+							<% if not $Last %><li class="divider"> | </li><% end_if %>
+							<% if $Children %>
+							<ul class="dropdown">
+								<% loop $Children %>
+								<li class="<% if $LinkingMode == "current" || $LinkingMode == "section" %>active<% end_if %>"><a href="$Link" title="Go to the $Title.ATT">$MenuTitle</a></li>
+								<% end_loop %>
+							</ul>
+							<% end_if %>
+						</li>
+						<% end_loop %>
+					</ul>
+					<% end_if %>
+				<% end_loop %>
 			</div>
 		</div>
 	</footer>
