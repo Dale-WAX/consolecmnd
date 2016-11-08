@@ -198,7 +198,7 @@ img.logo {
         font-family: formata-condensed, sans-serif;
         color: #000;
         font-weight: bold;
-        padding: 20px 0 0;
+        padding: 0;
         display: inline-block;
         width: 100%;        
         span {
@@ -520,7 +520,7 @@ img.logo {
         display: block;
         height: 100vh;
         position: fixed;
-        margin-top: -125px;
+        margin-top: -150px;
         transition-timing-function: ease-out;
         transition: 0.25s;
         transform: skew(0deg, -5deg) translateY(0%);
@@ -607,9 +607,16 @@ img.logo {
     margin: 20px 0;
     li {
         display: initial;
+            &:first-child {
+                margin-right: 3px;
+            }
         a {
             color: #333;
         }
+    }
+    .current {
+        color: black;
+        font-weight: bold;
     }
 }
 

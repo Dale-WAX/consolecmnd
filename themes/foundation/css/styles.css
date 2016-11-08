@@ -144,7 +144,7 @@ img.logo {
     font-family: formata-condensed, sans-serif;
     color: #000;
     font-weight: bold;
-    padding: 20px 0 0;
+    padding: 0;
     display: inline-block;
     width: 100%; }
     #container .project-count span {
@@ -401,7 +401,7 @@ img.logo {
     display: block;
     height: 100vh;
     position: fixed;
-    margin-top: -125px;
+    margin-top: -150px;
     transition-timing-function: ease-out;
     transition: 0.25s;
     transform: skew(0deg, -5deg) translateY(0%);
@@ -471,8 +471,13 @@ img.logo {
   margin: 20px 0; }
   .langSelect li {
     display: initial; }
+    .langSelect li:first-child {
+      margin-right: 3px; }
     .langSelect li a {
       color: #333; }
+  .langSelect .current {
+    color: black;
+    font-weight: bold; }
 
 input[type="submit"] {
   color: #fff;
@@ -576,3 +581,5 @@ button, .button {
 /****************************
         MEDIA QUERIES
 ****************************/
+
+/*# sourceMappingURL=styles.css.map */

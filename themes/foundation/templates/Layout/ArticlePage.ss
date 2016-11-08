@@ -1,24 +1,19 @@
             <div id="shapes" class="bg-shapes visible">
                 <div class="shape-mask-desktop">
-
-<div id="options" style="visibility: hidden">
-<div class="option">
-<label for="selIcon">Icon:</label>
-<select id="selIcon"></select>
-</div>
-<div class="option">
-<label for="selEasing">Easing:</label>
-<select id="selEasing"></select>
-</div>
-<div class="option">
-<label for="selDuration">Duration:</label>
-<select id="selDuration"></select>
-</div>
-<div class="option">
-<label for="selRotation">Rotation:</label>
-<select id="selRotation"></select>
-</div>
-</div>
+					<div id="options" style="visibility: hidden">
+						<div class="option">
+							<select id="selIcon"></select>
+						</div>
+						<div class="option">
+							<select id="selEasing"></select>
+						</div>
+						<div class="option">
+							<select id="selDuration"></select>
+						</div>
+						<div class="option">
+							<select id="selRotation"></select>
+						</div>
+					</div>
 
 					<svg class="icon" viewBox="0 0 1200 850" id="primitive_animation_desktop" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg">
 						<g id="D" display="none">
@@ -60,8 +55,8 @@
 									<% end_loop %>
 								<% end_if %>
 							</div>
-							<p class="project-count"><span><% loop $Categories %>$Title<% if not $Last %>, <% end_if %><% end_loop %></span> <span>Project $CurrentPageNumber / $NumberOfSiblings</span></p>
 						</div>
+						<p class="project-count"><span>Tags: <% loop $Categories %>$Title<% if not $Last %>, <% end_if %><% end_loop %></span> <span>Project $CurrentPageNumber / $NumberOfSiblings</span></p>
 					</div>
 					<div class="row" data-equalizer>
 						<div class="small-6 columns">

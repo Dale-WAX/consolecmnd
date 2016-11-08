@@ -3,7 +3,7 @@
 	
 		<div class="row">
 			<div class="large-3 columns">
-				<h1>Other Projects</h1>
+				<h1>CNMD Projects</h1>
 			</div>
 			<div class="large-9 columns">
 				<% loop Menu(1) %>
