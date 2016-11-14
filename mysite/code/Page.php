@@ -47,6 +47,8 @@ class Page_Controller extends ContentController {
         Requirements::Javascript($this->ThemeDir()."/bower_components/modernizr/modernizr.js");
         Requirements::Javascript($this->ThemeDir()."/bower_components/jquery/dist/jquery.min.js");
         Requirements::Javascript($this->ThemeDir()."/bower_components/foundation/js/foundation.min.js");
+		Requirements::Javascript($this->ThemeDir()."/javascript/masonry.pkgd.min.js");
+		Requirements::Javascript($this->ThemeDir()."/javascript/imagesloaded.pkgd.min.js");
         Requirements::Javascript($this->ThemeDir()."/javascript/app.js");
 	}
     
@@ -73,6 +75,6 @@ class Page_Controller extends ContentController {
 	}
 	public function CurrentPageNumber(){
 	    return (DataObject::get("SiteTree","ParentID = ($this->ParentID) AND Sort <= ($this->Sort)")->Count());
-	}	    
+	}
 
 }
