@@ -6,10 +6,11 @@ class ArticlePage extends Page {
 		'Date' => 'Date',
 		'Teaser' => 'Text',
 		'Author' => 'Varchar',
+		'GIF' => 'HTMLtext',
 	);
 
 	private static $has_one = array (
-		'Photo' => 'Image',
+		'Thumbnail' => 'Image',
 		'Brochure' => 'File'
 	);
 
@@ -28,6 +29,11 @@ class ArticlePage extends Page {
 		, 'Content');
 		$fields->addFieldToTab('Root.Main', TextField::create('Author', 'Author of Article'), 'Content');
 		$fields->addFieldToTab('Root.Main', TextareaField::create('Teaser'), 'Content');
+		$fields->addFieldToTab('Root.Main', TextField::create('GIF', 'Animated GIF Embed Link'), 'Content');
+        
+        $fields->addFieldToTab('Root.Main', $Thumbnail = UploadField::create('Thumbnail', 'Thumbnail'), 'Content');
+        $Thumbnail->getValidator()->setAllowedExtensions(array('png','gif','jpg','jpeg', 'mp4'));
+        $Thumbnail->setFolderName('Thumbnails');    
 
 		$fields->addFieldToTab('Root.Gallery',
 			$uploadField = new UploadField(
@@ -61,3 +67,4 @@ class ArticlePage extends Page {
 class ArticlePage_Controller extends Page_Controller {
 
 }
+

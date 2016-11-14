@@ -1,11 +1,10 @@
 <% include Header %>
 
 <body class="$ClassName.ATT">
-
     <div id="main" class="main-wrapper">
         <div id="container">
             <div class="row">
-                <div class="small-4 columns logo"><a href="/"><img src="$ThemeDir/images/console-cmnd-logo.svg" /></a></div>
+                <div class="small-4 columns logo"><a href="/"><img src="$ThemeDir/images/console-cmnd-logo.svg" class="light" /><img src="$ThemeDir/images/console-cmnd-logo-dark.svg" class="dark" /></a></div>
                 <div class="small-8 columns">
                     <% if $Locales %>
                         <ul class="langSelect">
@@ -19,8 +18,8 @@
                 </div>
             </div>
 
-            <% include TopBar %>            
-
+            <% include TopBar %>
+            <% include BgShapes %>
             $Layout
 	   </div>
     </div>

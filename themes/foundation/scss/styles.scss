@@ -52,6 +52,9 @@ $black: #3d3d3d;
 $l-black: rgba(0,0,0,.7);
 $red: rgb(234, 67, 53);
 
+$pink: #ffc8b8;
+$purple: #7B63F1;
+
 /**********************
        STANDARDS
 **********************/
@@ -151,9 +154,20 @@ a {
     }
 }
 
-img.logo {
+.logo {
     position: absolute;
     left: 0;
+    z-index: 1;
+    @media only screen and (min-width: 641px) {
+        position: fixed;
+        left: inherit;
+    }
+    .dark {
+        display: none;
+    }
+     .light {
+        display: block;
+    }    
 }
 
 
@@ -173,6 +187,31 @@ img.logo {
     margin-bottom: 430px;
 }
 
+.ArticleHolder {
+    #container {
+        background-color: $pink;
+        .main-panel {
+            .panel {
+                padding: 0;
+                &#info-panel {
+                    border: none;
+                }
+                @media only screen and (min-width: 641px) {
+                    // padding: 0 30px 80px 30px;
+                }
+                .grid-item {
+                    .article-bg {
+                        position: relative;
+                        padding-bottom: calc(100% / 300);
+                        height: inherit;
+                        background-size: cover;
+                        background-position: center center;
+                    }
+                }
+            }        
+        }
+    }
+}
 #container {
     background-color: #fff;
     transition: background-color .5s ease!important;
@@ -186,13 +225,38 @@ img.logo {
     margin: 0 -5px;
     @media only screen and (min-width: 480px) {
         margin: 0;
-    }    
-    &.about-palette {
+    }
+    &.dark {
+        p, li, a, h1, h2, h3 {
+            color: #fff;
+        }
+        .panel a {
+            text-decoration: underline;
+        }
+        .logo .dark {
+            display: block;
+        }
+        .logo .light {
+            display: none;
+        }
+    }
+    &.info-palette {
         background-color: #81E5C9;
         color: #000;
     }
+    &.about-palette {
+        background-color: #333;
+        color: $white;
+        #info-panel {
+            border: 6px solid $purple !important;
+        }
+    }    
     .project-info {
-        margin-top:90px;
+        display: none;
+        @media only screen and (min-width: 641px) {
+            margin-top: 90px;
+            display: block;
+        }
     }
     .project-count {
         font-family: formata-condensed, sans-serif;
@@ -206,6 +270,144 @@ img.logo {
         }
         span:first-child {
             float: left;
+        }
+    }
+
+    /***********
+        GRID
+    ***********/
+
+    .grid a {
+        height: inherit;
+        position: absolute;
+        width: 100%;
+        transition: .15s ease;
+        &:hover {
+            box-shadow: 0 1px 13px -2px black;
+        }
+    }
+    .grid-sizer, .grid-item {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    .grid-item {
+        margin-bottom: 50px;
+        float: left;
+        height: 380px;
+        .gfyitem {
+            width: 100%;
+            height: inherit;
+            overflow: hidden;
+            div {
+                z-index: 0 !important;
+                width: inherit !important;
+                height: inherit !important;
+            }
+            .gfyVid {
+                width: initial;
+                height: initial;
+                left: 0;
+                @media only screen and (min-width: 781px) {
+                   left: -25% !important;
+                }                
+            }
+            .gfyDotCanvas {
+                opacity: 0;
+            }
+        }
+        h2 {
+            position: absolute;
+            z-index: 1;
+            text-transform: uppercase;
+            padding: 20px;
+            font-size: 35px;
+            letter-spacing: -1px;
+            font-style: normal;
+            color: $white;
+        }
+        h3 {
+            position: absolute;
+            z-index: 1;
+            text-transform: uppercase;
+            padding: 20px;
+            letter-spacing: -1px;
+
+            font-size: 15px;
+            bottom: -25px;
+            margin: 0;
+            padding: 0;
+            color: $black;
+        }
+        p {
+            position: absolute;
+            z-index: 1;
+            bottom: 0;
+            padding: 20px;
+            color: $white;
+            font-family: formata-condensed, sans-serif;
+            font-size: 17px;
+            line-height: inherit;            
+        }
+        .dim {
+            background-color: rgba(000, 000, 000, 0.5);
+            height: 100%;
+            position: inherit;
+            width: 100%;
+            z-index: 1;
+        }
+    }
+    .share-panel-wrapper.share-panel-wrapper--hidden {
+        display: none !important;
+    }
+    .grid-item .overlay.overlay--desktop {
+        display: none !important;
+    }
+    .grid:after {
+        content: '';
+        display: block;
+        clear: both;
+    }
+    @media only screen and (min-width: 641px) {
+        .gutter-sizer {
+            width: 1%;
+        }
+        .grid-sizer, .grid-item {
+            
+        }
+    }
+    @media only screen and (min-width: 781px) {
+        .grid-sizer, .grid-item {
+            width: 48.33333%;
+        }
+        .grid-item {
+            h2 {
+                font-size: 30px;
+            }        
+        }
+    }
+    @media only screen and (min-width: 1025px) {
+        .grid-sizer, .grid-item {
+            width: 32.33333%;
+        }
+        .grid-item {
+            h2 {
+                font-size: 25px;
+            }        
+        }        
+    }
+    @media only screen and (min-width: 1250px) {
+        .grid-item {
+            h2 {
+                font-size: 35px;
+            }
+            h2, p {
+                padding: 30px;
+            }        
+        }        
+    }
+    .overlay {
+        .control-bar {
+            display: none !important;
         }
     }
     .main-panel {
@@ -227,7 +429,7 @@ img.logo {
                     text-transform: uppercase;
                     padding-top: 136px;
                     padding-bottom: 60px;
-                    &.about-header {
+                    &.info-header {
                         padding-top: 40px;
                         padding-bottom: 30px;
                         @media only screen and (min-width: 480px) {
@@ -266,7 +468,7 @@ img.logo {
                     }
                 }
             }
-            &#about-panel {
+            &#info-panel {
                 /* margin-top: 60px; */
                 border: 6px solid #000; 
             }
@@ -305,6 +507,16 @@ img.logo {
 .bg-shapes {
     svg {
         stroke: #fff;
+        &.info-stroke {
+            g path {
+                stroke: red;
+            }
+        }
+        &.about-stroke {
+            g path {
+                stroke: #7B63F1;
+            }
+        }        
     } 
     position: fixed;
     left: 0;
@@ -386,22 +598,51 @@ img.logo {
     left: 0;
     width: 100%;
     z-index: -1;
-    padding: 60px 0 40px; 
+    padding: 30px 0;
     height: 430px;
     text-transform: uppercase;
     font-size: 1.2em;
-    background: #1A1A1A url("../images/console-cmnd-bud.svg") no-repeat 20px 210px;
-    background-size: 200px;
-
-    h1 {
+    background-color: black;
+    overflow: hidden;
+    &:before {
+        content: ' ';
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        opacity: 0.6;
+        -ms-background-size: cover;
+        -o-background-size: cover;
+        -moz-background-size: cover;
+        -webkit-background-size: cover;
+        background-size: cover;
+        background: #1A1A1A url("../images/console-cmnd-bud.svg") no-repeat center center;
+    }
+    @media only screen and (min-width: 1025px) {
+        background: #1A1A1A url("../images/console-cmnd-bud.svg") no-repeat 20px 210px;
+        background-size: 200px;
+        padding: 60px 0 40px;
+        &:before {
+            opacity: 0;
+        }
+    }
+    .row .columns h1 {
+        z-index: 2;
+        position: relative;
         color: $white;
+        margin-left: 30px; 
     }
     ul {
     color: $white;
         margin-top: 13px;
+        z-index: 2;
+        position: relative;
         li {
             display: inline-block;
-            margin: 0 15px;
+            margin: 12px;
             a {
                 color: $white;
                 font-weight: bold;
@@ -464,7 +705,7 @@ img.logo {
 
         }
         &.right {
-            top: 99px;
+            top: 85px;
             transform: scale(0);
             position: fixed;
             @media only screen and (min-width: 641px) {
