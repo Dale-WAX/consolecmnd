@@ -193,13 +193,15 @@ article h2 {
       float: right; }
     #container .project-count span:first-child {
       float: left; }
-  #container .grid a {
-    height: inherit;
-    position: absolute;
-    width: 100%;
-    transition: .15s ease; }
-    #container .grid a:hover {
-      box-shadow: 0 1px 13px -2px black; }
+  #container .grid {
+    margin-top: 50px; }
+    #container .grid a {
+      height: inherit;
+      position: absolute;
+      width: 100%;
+      transition: .15s ease; }
+      #container .grid a:hover {
+        box-shadow: 0 1px 13px -2px black; }
   #container .grid-sizer, #container .grid-item {
     width: 100%;
     margin-bottom: 10px; }
@@ -328,7 +330,8 @@ article h2 {
           #container .main-panel .panel .gallery {
             margin-top: 80px; } }
         #container .main-panel .panel .gallery img {
-          margin: 10px 0; }
+          margin: 10px 0;
+          width: 100%; }
           @media only screen and (min-width: 480px) {
             #container .main-panel .panel .gallery img {
               margin: 20px 0; } }

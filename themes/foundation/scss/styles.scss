@@ -277,13 +277,16 @@ a {
         GRID
     ***********/
 
-    .grid a {
-        height: inherit;
-        position: absolute;
-        width: 100%;
-        transition: .15s ease;
-        &:hover {
-            box-shadow: 0 1px 13px -2px black;
+    .grid {
+        margin-top: 50px;
+        a {
+            height: inherit;
+            position: absolute;
+            width: 100%;
+            transition: .15s ease;
+            &:hover {
+                box-shadow: 0 1px 13px -2px black;
+            }
         }
     }
     .grid-sizer, .grid-item {
@@ -457,6 +460,7 @@ a {
                 }
                 img {
                     margin: 10px 0;
+                    width: 100%;
                     @media only screen and (min-width: 480px) {
                         margin: 20px 0;
                     }                       
