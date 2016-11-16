@@ -187,7 +187,9 @@ a {
     margin-bottom: 430px;
 }
 
-.ArticleHolder {
+
+
+.ArticleHolder, .HomePage {
     #container {
         background-color: $pink;
         .main-panel {
@@ -210,6 +212,11 @@ a {
                 }
             }        
         }
+    }
+}
+.HomePage {
+    #container {
+        background-color: $purple;
     }
 }
 #container {
@@ -280,8 +287,9 @@ a {
     .grid {
         margin-top: 50px;
         a {
-            height: inherit;
-            position: absolute;
+            height: 100%;
+            position: relative;
+            display: block;
             width: 100%;
             transition: .15s ease;
             &:hover {
@@ -306,6 +314,21 @@ a {
                 width: inherit !important;
                 height: inherit !important;
             }
+            iframe {
+                
+                .iframe-video {
+                    border: 1px solid red;
+                    position: relative !important;
+                    width: initial !important;
+                    height: initial !important;
+                    display: inline-block !important;
+                    vertical-align: baseline !important;
+                    left: -25% !important;
+                }
+                .iframe-video-container.iframe-video-container-measurements {
+                    border: 1px solid red;
+                }
+            }
             .gfyVid {
                 width: initial;
                 height: initial;
@@ -327,6 +350,8 @@ a {
             letter-spacing: -1px;
             font-style: normal;
             color: $white;
+            top: 0;
+            width: 50%;
         }
         h3 {
             position: absolute;
@@ -354,7 +379,7 @@ a {
         .dim {
             background-color: rgba(000, 000, 000, 0.5);
             height: 100%;
-            position: inherit;
+            position: absolute;
             width: 100%;
             z-index: 1;
         }
@@ -390,7 +415,7 @@ a {
     }
     @media only screen and (min-width: 1025px) {
         .grid-sizer, .grid-item {
-            width: 32.33333%;
+            width: 33.33333%;
         }
         .grid-item {
             h2 {
@@ -451,6 +476,10 @@ a {
                 }
                 p {
                     orphans: 2;
+                }
+                .login {
+                    width: 100% !important;
+                    display: inline-block;
                 }
             }
             .gallery {
@@ -868,7 +897,7 @@ a {
 input[type="submit"] {
     color: $white;
     font-size: 16px;
-    background-color: $red;
+    background-color: $black;
     padding: 8px 20px;
     border: none;
     text-transform: uppercase !important;
@@ -878,7 +907,7 @@ input[type="submit"] {
 
 input[type="text"] {
     box-shadow: none;
-    text-transform: uppercase;
+    text-transform: none;
     font-family: $lato;
 }
 
@@ -892,7 +921,9 @@ input[type="text"] {
 fieldset {
     border: none;
 }
-
+.field.checkbox {
+    position: absolute;    
+}
 select {
     background-color: $white;
     text-transform: uppercase;

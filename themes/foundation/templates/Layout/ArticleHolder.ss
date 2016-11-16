@@ -6,11 +6,9 @@
 					<div class="main-panel">
 						<div class="panel" id="info-panel">
 							<div class="grid">
-							  	<div class="grid-sizer"></div>
-							  	<div class="gutter-sizer"></div>
 								<% loop $AllChildren %>
 									
-									<div class="grid-item">
+									<div class="grid-item small-12 medium-6 large-4 columns">
 									<a href="$Link">
 										<div class="dim"></div>
 										<h2>$Title</h2>
@@ -30,11 +28,5 @@
 					</div>
 				</div>
 			</div>
-			<script>
-				(function (d, t) {
-				    var g = d.createElement(t),
-				        s = d.getElementsByTagName(t)[0];
-				    g.src = 'http://assets.gfycat.com/js/gfyajax-0.517d.js';
-				    s.parentNode.insertBefore(g, s);
-				}(document, 'script'));
-			</script>
+
+		

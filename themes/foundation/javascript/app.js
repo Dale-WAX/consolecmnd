@@ -34,7 +34,13 @@ window.onclick = function(event) {
   }
 
 }
-
+    
+  // (function (d, t) {
+  //     var g = d.createElement(t),
+  //         s = d.getElementsByTagName(t)[0];
+  //     g.src = 'http://assets.gfycat.com/js/gfyajax-0.517d.js';
+  //     s.parentNode.insertBefore(g, s);
+  // }(document, 'script'));
 
 // PAGE ID
 
@@ -113,28 +119,28 @@ $(document).ready(function() {
 
 
 
-// MASONRY INITIALIZE
+// // MASONRY INITIALIZE
 
-$('.grid').masonry({
-    columnWidth: '.grid-sizer',
-    gutter: '.gutter-sizer',
-    itemSelector: '.grid-item',
-    percentPosition: true
-});
+// $('.grid').masonry({
+//     columnWidth: '.grid-sizer',
+//     gutter: '.gutter-sizer',
+//     itemSelector: '.grid-item',
+//     percentPosition: true
+// });
 
-// IMGS LOADED
-$('#container').imagesLoaded( function() {
-  // images have loaded
-});
+// // IMGS LOADED
+// $('#container').imagesLoaded( function() {
+//   // images have loaded
+// });
 
-// options
-$('#container').imagesLoaded( {
-  // options...
-  },
-  function() {
-    // images have loaded
-  }
-);
+// // options
+// $('#container').imagesLoaded( {
+//   // options...
+//   },
+//   function() {
+//     // images have loaded
+//   }
+// );
 
 
 // BG SVG ANIMATIONS

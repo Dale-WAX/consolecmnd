@@ -130,18 +130,21 @@ article h2 {
   height: initial;
   margin-bottom: 430px; }
 
-.ArticleHolder #container {
+.ArticleHolder #container, .HomePage #container {
   background-color: #ffc8b8; }
-  .ArticleHolder #container .main-panel .panel {
+  .ArticleHolder #container .main-panel .panel, .HomePage #container .main-panel .panel {
     padding: 0; }
-    .ArticleHolder #container .main-panel .panel#info-panel {
+    .ArticleHolder #container .main-panel .panel#info-panel, .HomePage #container .main-panel .panel#info-panel {
       border: none; }
-    .ArticleHolder #container .main-panel .panel .grid-item .article-bg {
+    .ArticleHolder #container .main-panel .panel .grid-item .article-bg, .HomePage #container .main-panel .panel .grid-item .article-bg {
       position: relative;
       padding-bottom: calc(100% / 300);
       height: inherit;
       background-size: cover;
       background-position: center center; }
+
+.HomePage #container {
+  background-color: #7B63F1; }
 
 #container {
   background-color: #fff;
@@ -196,8 +199,9 @@ article h2 {
   #container .grid {
     margin-top: 50px; }
     #container .grid a {
-      height: inherit;
-      position: absolute;
+      height: 100%;
+      position: relative;
+      display: block;
       width: 100%;
       transition: .15s ease; }
       #container .grid a:hover {
@@ -217,6 +221,16 @@ article h2 {
         z-index: 0 !important;
         width: inherit !important;
         height: inherit !important; }
+      #container .grid-item .gfyitem iframe .iframe-video {
+        border: 1px solid red;
+        position: relative !important;
+        width: initial !important;
+        height: initial !important;
+        display: inline-block !important;
+        vertical-align: baseline !important;
+        left: -25% !important; }
+      #container .grid-item .gfyitem iframe .iframe-video-container.iframe-video-container-measurements {
+        border: 1px solid red; }
       #container .grid-item .gfyitem .gfyVid {
         width: initial;
         height: initial;
@@ -234,7 +248,9 @@ article h2 {
       font-size: 35px;
       letter-spacing: -1px;
       font-style: normal;
-      color: #fff; }
+      color: #fff;
+      top: 0;
+      width: 50%; }
     #container .grid-item h3 {
       position: absolute;
       z-index: 1;
@@ -258,7 +274,7 @@ article h2 {
     #container .grid-item .dim {
       background-color: rgba(0, 0, 0, 0.5);
       height: 100%;
-      position: inherit;
+      position: absolute;
       width: 100%;
       z-index: 1; }
   #container .share-panel-wrapper.share-panel-wrapper--hidden {
@@ -279,7 +295,7 @@ article h2 {
       font-size: 30px; } }
   @media only screen and (min-width: 1025px) {
     #container .grid-sizer, #container .grid-item {
-      width: 32.33333%; }
+      width: 33.33333%; }
     #container .grid-item h2 {
       font-size: 25px; } }
   @media only screen and (min-width: 1250px) {
@@ -324,6 +340,9 @@ article h2 {
             width: 80%; } }
         #container .main-panel .panel .panel-text p {
           orphans: 2; }
+        #container .main-panel .panel .panel-text .login {
+          width: 100% !important;
+          display: inline-block; }
       #container .main-panel .panel .gallery {
         margin-top: 0; }
         @media only screen and (min-width: 640px) {
@@ -653,7 +672,7 @@ article h2 {
 input[type="submit"] {
   color: #fff;
   font-size: 16px;
-  background-color: #ea4335;
+  background-color: #3d3d3d;
   padding: 8px 20px;
   border: none;
   text-transform: uppercase !important;
@@ -662,7 +681,7 @@ input[type="submit"] {
 
 input[type="text"] {
   box-shadow: none;
-  text-transform: uppercase;
+  text-transform: none;
   font-family: "Lato", sans-serif; }
 
 #form-container input, #form-container select {
@@ -673,6 +692,9 @@ input[type="text"] {
 
 fieldset {
   border: none; }
+
+.field.checkbox {
+  position: absolute; }
 
 select {
   background-color: #fff;

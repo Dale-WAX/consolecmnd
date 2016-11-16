@@ -10,6 +10,7 @@
                             </div>
                             <div class="panel-text">
                                 <div>$Content</div>
+                                <div class="login">$Form</div>
                             </div>
                             <div class="gallery">
                                 <% if $GalleryImage %>
