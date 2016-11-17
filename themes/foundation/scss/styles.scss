@@ -316,8 +316,8 @@ a {
             }
             iframe {
                 
-                .iframe-video {
-                    border: 1px solid red;
+                html.iframe-video {
+                border: 1px solid red;
                     position: relative !important;
                     width: initial !important;
                     height: initial !important;

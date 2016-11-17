@@ -221,7 +221,7 @@ article h2 {
         z-index: 0 !important;
         width: inherit !important;
         height: inherit !important; }
-      #container .grid-item .gfyitem iframe .iframe-video {
+      #container .grid-item .gfyitem iframe html.iframe-video {
         border: 1px solid red;
         position: relative !important;
         width: initial !important;
