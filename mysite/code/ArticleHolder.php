@@ -7,7 +7,8 @@ class ArticleHolder extends Page {
 	);
 
 	private static $allowed_children = array (
-		'ArticlePage'
+		'ArticlePage',
+		'BannerAdPage'
 	);
 
 	public function getCMSFields() {
