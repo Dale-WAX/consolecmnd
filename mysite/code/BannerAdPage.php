@@ -2,7 +2,7 @@
 
 class BannerAdPage extends Page {
 
-	private static $has_many = array (
+	private static $has_many = array(
 		'BannerAds' => 'BannerAd',
 	);
 
@@ -21,21 +21,21 @@ class BannerAdPage extends Page {
 
 class BannerAdPage_Controller extends Page_Controller {
 
-	private static $allowed_actions = array (
-		'show',
-	);
+	// private static $allowed_actions = array (
+	// 	'show',
+	// );
 
-	public function show(SS_HTTPRequest $request) {
-		$BannerAd = BannerAd::get()->find('URLSegment', $request->param('ID'));
+	// public function show(SS_HTTPRequest $request) {
+	// 	$bannerAd = BannerAd::get()->find('URLSegment', $request->param('ID'));
 
-		if (!$leadership) {
-			return $this->httpError(404, 'That ad could not be found.');
-		}
+	// 	if (!$bannerAd) {
+	// 		return $this->httpError(404, 'That ad could not be found.');
+	// 	}
 
-		return array (
-			'BannerAd' => $BannerAd,
-			'Title' => $BannerAd->Title
-		);
-	}
+	// 	return array (
+	// 		'BannerAd' => $bannerAd,
+	// 		'Title' => $bannerAd->Title
+	// 	);
+	// }
 
 }

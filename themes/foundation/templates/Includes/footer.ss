@@ -27,6 +27,35 @@
 				<% end_loop %>
 			</div>
 		</div>
+
+		<div class="row social-copy">
+			<div class="medium-6 columns">
+				<ul>
+					<% with $SiteConfig %>
+						<% if $TwitterLink %>
+						<li>
+							<a href="$TwitterLink" target="_blank">
+								<i class="fa fa-twitter fa-inverse"></i>
+								@fatwreck
+							</a>
+						</li>
+						<% end_if %>
+
+						<% if $EmailLink %>
+						<li>
+							<a href="$EmailLink">
+								<i class="fa fa-envelope fa-inverse"></i>
+								Email
+							</a>
+						</li>
+						<% end_if %>
+					<% end_with %>
+				</ul>
+			</div>
+			<div class="medium-6 columns">
+				<p class="legal">&copy Copyright $SiteConfig.Title</p>
+			</div>
+		</div>	
 	</footer>
 	
 

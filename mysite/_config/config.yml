@@ -9,8 +9,17 @@ After:
 # Caution: Indentation through two spaces, not tabs
 SSViewer:
   theme: 'foundation'
+SiteConfig:
+  extensions:
+    - SiteConfigExtension
+Director:
+  enviroment_type: 'dev'
 Debug:
   friendly_error_httpcode: true
 Image:
   extensions:
     - GalleryImage
+    - AdFilesExtension
+File:
+  allowed_extensions:
+    - html

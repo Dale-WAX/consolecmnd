@@ -47,13 +47,14 @@ $p-font-sizes: (
         COLOURS
 **********************/
 
-$white: #fff;
+$white: #fff; 
 $black: #3d3d3d;
 $l-black: rgba(0,0,0,.7);
 $red: rgb(234, 67, 53);
 
 $pink: #ffc8b8;
 $purple: #7B63F1;
+$green: #27f22c;
 
 /**********************
        STANDARDS
@@ -93,8 +94,8 @@ body {
 
 h1, h2, h3, h4, .top-bar-section ul li:not(.has-form) a:not(.button), .top-bar-section ul li.active:not(.has-form) a:not(.button) {
     font-family: $formata;
-    font-style: italic;
     font-weight: 400;
+    color: $black;
     
 }
 p {
@@ -114,9 +115,24 @@ article {
     }
 }
 
-a {
+h3 {
+    text-transform: uppercase;
+    font-size: 22px;
 }
 
+a {
+    color: #1A1A1A;   
+    &:hover, &:focus {
+        color: $black;
+    }
+}
+
+hr {
+    margin: 1.9rem 0 1.5rem;
+    border: 3px solid #000;
+    display: inline-block;
+    width: 100%;
+}
 :focus {
     outline: none;
 }
@@ -175,23 +191,16 @@ a {
         CONTENT
 **********************/
 
-.visible {
-    display: block !important;
-    opacity: 1 !important;
-    transition: opacity .5s ease;
-}
-
 #main.main-wrapper {
     position: relative;
     height: initial;
     margin-bottom: 430px;
 }
 
-
-
 .ArticleHolder, .HomePage {
     #container {
         background-color: $pink;
+        transition: .15s ease;
         .main-panel {
             .panel {
                 padding: 0;
@@ -213,10 +222,13 @@ a {
             }        
         }
     }
+    &:hover {
+        box-shadow: 0 1px 13px -2px black;
+    }
 }
 .HomePage {
     #container {
-        background-color: $purple;
+        background-color: $white;
     }
 }
 #container {
@@ -250,6 +262,14 @@ a {
     &.info-palette {
         background-color: #81E5C9;
         color: #000;
+        a {
+            color: #1A1A1A;
+            background: linear-gradient($pink,$pink),linear-gradient($pink,$pink),linear-gradient($black,$black);
+            background-size: .05em 1px,.05em 1px,1px 1px;
+            background-repeat: no-repeat,no-repeat,repeat-x;
+            text-shadow: .03em 0 $pink,-.03em 0 $pink,0 .03em $pink,0 -.03em $pink,.06em 0 $pink,-.06em 0 $pink,.09em 0 $pink,-.09em 0 $pink,.12em 0 $pink,-.12em 0 $pink,.15em 0 $pink,-.15em 0 $pink;
+            background-position: 0 95%,100% 95%,0 95%;        
+        }
     }
     &.about-palette {
         background-color: #333;
@@ -257,7 +277,14 @@ a {
         #info-panel {
             border: 6px solid $purple !important;
         }
-    }    
+    }
+    &.work-palette {
+        background-color: $pink;
+        color: $black;
+        #info-panel {
+            border: none;
+        }
+    }       
     .project-info {
         display: none;
         @media only screen and (min-width: 641px) {
@@ -278,6 +305,47 @@ a {
         span:first-child {
             float: left;
         }
+    }
+    .bannerAd {
+        .replay-btn {
+            border-bottom: 1px solid black;
+            text-transform: uppercase;
+            text-shadow: none;
+            padding: 10px 15px;
+            background: none;
+            transition: .15s ease;
+            font-size: 19px;
+            bottom: 0;
+            @media only screen and (min-width: 1025px) {
+                position: absolute;
+            }            
+            &:hover {
+                color: black;
+                text-shadow: none;
+                border-bottom: 6px solid black;
+                
+            }
+        } 
+        .bigbox {
+            border: 1px solid red;
+            display: inline-block;
+            position: inherit;
+            @media only screen and (min-width: 1025px) {
+                min-width: 41%;
+                float: left;
+            }
+            &.desc {
+                border: 1px solid blue;
+                display: block;
+                position: relative;
+                width: 100%;
+                @media only screen and (min-width: 1025px) {
+                    width: 40%;
+                    margin-left: 10px;
+                }
+            }
+        }
+
     }
 
     /***********
@@ -471,6 +539,7 @@ a {
                 width: 100%;
                 columns: 2 200px;
                 column-gap: 2rem;
+                margin-bottom: 50px;
                 @media only screen and (min-width: 640px) {
                     width: 80%;
                 }
@@ -521,6 +590,7 @@ a {
             font-weight: bold;
             display: block;
             padding: 70px 10px;
+            background: none;
             @media only screen and (min-width: 480px) {
                 padding: 30px 20px;
             }
@@ -537,8 +607,21 @@ a {
     }
 }
 
+
+.visible {
+    opacity: 1 !important;
+    transition: opacity .5s ease;
+}
+
+.gone {
+    display: none;
+}
+
 .bg-shapes {
     svg {
+        g path {
+            stroke: $black;
+        }  
         stroke: #fff;
         &.info-stroke {
             g path {
@@ -547,7 +630,12 @@ a {
         }
         &.about-stroke {
             g path {
-                stroke: #7B63F1;
+                stroke: $purple;
+            }
+        }
+        &.work-stroke {
+            g path {
+                stroke: $white;
             }
         }        
     } 
@@ -556,7 +644,6 @@ a {
     right: 0;
     bottom: 0;
     opacity: 0;
-    display: none;
     top: 50%;
     margin-top: -19%;
     transition: opacity .5s ease;
@@ -655,7 +742,7 @@ a {
         background: #1A1A1A url("../images/console-cmnd-bud.svg") no-repeat center center;
     }
     @media only screen and (min-width: 1025px) {
-        background: #1A1A1A url("../images/console-cmnd-bud.svg") no-repeat 20px 210px;
+        background: #1A1A1A url("../images/console-cmnd-bud.svg") no-repeat 30px 180px;
         background-size: 200px;
         padding: 60px 0 40px;
         &:before {
@@ -685,6 +772,49 @@ a {
                     border-bottom: 6px solid $white;
                 }
             }
+        }
+    }
+    .social-copy {
+        bottom: 0;
+        position: absolute;
+        z-index: 1;
+        p {
+            color: $white;
+            font-family: $formata;
+            text-align: right;
+            bottom: 0;
+        }
+        ul {
+            margin: 0 0 0 0;
+            @media only screen and (min-width: 1025px) {
+                margin: 0 0 0 20px;
+            }            
+            li {
+                margin: 0 10px;
+                font-size: 14px;
+                a {
+                    text-align: right;
+                    font-weight: normal;
+                }
+            }
+        }
+        .fa-stack {
+            position: relative;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .legal {
+            text-align: left;
+            margin-left: 10px;
+            font-size: 14px;
+            @media only screen and (min-width: 640px) {
+                text-align: right;
+                margin-right: 10px;
+                margin-left: 0;
+            }
+            @media only screen and (min-width: 1025px) {
+                margin-right: 20px;
+            }               
         }
     }
 }
@@ -879,6 +1009,13 @@ a {
 .langSelect {
     text-align: right;
     margin: 20px 0;
+    text-transform: uppercase;
+    font-size: 11px;
+    font-family: $lato;
+    @media only screen and (min-width: 641px) {
+        margin: 20px 11px;
+        font-size: 13px;
+    }
     li {
         display: initial;
             &:first-child {
@@ -886,6 +1023,7 @@ a {
             }
         a {
             color: #333;
+            background-size: 0px !important;
         }
     }
     .current {
@@ -938,8 +1076,8 @@ button, .button {
     font-size: 16px;
     text-transform: uppercase;
     padding: 8px 35px;
-    &.blue {
-      background: $red;
+    &.black {
+      background: $black;
         a {
             color: $white;
             padding: 8px 35px;
@@ -1020,13 +1158,378 @@ button, .button {
 
 
 
+/*** HOME ***/
+
+#first-panel {
+    position: relative;
+    top: 0px;
+    @media only screen and (min-width: 641px) {
+        top: -25px;
+    }    
+    .home-slide {
+        min-height: 0;
+        padding-bottom: 345px;
+        -webkit-transition: padding-bottom .3s ease-in-out;
+        transition: padding-bottom .3s ease-in-out;
+        position: relative;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        @media only screen and (min-width: 641px) {
+            padding-bottom: 425px;
+        }
+        @media only screen and (min-width: 1155px) {
+            padding-bottom: 500px;
+        }        
+    }
+}
+
+.slider-panel {
+    min-height: 0;
+    width: 100%;
+    position: absolute;
+    .row {
+        position: relative;
+    }
+    #carousel-info-container {
+        position: absolute;
+        bottom: -30px;
+        transition: .15s ease;
+        @media only screen and (min-width: 641px) {
+            bottom: 0px;
+        }
+        &:hover {
+            box-shadow: 0 1px 13px -2px black;
+        }        
+        #carousel-info-box {
+            position: relative;
+            margin: 0 auto;
+            background: black;
+            width: 100%;
+            line-height: 1.1;
+            text-transform: uppercase;
+            overflow-x: hidden;
+            padding: 0;
+            .slick-slide {
+                padding: 0 34px;              
+            }            
+            h1 {
+                font-size: 35px;
+                color: $black;
+                font-size: 27px;
+                font-style: normal;
+                line-height: 1;
+                margin: 20px 0 16px 0; 
+                overflow: hidden;
+                @media only screen and (min-width: 641px) {
+                    font-size: 25px;
+                }
+                @media only screen and (min-width: 1025px) {
+                    font-size: 30px;
+                }                
+                a {
+                    padding: 0;
+                    color: $white;
+                    transition: .15s ease;
+                    border-bottom: 0px solid $black;
+                    &:hover {
+                        border-bottom: 6px solid $white;
+                    }
+                }
+            }
+            .slick-dots {
+                position: absolute;
+                bottom: 4px;
+                right: 10px;
+                @media only screen and (min-width: 1025px) {
+                    right: 20px;
+                }
+                li { 
+                    list-style: none;
+                    border-radius: 15px;
+                    padding: 0px;
+                    margin: 0 2px;
+                    float: left;
+                    background: $white;
+                    @media only screen and (min-width: 1025px) {
+                        margin: 0 4px;
+                    }                    
+                    button {
+                        background-color: $white;
+                        border-radius: 14px;
+                        width: 10px;
+                        height: 10px;
+                        padding: 0px;
+                        margin: 2px 2px;
+                        display: inherit;
+                    }
+                    &.slick-active button {
+                        background-color: $black;
+                    }
+                }                
+            }
+        }
+    }
+}
 
 
+.HomePage .row.pageTitle {  
+    margin-top: 0;
+    h1 {
+        font-size: 70px;
+        padding: 55px;
+        margin: 0 4px;
+        line-height: 1.2;
+    }
+}
+
+.overview .feature-slides {
+    overflow: hidden;
+    .slick-list {
+        overflow: visible;
+    }
+    .spacer {
+        height: 36px;
+    }
+}
+
+.controls {
+    display: block;
+    margin-top: -30px;
+    .slick-next {
+        float: right;
+    }
+    .button {
+        background-color: transparent;
+        padding: 0;
+        margin: 0;
+        .arrow-left, .arrow-right {
+            display: inline-block;
+            background-position: center center;
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            position: relative;
+            width: 23px;
+            height: 26px;
+        }
+        .arrow-left {
+            background-image: linear-gradient(transparent, transparent), url(../images/arrow-left.svg);
+        }
+        .arrow-right {
+            background-image: linear-gradient(transparent, transparent), url(../images/arrow-right.svg);
+        }
+        &#next-feature {
+            float: right;
+        }        
+    }
+}
+
+.overview .feature-slide {
+    margin: 40px 0 0 0;
+    padding: 0 5px;
+    &:first-child {
+        padding: 0 10px 0 0;
+        img {
+            float: none;
+        }
+    }
+    &:last-child {
+        padding: 0 0 0 10px;
+        img {
+            float: none;
+        }
+    }
+    .featureText {
+        display: block;
+        margin-bottom: 0px;
+        p {
+            text-align: center;
+            margin: 30px 0;
+            font-size: 26px;
+        }
+    }
+    img {
+        border: 3px solid $black;
+        margin: 0 auto;
+        display: block;
+    }
+    .bottom-wrap {
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+        .bottom {
+            text-align: center;
+            .button {
+                margin: 0 auto;
+            }            
+        }        
+    }
+}
 
 
+/****************************
+        BANNER ADS
+****************************/
 
+.bannerAd {
 
-
+    iframe {
+        border: none;
+    }
+    #wrapper {
+      min-width: 900px;
+    }
+    
+    .project-wrapper {
+      width: 650px;
+      clear: both;
+      margin: auto;
+    }
+    
+    .project-wrapper:after {
+      content: '';
+      display: block;
+      clear: both;
+    }
+    
+    body {
+      width: 100%;
+      height: 100%;
+      background-color: #FFF;
+    }
+    
+    div.project {
+      margin-top: 30px;
+      text-align: center;
+    }
+    
+    div.project p {
+      font-size: 13px;
+      color: #000;
+      text-align: center;
+      font-weight: 100;
+      margin-bottom: 5px;
+    }
+    
+    div.project iframe {
+      display: block;
+      margin: auto;
+      border: 0;
+    }
+    
+    #container {
+      width: 700px;
+      margin: 0 auto;
+    }
+    
+    .left {
+      float: left;
+    }
+    
+    .right {
+      float: right;
+    }
+    
+    .clear {
+      clear: both;
+    }
+    
+    div#project_info p {
+      font-family: Helvetica, Arial, sans-serif;
+      font-size: 11px;
+      color: #CCC;
+      font-weight: 100;
+      text-transform: uppercase;
+      line-height: 16px;
+    }
+    
+    div#project_info p strong {
+      color: #FFF;
+    }
+    
+    div#spacer {
+      width: 100%;
+      height: 100px;
+    }
+    
+    div#footer {
+      background-color: #000;
+      width: 100%;
+      min-width: 900px;
+      height: 70px;
+      overflow: hidden;
+      position: fixed;
+      bottom: 0;
+    }
+    
+    div#project_info {
+      float: left;
+      margin: 20px 30px;
+    }
+    
+    div#logo {
+      float: right;
+      margin: 25px 30px;
+    }
+    
+    #tab-nav {
+      width: 900px;
+      text-align: center;
+      vertical-align: top;
+      position: absolute;
+      margin: auto;
+      top: 0px;
+      left: 0px;
+      right: 0px;
+    }
+    
+    #tab-nav > a {
+      font-size: 14px;
+      margin: 0 5px;
+      text-decoration: none;
+      display: inline-block;
+      position: relative;
+      top: -10px;
+      background: transparent url(pointer.png) no-repeat center bottom;
+      background: transparent url(pointer.svg) no-repeat center bottom;
+    }
+    
+    #tab-nav > a > span {
+      color: #000;
+      background-color: #ccc;
+      display: block;
+      padding: 20px 15px 10px;
+    }
+    
+    #tab-nav > a:hover,
+    #tab-nav > a.selected {
+      top: 0;
+    }
+    
+    #tab-nav > a.selected {
+      padding-bottom: 10px;
+    }
+    
+    #tab-nav > a.selected {
+      background: transparent url(pointer.png) no-repeat center bottom;
+      background: transparent url(pointer.svg) no-repeat center bottom;
+    }
+    
+    #tab-nav > a:hover > span {
+      padding-top: 20px;
+    }
+    
+    #tab-nav > a.selected > span {
+      color: #fff;
+      background-color: #000;
+    }
+    
+    .tab {
+      display: none;
+      text-align: center;
+      margin-top: 100px;
+    }
+}
 
   
 
@@ -1037,7 +1540,6 @@ button, .button {
 ****************************/
 
 @media only screen and (min-width: 640px) {
-
 
 }
 

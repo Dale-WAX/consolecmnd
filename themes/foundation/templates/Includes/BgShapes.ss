@@ -17,16 +17,16 @@
 
                     <svg class="icon" viewBox="0 0 1200 850" id="primitive_animation_desktop" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg">
                         <g id="D" display="none">
-                            <path display="inline" fill="none" stroke="#ffffff" stroke-width="12" stroke-miterlimit="10" d="M692.5,100.5l70.003,69v402 l-175.996,178H437.5v-542l108-107H692.5z M545.5,100.5v541l-108,108 M692.5,100.5l-104,106l-151,1 M654.5,679.531V274.5l-66-68 M545.5,641.5h146.217 M762.503,169.5L654.5,274.5"/>
+                            <path display="inline" fill="none" stroke="#27f22c" stroke-width="12" stroke-miterlimit="10" d="M692.5,100.5l70.003,69v402 l-175.996,178H437.5v-542l108-107H692.5z M545.5,100.5v541l-108,108 M692.5,100.5l-104,106l-151,1 M654.5,679.531V274.5l-66-68 M545.5,641.5h146.217 M762.503,169.5L654.5,274.5"/>
                         </g>
                         <g id="M" display="none">
-                            <path display="inline" fill="none" stroke="#ffffff" stroke-width="12" stroke-miterlimit="10" d="M436.5,637.5L328.496,750.509 l2.002-543.009L438.5,99.492L436.5,637.5z M334.502,207.5H762.5L871.505,91.484l-427.502,0.103 M761.499,209.502l0.999,524 l117.015-111.004V85.479 M548.5,207.5l-1.001,543.009L654.5,635.5V100.493L548.5,207.5z"/>
+                            <path display="inline" fill="none" stroke="#27f22c" stroke-width="12" stroke-miterlimit="10" d="M436.5,637.5L328.496,750.509 l2.002-543.009L438.5,99.492L436.5,637.5z M334.502,207.5H762.5L871.505,91.484l-427.502,0.103 M761.499,209.502l0.999,524 l117.015-111.004V85.479 M548.5,207.5l-1.001,543.009L654.5,635.5V100.493L548.5,207.5z"/>
                         </g>
                         <g id="N" display="none">
-                            <path display="inline" fill="none" stroke="#ffffff" stroke-width="12" stroke-miterlimit="10" d="M544.5,643.506L437.5,747.5v-538 l107-109.003V643.506z M762.5,637.506V101.498L655.5,210.5v537L762.5,637.506z M544.5,100.497l219.001,523 M655.5,747.5l-218-538"/>
+                            <path display="inline" fill="none" stroke="#27f22c" stroke-width="12" stroke-miterlimit="10" d="M544.5,643.506L437.5,747.5v-538 l107-109.003V643.506z M762.5,637.506V101.498L655.5,210.5v537L762.5,637.506z M544.5,100.497l219.001,523 M655.5,747.5l-218-538"/>
                         </g>
                         <g id="C" display="none">
-                            <path display="inline" fill="none" stroke="#ffffff" stroke-width="12" stroke-miterlimit="10" d="M440.5,745.5l106-110h217 M544.5,100.5l2,535 M440.5,204.5h213v157l110-99v-162h-219L440.5,204.5v541h212l111-110v-152l-109,103l-2,159 M763.5,100.5 l-110,104"/>
+                            <path display="inline" fill="none" stroke="#27f22c" stroke-width="12" stroke-miterlimit="10" d="M440.5,745.5l106-110h217 M544.5,100.5l2,535 M440.5,204.5h213v157l110-99v-162h-219L440.5,204.5v541h212l111-110v-152l-109,103l-2,159 M763.5,100.5 l-110,104"/>
                         </g>
                     </svg>
                 </div>

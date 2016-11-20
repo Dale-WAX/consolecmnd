@@ -4,19 +4,19 @@ class Page extends SiteTree {
 	private static $db = array(
 	);
 
-	private static $has_one = array (
-        'HeaderPhoto' => 'Image'
-    );
+	// private static $has_one = array (
+ //        'HeaderPhoto' => 'Image'
+ //    );
     
-    public function getCMSFields() {
-        $fields = parent::getCMSFields();
-        $fields->addFieldToTab('Root.Main', $photo = UploadField::create('HeaderPhoto', 'Header Image'), 'Content');
+    // public function getCMSFields() {
+    //     $fields = parent::getCMSFields();
+    //     $fields->addFieldToTab('Root.Main', $photo = UploadField::create('HeaderPhoto', 'Header Image'), 'Content');
         
-        $photo->getValidator()->setAllowedExtensions(array('png','gif','jpg','jpeg'));
-        $photo->setFolderName('header-photos');
+    //     $photo->getValidator()->setAllowedExtensions(array('png','gif','jpg','jpeg'));
+    //     $photo->setFolderName('header-photos');
 
-        return $fields;
-    }
+    //     return $fields;
+    // }
 
 }
 class Page_Controller extends ContentController {

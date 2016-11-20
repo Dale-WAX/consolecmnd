@@ -14,40 +14,26 @@
 							<div class="panel-text">
 								<div>$Content</div>
 							</div>
-							<div class="row collapse">
-							
-							<% if $Ads %>
-								<% loop $Ads %>
-									<div class="medium-12 columns">
-										<div class="bannerAd">
-											<h3>$Name</h3>
-											<div class="row collapse" data-equalizer>
-												<div class="bigbox" data-equalizer-watch>
-													<iframe id="$FileName-iframe" width="$width" height="$height" src="$Files.Filename"></iframe>
-												</div>
-												<div class="bigbox desc" data-equalizer-watch>
-													<% if $Description %>
-														<p>$Description</p>
-													<% end_if %>
-									        		<a id="$FileName-replay" class="replay-btn" href="javascript:void(0);" onclick="replay(this.id);">Replay</a>
-												</div>
-											</div>
-										</div>
-									</div>
-									<% if not $Last %><hr /><% end_if %>
-								<% end_loop %>
-							<% end_if %>
+							<div class="gallery">
 
-							<% if $GalleryImage %>
-								<div class="gallery">
-									<% loop $GalleryImage %>
-										<img src="$URL" alt="$Title" />
+								<% if $Image %>
+									<img src="$URL" alt="$Title" />
+								<% end_if %>
+
+								<% if $Ads %>
+									<% loop $Ads %>
+										<% if $Image %>
+											$Image
+										<% end_if %>
+										<h2>$Name</h2>
+										<p>$Description.FirstParagraph</p>
+										<% if not $Last %><hr /><% end_if %>
 									<% end_loop %>
-								</div>
-							<% end_if %>
+								<% end_if %>
+							</div>
 						</div>
+						<p class="project-count"><span>Project $CurrentPageNumber / $NumberOfSiblings</span></p>
 					</div>
-					<p class="project-count"><span>Project $CurrentPageNumber / $NumberOfSiblings</span></p>
 					<div class="row" data-equalizer>
 						<div class="small-6 columns">
 							<% control PrevNextPage(prev) %>
