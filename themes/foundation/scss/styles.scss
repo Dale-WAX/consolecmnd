@@ -139,6 +139,9 @@ hr {
 .clear {
     clear: both;
 }
+pre {
+    white-space: normal;
+}
 .row.bodyContent {
     table {
         width: 100%;
@@ -307,6 +310,18 @@ hr {
         }
     }
     .bannerAd {
+        iframe {
+            margin-left: -26px;
+            @media only screen and (min-width: 340px) {
+                margin-left: -16px;
+            }     
+            @media only screen and (min-width: 360px) {
+                margin-left: -6px;
+            }             
+            @media only screen and (min-width: 370px) {
+                margin-left: 0px;
+            }            
+        }
         .replay-btn {
             border-bottom: 1px solid black;
             text-transform: uppercase;
@@ -316,6 +331,8 @@ hr {
             transition: .15s ease;
             font-size: 19px;
             bottom: 0;
+            margin-top: 10px;
+            display: inline-block;            
             @media only screen and (min-width: 1025px) {
                 position: absolute;
             }            
@@ -327,7 +344,6 @@ hr {
             }
         } 
         .bigbox {
-            border: 1px solid red;
             display: inline-block;
             position: inherit;
             @media only screen and (min-width: 1025px) {
@@ -335,7 +351,6 @@ hr {
                 float: left;
             }
             &.desc {
-                border: 1px solid blue;
                 display: block;
                 position: relative;
                 width: 100%;
@@ -343,6 +358,24 @@ hr {
                     width: 40%;
                     margin-left: 10px;
                 }
+                p {
+                margin: 0;
+                }
+            }
+        }
+        .leaderboard-note {
+            display: block;
+            @media only screen and (min-width: 1245px) {
+                display: none;
+            }
+        }
+        .leaderboard {
+            display: none;
+            @media only screen and (min-width: 1245px) {
+                display: block;
+            }
+            .replay-btn {
+                position: relative;
             }
         }
 
@@ -426,8 +459,6 @@ hr {
             z-index: 1;
             text-transform: uppercase;
             padding: 20px;
-            letter-spacing: -1px;
-
             font-size: 15px;
             bottom: -25px;
             margin: 0;
@@ -487,14 +518,14 @@ hr {
         }
         .grid-item {
             h2 {
-                font-size: 25px;
+                
             }        
         }        
     }
     @media only screen and (min-width: 1250px) {
         .grid-item {
             h2 {
-                font-size: 35px;
+                
             }
             h2, p {
                 padding: 30px;
@@ -551,10 +582,15 @@ hr {
                     display: inline-block;
                 }
             }
+            .ads {
+                display: inline-block;
+                margin-bottom: 50px;
+            }
             .gallery {
                 margin-top: 0;
+                display: inline-block;
                 @media only screen and (min-width: 640px) {
-                    margin-top: 80px;
+                    /*margin-top: 80px;*/
                 }
                 img {
                     margin: 10px 0;
@@ -568,6 +604,9 @@ hr {
                     &:last-child {
                         margin-bottom: 0;
                     }
+                }
+                h3 {
+                    margin: 20px 0 0 0;
                 }
             }
             &#info-panel {
@@ -698,7 +737,7 @@ hr {
         font-weight: 900;
     }
 }
-
+/*
 @supports (initial-letter: 4) or (-webkit-initial-letter: 4) {
 
     p::first-letter {
@@ -711,7 +750,7 @@ hr {
     }
 
 }
-
+*/
 .footer {
     position: fixed;
     bottom: 0;
@@ -944,16 +983,21 @@ hr {
         a {
             font-family: $formata;
             font-weight: 600;
-            text-transform: uppercase;
-            color: white;
-            padding: 15px 0px;
             font-size: 4vh;
-            width: 100%;
+            text-transform: uppercase;
             text-decoration: none;
+            color: #fff !important;
+            padding: 15px 0px;
+            width: 100%;
             display: block;
             text-align: center;
+            background: none;
+            background-size: 0 !important;
+            background-repeat: no-repeat,no-repeat,repeat-x !important;
+            text-shadow: none !important;
+            background-position: inherit;
             &:hover {
-                border-bottom: 27px solid black;
+                border-bottom: 27px solid $black;
             }
         }
     }

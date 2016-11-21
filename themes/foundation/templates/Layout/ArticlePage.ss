@@ -17,7 +17,9 @@
 							<div class="row collapse">
 							
 							<% if $Ads %>
+								<div class="ads">
 								<% loop $Ads %>
+								<%if $width <= 700 %>
 									<div class="medium-12 columns">
 										<div class="bannerAd">
 											<h3>$Name</h3>
@@ -34,13 +36,36 @@
 											</div>
 										</div>
 									</div>
-									<% if not $Last %><hr /><% end_if %>
+									<% else %>
+									<div class="medium-12 columns">
+										<div class="bannerAd">
+											<h3>$Name</h3>
+											<div class="row collapse">
+												<div class="leaderboard-note">
+													<pre><span>Leaderboard ad available at larger screen sizes. (1245px)</pre>
+												</div>
+												<div class="leaderboard">
+													<iframe id="$FileName-iframe" width="$width" height="$height" src="$Files.Filename"></iframe>
+												</div>
+												<div class="leaderboard desc">
+													<% if $Description %>
+														<p>$Description</p>
+													<% end_if %>
+									        		<a id="$FileName-replay" class="replay-btn" href="javascript:void(0);" onclick="replay(this.id);">Replay</a>
+												</div>
+											</div>
+										</div>
+									</div>									
+								<% end_if %>		
+								<% if not $Last %><hr /><% end_if %>
 								<% end_loop %>
+								</div>
 							<% end_if %>
 
 							<% if $GalleryImage %>
 								<div class="gallery">
 									<% loop $GalleryImage %>
+										<h3>$Title</h3>
 										<img src="$URL" alt="$Title" />
 									<% end_loop %>
 								</div>

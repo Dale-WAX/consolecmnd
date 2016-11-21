@@ -34,7 +34,7 @@ class Ad extends DataObject {
 			TextField::create('FileName'),
 			TextField::create('width'),
 			TextField::create('height'),
-			TextareaField::create('Description'),
+			HtmlEditorField::create('Description'),
 			$uploader = UploadField::create('Image'),
 			$adField = UploadField::create('Files')
 		);
