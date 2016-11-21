@@ -212,7 +212,12 @@ pre {
     @media only screen and (min-width: 641px) {
       #container .project-info {
         margin-top: 90px;
-        display: block; } }
+        display: block; }
+        #container .project-info p {
+          text-transform: uppercase;
+          font-family: formata-condensed, sans-serif;
+          font-size: 13px;
+          letter-spacing: 1px; } }
   #container .project-count {
     font-family: formata-condensed, sans-serif;
     color: #000;

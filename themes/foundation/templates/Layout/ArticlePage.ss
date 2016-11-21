@@ -1,8 +1,8 @@
             <div class="row">
 				<div class="medium-3 columns">
 					<div class="project-info">
-						<p class="project-count"><em>$Date.Format('Y')</em></p>
-						<p class="project-count"><span>Tags<br /><% loop $Categories %>$Title<% if not $Last %>, <% end_if %><% end_loop %></span></p>
+						<p><span>Created</span><br />$Date.Format('Y')</p>
+						<p><span>Tags</span><br /><% loop $Categories %>$Title<% if not $Last %>, <% end_if %><% end_loop %></p>
 					</div>
 				</div>
 				<div class="medium-9 columns">
@@ -42,7 +42,7 @@
 											<h3>$Name</h3>
 											<div class="row collapse">
 												<div class="leaderboard-note">
-													<pre><span>Leaderboard ad available at larger screen sizes. (1245px)</pre>
+													<pre><span>Leaderboard ad available at larger browser sizes. (1245px)</pre>
 												</div>
 												<div class="leaderboard">
 													<iframe id="$FileName-iframe" width="$width" height="$height" src="$Files.Filename"></iframe>

@@ -293,6 +293,15 @@ pre {
         @media only screen and (min-width: 641px) {
             margin-top: 90px;
             display: block;
+            p {
+                text-transform: uppercase;
+                font-family: formata-condensed, sans-serif;
+                font-size: 13px;
+                letter-spacing: 1px;
+                span {
+                    
+                }
+            }
         }
     }
     .project-count {
