@@ -140,7 +140,6 @@ pre {
 **********************/
 #main.main-wrapper {
   position: relative;
-  height: initial;
   margin-bottom: 430px; }
 
 .ArticleHolder #container, .HomePage #container {
@@ -818,7 +817,7 @@ pre {
       margin: 20px 11px;
       font-size: 13px; } }
   .langSelect li {
-    display: initial; }
+    display: inline; }
     .langSelect li:first-child {
       margin-right: 3px; }
     .langSelect li a {

@@ -196,7 +196,7 @@ pre {
 
 #main.main-wrapper {
     position: relative;
-    height: initial;
+    
     margin-bottom: 430px;
 }
 
@@ -1070,7 +1070,7 @@ pre {
         font-size: 13px;
     }
     li {
-        display: initial;
+        display: inline;
             &:first-child {
                 margin-right: 3px;
             }
