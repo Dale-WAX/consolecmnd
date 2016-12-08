@@ -2,10 +2,11 @@
 	<footer class="footer" role="contentinfo">
 	
 		<div class="row">
-			<div class="large-3 columns">
-				<h1>CNMD Projects</h1>
+			<div class="show-for-large-up large-3 columns">
+				<img src="$ThemeDir/images/console-cmnd-bud.svg" />
 			</div>
 			<div class="large-9 columns">
+				<h1>Other CMND Projects</h1>
 				<% loop Menu(1) %>
 					<% if $Children %>
 					<ul>
@@ -28,34 +29,36 @@
 			</div>
 		</div>
 
-		<div class="row social-copy">
-			<div class="medium-6 columns">
-				<ul>
-					<% with $SiteConfig %>
-						<% if $TwitterLink %>
-						<li>
-							<a href="$TwitterLink" target="_blank">
-								<i class="fa fa-twitter fa-inverse"></i>
-								@fatwreck
-							</a>
-						</li>
-						<% end_if %>
+		<div class="center-footer">
+			<div class="row social-copy">
+				<div class="small-6 columns">
+					<ul>
+						<% with $SiteConfig %>
+							<% if $TwitterLink %>
+							<li>
+								<a href="$TwitterLink" target="_blank">
+									<i class="fa fa-twitter fa-inverse"></i>
+									@fatwreck
+								</a>
+							</li>
+							<% end_if %>
 
-						<% if $EmailLink %>
-						<li>
-							<a href="$EmailLink">
-								<i class="fa fa-envelope fa-inverse"></i>
-								Email
-							</a>
-						</li>
-						<% end_if %>
-					<% end_with %>
-				</ul>
+							<% if $EmailLink %>
+							<li>
+								<a href="$EmailLink">
+									<i class="fa fa-envelope fa-inverse"></i>
+									Email
+								</a>
+							</li>
+							<% end_if %>
+						<% end_with %>
+					</ul>
+				</div>
+				<div class="small-6 columns">
+					<p class="legal">&copy Copyright $SiteConfig.Title</p>
+				</div>
 			</div>
-			<div class="medium-6 columns">
-				<p class="legal">&copy Copyright $SiteConfig.Title</p>
-			</div>
-		</div>	
+		</div>
 	</footer>
 	
 
