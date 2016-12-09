@@ -105,7 +105,7 @@ if (secondLevelLocation == 'work') {
     $('.panel').each(function () {
         var itemHeight = $(this).height(),
             itemTop = $(this).offset().top,
-            itemBot = itemTop + itemHeight;
+            itemBot = itemTop + itemHeight - 35;
 
         if (winScrPos + winHeight > itemBot + itemTop) {
             $('.dropbtn.bottom').addClass('stick').css({'top': itemBot});

@@ -51,10 +51,14 @@ $white: #fff;
 $black: #3d3d3d;
 $l-black: rgba(0,0,0,.7);
 $red: rgb(234, 67, 53);
+$grey: #767676;
 
 $pink: #ffc8b8;
 $purple: #7B63F1;
+$purple2: #6948f3;
 $green: #27f22c;
+$yellow: #ffd900;
+$greyblue: #394951;
 
 /**********************
        STANDARDS
@@ -89,7 +93,7 @@ body {
             font-size: 1rem;
             color: $black;
         }        
-    }    
+    }
 }
 
 h1, h2, h3, h4, .top-bar-section ul li:not(.has-form) a:not(.button), .top-bar-section ul li.active:not(.has-form) a:not(.button) {
@@ -196,8 +200,13 @@ pre {
 
 #main.main-wrapper {
     position: relative;
-    
-    margin-bottom: 430px;
+    padding-bottom: 430px;
+    #container {
+        /*
+        bottom: 430px;
+        position: relative;
+        */
+    }
 }
 
 .ArticleHolder, .HomePage {
@@ -425,18 +434,13 @@ pre {
                 height: inherit !important;
             }
             iframe {
-                
                 html.iframe-video {
-                border: 1px solid red;
                     position: relative !important;
                     width: initial !important;
                     height: initial !important;
                     display: inline-block !important;
                     vertical-align: baseline !important;
                     left: -25% !important;
-                }
-                .iframe-video-container.iframe-video-container-measurements {
-                    border: 1px solid red;
                 }
             }
             .gfyVid {
@@ -840,10 +844,13 @@ pre {
                 color: $white;
                 font-weight: bold;
                 transition: .15s ease;
-                    border-bottom: 0px solid $black;
+                border-bottom: 0px solid $black;
                 &:hover {
                     border-bottom: 6px solid $white;
                 }
+                @media only screen and (min-width: 641px) {
+                    letter-spacing: 1px;
+                }                
             }
             &.divider {
                 margin: 0 10px;
@@ -854,6 +861,8 @@ pre {
         }
     }
     .social-copy {
+        position: relative;
+        z-index: 1;
         p {
             color: $white;
             font-family: $formata;
@@ -863,10 +872,7 @@ pre {
         ul {
             margin: 0;
             line-height: 1;
-            text-align: left;
-            @media only screen and (min-width: 1025px) {
-                
-            }            
+            text-align: left;           
             li {
                 margin: 0 10px;
                 font-size: 10px;
@@ -887,6 +893,8 @@ pre {
         .legal {
             text-align: right;
             font-size: 10px;
+            color: $grey;
+
             @media only screen and (min-width: 641px) {
                 margin-right: 10px;
                 font-size: 12px;
@@ -906,8 +914,12 @@ pre {
 
 .logo {
     img {
-        width: 160px;
+        width: 140px;
         min-width: 130px;
+        @media only screen and (min-width: 641px) {
+            width: 160px;
+            min-width: 130px;
+        }        
     }
 }
 .dropbtn {
