@@ -102,26 +102,27 @@ if (secondLevelLocation == 'work') {
 
 
     // STOP MOBILE BUTTON AT BOTTOM OF MAIN PANEL
-    $('.panel').each(function () {
-        var itemHeight = $(this).height(),
-            itemTop = $(this).offset().top,
-            itemBot = itemTop + itemHeight - 35;
+    // if (screen.width > 640) {
+      $('.panel').each(function () {
+          var itemHeight = $(this).height(),
+              itemTop = $(this).offset().top,
+              itemBot = itemTop + itemHeight - 35;
 
-        if (winScrPos + winHeight > itemBot + itemTop) {
-            $('.dropbtn.bottom').addClass('stick').css({'top': itemBot});
-        } else if (winScrPos + winHeight < itemBot + itemTop) {
-            $('.dropbtn.bottom').removeClass('stick').css({'top': 'inherit'});
-        }
+          if (winScrPos + winHeight > itemBot + itemTop) {
+              $('.dropbtn.bottom').addClass('stick').css({'top': itemBot});
+          } else if (winScrPos + winHeight < itemBot + itemTop) {
+              $('.dropbtn.bottom').removeClass('stick').css({'top': 'inherit'});
+          }
 
-        // MOVE BUTTON UP ON SCROLL
-        if (winScrPos >= 80) {
-          $('.dropdown button.right').css({"top": "30px"});
-        } else {
-          $('.dropdown button.right').css({"top": "85px"});
-        }
-        // console.log(winScrPos, winHeight, itemBot, itemTop, itemHeight);
-    });
-
+          // MOVE BUTTON UP ON SCROLL
+          if (winScrPos >= 80) {
+            $('.dropdown button.right').css({"top": "30px"});
+          } else {
+            $('.dropdown button.right').css({"top": "85px"});
+          }
+          // console.log(winScrPos, winHeight, itemBot, itemTop, itemHeight);
+      })
+    // };
 });
 
 
