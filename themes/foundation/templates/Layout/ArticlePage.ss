@@ -1,7 +1,7 @@
             <div class="row">
 				<div class="medium-3 columns">
 					<div class="project-info">
-						<p><span>Created</span><br />$Date.Format('Y')</p>
+						<p><span>Created</span><br />$Date.Month, $Date.Year</p>
 						<p><span>Tags</span><br /><% loop $Categories %>$Title<% if not $Last %>, <% end_if %><% end_loop %></p>
 					</div>
 				</div>
@@ -18,14 +18,14 @@
 							
 							<% if $Ads %>
 								<div class="ads">
-								<% loop $Ads %>
-								<%if $width <= 700 %>
+								<% loop $Ads.Sort(Date, DESC) %>
+								<%if $AdWidth <= 700 %>
 									<div class="medium-12 columns">
 										<div class="bannerAd">
 											<h3>$Name</h3>
 											<div class="row collapse" data-equalizer>
 												<div class="bigbox" data-equalizer-watch>
-													<iframe id="$FileName-iframe" width="$width" height="$height" src="$Files.Filename"></iframe>
+													<iframe id="$FileName-iframe" width="$AdWidth" height="$AdHeight" src="$Files.Filename"></iframe>
 												</div>
 												<div class="bigbox desc" data-equalizer-watch>
 													<% if $Description %>
@@ -45,7 +45,7 @@
 													<pre><span>Leaderboard ad available at larger browser sizes. (1245px)</pre>
 												</div>
 												<div class="leaderboard">
-													<iframe id="$FileName-iframe" width="$width" height="$height" src="$Files.Filename"></iframe>
+													<iframe id="$FileName-iframe" width="$AdWidth" height="$AdHeight" src="$Files.Filename"></iframe>
 												</div>
 												<div class="leaderboard desc">
 													<% if $Description %>

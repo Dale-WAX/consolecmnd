@@ -140,12 +140,8 @@ pre {
 **********************/
 #main.main-wrapper {
   position: relative;
-  padding-bottom: 430px; }
-  #main.main-wrapper #container {
-    /*
-    bottom: 430px;
-    position: relative;
-    */ }
+  padding-bottom: 430px;
+  z-index: 0; }
 
 .ArticleHolder #container, .HomePage #container {
   background-color: #ffc8b8;
@@ -564,7 +560,7 @@ pre {
 */
 .center-footer {
   width: 100%;
-  height: 30px;
+  height: 40px;
   position: absolute;
   bottom: 0; }
 
@@ -574,7 +570,7 @@ pre {
   left: 0;
   width: 100%;
   z-index: -1;
-  padding: 30px 0;
+  padding: 60px 0;
   height: 430px;
   text-transform: uppercase;
   font-size: 1.2em;
@@ -700,7 +696,7 @@ pre {
 .dropbtn {
   background-color: transparent;
   color: #3d3d3d;
-  padding: 26px 16px;
+  padding: 27px 14px;
   font-size: 24px;
   border: none;
   cursor: pointer;
@@ -718,8 +714,8 @@ pre {
   .dropdown button {
     margin: 0;
     border-radius: 70px 70px;
-    width: 56px;
-    height: 56px;
+    width: 54px;
+    height: 54px;
     text-align: center;
     background-color: black;
     transition-timing-function: ease-out;
@@ -732,7 +728,8 @@ pre {
     .dropdown button.right {
       top: 85px;
       transform: scale(0);
-      position: fixed; }
+      position: fixed;
+      display: block; }
       @media only screen and (min-width: 641px) {
         .dropdown button.right {
           transition-timing-function: ease-out;
@@ -741,7 +738,8 @@ pre {
     .dropdown button.bottom {
       bottom: 25px;
       transform: scale(1);
-      position: fixed; }
+      position: fixed;
+      display: block; }
       .dropdown button.bottom.stick {
         position: absolute; }
       @media only screen and (min-width: 641px) {
@@ -1246,3 +1244,5 @@ button, .button {
 /****************************
         MEDIA QUERIES
 ****************************/
+
+/*# sourceMappingURL=styles.css.map */

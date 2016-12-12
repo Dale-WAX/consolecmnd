@@ -12,17 +12,14 @@
                                 <div>$Content</div>
                                 <div class="login">$Form</div>
                             </div>
-                            <div class="gallery">
-                                <% if $GalleryImage %>
+                            <% if $GalleryImage %>
+                                <div class="gallery">
                                     <% loop $GalleryImage %>
+                                        <h3>$Title</h3>
                                         <img src="$URL" alt="$Title" />
                                     <% end_loop %>
-                                <% end_if %>
-                            </div>
+                                </div>
+                            <% end_if %>
                         </div>
                     </div>
                 </div>
-            </div>
-
-    
-            

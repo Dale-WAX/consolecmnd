@@ -57,6 +57,7 @@ $pink: #ffc8b8;
 $purple: #7B63F1;
 $purple2: #6948f3;
 $green: #27f22c;
+$mint: #81E5C9;
 $yellow: #ffd900;
 $greyblue: #394951;
 
@@ -201,12 +202,7 @@ pre {
 #main.main-wrapper {
     position: relative;
     padding-bottom: 430px;
-    #container {
-        /*
-        bottom: 430px;
-        position: relative;
-        */
-    }
+    z-index: 0;
 }
 
 .ArticleHolder, .HomePage {
@@ -272,7 +268,7 @@ pre {
         }
     }
     &.info-palette {
-        background-color: #81E5C9;
+        background-color: $mint;
         color: #000;
         a {
             color: #1A1A1A;
@@ -766,7 +762,7 @@ pre {
 */
 .center-footer {
     width: 100%;
-    height: 30px;
+    height: 40px;
     position: absolute;
     bottom: 0;
 }
@@ -776,7 +772,7 @@ pre {
     left: 0;
     width: 100%;
     z-index: -1;
-    padding: 30px 0;
+    padding: 60px 0;
     height: 430px;
     text-transform: uppercase;
     font-size: 1.2em;
@@ -925,7 +921,7 @@ pre {
 .dropbtn {
     background-color: transparent;
     color: $black;
-    padding: 26px 16px;
+    padding: 27px 14px;
     font-size: 24px;
     border: none;
     cursor: pointer;
@@ -944,8 +940,8 @@ pre {
     button {
         margin: 0;
         border-radius: 70px 70px;
-        width: 56px;
-        height: 56px;
+        width: 54px;
+        height: 54px;
         text-align: center;
         background-color: rgba(0, 0, 0, 1);
         transition-timing-function: ease-out;
@@ -962,6 +958,7 @@ pre {
             top: 85px;
             transform: scale(0);
             position: fixed;
+            display: block;
             @media only screen and (min-width: 641px) {
                 transition-timing-function: ease-out;
                 transition: 0.25s;
@@ -972,6 +969,7 @@ pre {
             bottom: 25px;
             transform: scale(1);
             position: fixed;
+            display: block;
             &.stick {
                 position: absolute;
             }

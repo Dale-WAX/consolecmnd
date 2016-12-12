@@ -5,9 +5,10 @@ class Ad extends DataObject {
 	private static $db = array(
 		'Name' => 'VarChar',
 		'FileName' => 'VarChar',
-		'width' => 'VarChar',
-		'height' => 'VarChar',
+		'AdWidth' => 'VarChar',
+		'AdHeight' => 'VarChar',
 		'Description' => 'HTMLText',
+		'Date' => 'Date',
 	);
 
 	private static $has_one = array(
@@ -25,6 +26,9 @@ class Ad extends DataObject {
 		'Image.CMSThumbnail' => 'Thumbnail',
 		'Name' => 'Name of Ad',
 		'Description' => 'Description',
+		'Date' => 'Date',
+		'AdWidth' => 'Width',
+		'AdHeight' => 'Height'
 	);
 
 	public function getCMSFields() {
@@ -32,8 +36,9 @@ class Ad extends DataObject {
 		$fields = FieldList::create(
 			TextField::create('Name'),
 			TextField::create('FileName'),
-			TextField::create('width'),
-			TextField::create('height'),
+			TextField::create('AdWidth'),
+			TextField::create('AdHeight'),
+			DateField::create('Date', 'Date of Article')->setConfig('showcalendar', true),
 			HtmlEditorField::create('Description'),
 			$uploader = UploadField::create('Image'),
 			$adField = UploadField::create('Files')
