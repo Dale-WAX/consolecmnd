@@ -6,7 +6,7 @@
 					<div class="main-panel">
 						<div class="panel" id="info-panel">
 							<div class="grid">
-								<% loop $AllChildren %>
+								<% loop $Children %>
 									
 									<div class="grid-item small-12 medium-6 large-4 columns">
 									<a href="$Link">

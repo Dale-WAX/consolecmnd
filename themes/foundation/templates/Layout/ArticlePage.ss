@@ -2,6 +2,9 @@
 				<div class="medium-3 columns">
 					<div class="project-info">
 						<p><span>Created</span><br />$Date.Month, $Date.Year</p>
+						<% if $URL %>
+						<p><span>URL</span><br /><a href="http://$URL" target="_blank">$URL</a></p>
+						<% end_if %>
 						<p><span>Tags</span><br /><% loop $Categories %>$Title<% if not $Last %>, <% end_if %><% end_loop %></p>
 					</div>
 				</div>
@@ -77,7 +80,7 @@
 						<div class="small-6 columns">
 							<% control PrevNextPage(prev) %>
 								<div class="prev-next-link prev" data-equalizer-watch>
-									<a href="$Link" title="Go to $Title">Previous Project<br /><span>- $Title</span></a>   
+									<a href="$Link" title="Go to $Title">Previous Project<br /><span>$Title</span></a>   
 								</div>
 							<% end_control %>
 						</div>
@@ -85,7 +88,7 @@
 						<div class="small-6 columns">	
 							<% control PrevNextPage(next) %> 
 								<div class="prev-next-link next" data-equalizer-watch>
-									<a href="$Link" title="Go to $Title">Next Project<br /><span>$Title -</span></a>
+									<a href="$Link" title="Go to $Title">Next Project<br /><span>$Title</span></a>
 								</div>
 							<% end_control %>
 						</div>	
