@@ -48,6 +48,9 @@ if ($('body').hasClass('ArticlePage')) {
 	$('#container').addClass('info-palette');
 };
 
+if ($('body').hasClass('ArticleHolder')) {
+  $('#container').addClass('work-palette light');
+};
 
 // GET URL PATH
 var pathArray = window.location.pathname.split( '/' );
@@ -61,7 +64,7 @@ if (secondLevelLocation == 'about') {
 }
 
 if (secondLevelLocation == 'work') {
-    $('#container').addClass('work-palette light');
+    // $('#container').addClass('work-palette light');
     $(".bg-shapes div svg").attr("class", "icon work-stroke");
 }
 

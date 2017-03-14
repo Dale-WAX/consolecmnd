@@ -1,22 +1,17 @@
 /*
-Error: File to import not found or unreadable: compass/css3.
-       Load path: /Users/Dale/Documents/sandbox/consolecmnd/cms/scss
-        on line 13 of /Users/Dale/Documents/sandbox/consolecmnd/cms/scss/screen.scss
+Error: File to import not found or unreadable: foundation.
+       Load path: /Users/Dale/Documents/sandbox/consolecmnd/themes/foundation/scss
+        on line 2 of /Users/Dale/Documents/sandbox/consolecmnd/themes/foundation/scss/editor.scss
 
-8:  *\/
-9: 
-10: /** -----------------------------
-11:  * Core Compass Libraries
-12:  * ------------------------------ *\/
-13: @import "compass/css3";
-14: @import "compass/utilities/sprites/sprite-img";
-15: @import "compass/utilities/general";
-16: 
-17: /** -----------------------------
-18:  * CMS Components
+1: @import "settings";
+2: @import "foundation";
+3: 
+4: .typography {
+5:     padding: 18px 20px;
+6: }
 
 Backtrace:
-/Users/Dale/Documents/sandbox/consolecmnd/cms/scss/screen.scss:13
+/Users/Dale/Documents/sandbox/consolecmnd/themes/foundation/scss/editor.scss:2
 /Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.9/lib/sass/tree/import_node.rb:66:in `rescue in import'
 /Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.9/lib/sass/tree/import_node.rb:45:in `import'
 /Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.9/lib/sass/tree/import_node.rb:28:in `imported_file'
@@ -53,4 +48,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: File to import not found or unreadable: compass/css3.\A        Load path: /Users/Dale/Documents/sandbox/consolecmnd/cms/scss\A         on line 13 of /Users/Dale/Documents/sandbox/consolecmnd/cms/scss/screen.scss\A \A 8:  */\A 9: \A 10: /** -----------------------------\A 11:  * Core Compass Libraries\A 12:  * ------------------------------ */\A 13: @import \"compass/css3\";\A 14: @import \"compass/utilities/sprites/sprite-img\";\A 15: @import \"compass/utilities/general\";\A 16: \A 17: /** -----------------------------\A 18:  * CMS Components"; }
+  content: "Error: File to import not found or unreadable: foundation.\A        Load path: /Users/Dale/Documents/sandbox/consolecmnd/themes/foundation/scss\A         on line 2 of /Users/Dale/Documents/sandbox/consolecmnd/themes/foundation/scss/editor.scss\A \A 1: @import \"settings\";\A 2: @import \"foundation\";\A 3: \A 4: .typography {\A 5:     padding: 18px 20px;\A 6: }"; }

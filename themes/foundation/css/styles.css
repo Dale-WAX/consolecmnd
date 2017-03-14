@@ -61,7 +61,7 @@ body {
 
 h1, h2, h3, h4, .top-bar-section ul li:not(.has-form) a:not(.button), .top-bar-section ul li.active:not(.has-form) a:not(.button) {
   font-family: formata-condensed, sans-serif;
-  font-weight: 400;
+  font-weight: 600;
   color: #3d3d3d; }
 
 p {
@@ -160,7 +160,7 @@ pre {
   box-shadow: 0 1px 13px -2px black; }
 
 .HomePage #container {
-  background-color: #fff; }
+  background-image: linear-gradient(-225deg, #20E2D7 0%, #F9FEA5 100%); }
 
 #container {
   background-color: #fff;
@@ -188,22 +188,25 @@ pre {
   #container.dark .logo .light {
     display: none; }
   #container.info-palette {
-    background-color: #81E5C9;
+    background-image: linear-gradient(-225deg, #B7F8DB 0%, #50A7C2 100%);
     color: #000; }
     #container.info-palette a {
       color: #1A1A1A;
-      background: linear-gradient(#ffc8b8, #ffc8b8), linear-gradient(#ffc8b8, #ffc8b8), linear-gradient(#3d3d3d, #3d3d3d);
+      /*
+      background: linear-gradient($pink,$pink),linear-gradient($pink,$pink),linear-gradient($black,$black);
       background-size: .05em 1px,.05em 1px,1px 1px;
       background-repeat: no-repeat,no-repeat,repeat-x;
-      text-shadow: 0.03em 0 #ffc8b8, -0.03em 0 #ffc8b8, 0 0.03em #ffc8b8, 0 -0.03em #ffc8b8, 0.06em 0 #ffc8b8, -0.06em 0 #ffc8b8, 0.09em 0 #ffc8b8, -0.09em 0 #ffc8b8, 0.12em 0 #ffc8b8, -0.12em 0 #ffc8b8, 0.15em 0 #ffc8b8, -0.15em 0 #ffc8b8;
-      background-position: 0 95%,100% 95%,0 95%; }
+      text-shadow: .03em 0 $pink,-.03em 0 $pink,0 .03em $pink,0 -.03em $pink,.06em 0 $pink,-.06em 0 $pink,.09em 0 $pink,-.09em 0 $pink,.12em 0 $pink,-.12em 0 $pink,.15em 0 $pink,-.15em 0 $pink;
+      background-position: 0 95%,100% 95%,0 95%;
+      */ }
   #container.about-palette {
-    background-color: #333;
-    color: #fff; }
+    background-image: linear-gradient(-20deg, #d558c8 0%, #24d292 100%); }
     #container.about-palette #info-panel {
       border: 6px solid #7B63F1 !important; }
+      #container.about-palette #info-panel h1 {
+        color: #3e3636 !important; }
   #container.work-palette {
-    background-color: #ffc8b8;
+    background-image: linear-gradient(45deg, #8baaaa 0%, #ae8b9c 100%);
     color: #3d3d3d; }
     #container.work-palette #info-panel {
       border: none; }
@@ -395,7 +398,7 @@ pre {
     #container .main-panel .panel {
       padding-left: 20px;
       padding-right: 20px;
-      min-height: 20vh;
+      min-height: 83vh;
       background-color: transparent; }
       @media only screen and (min-width: 480px) {
         #container .main-panel .panel {
@@ -1244,5 +1247,3 @@ button, .button {
 /****************************
         MEDIA QUERIES
 ****************************/
-
-/*# sourceMappingURL=styles.css.map */

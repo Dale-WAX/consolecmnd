@@ -51,6 +51,7 @@ $white: #fff;
 $black: #3d3d3d;
 $l-black: rgba(0,0,0,.7);
 $red: rgb(234, 67, 53);
+$darkred: #3e3636;
 $grey: #767676;
 
 $pink: #ffc8b8;
@@ -99,7 +100,7 @@ body {
 
 h1, h2, h3, h4, .top-bar-section ul li:not(.has-form) a:not(.button), .top-bar-section ul li.active:not(.has-form) a:not(.button) {
     font-family: $formata;
-    font-weight: 400;
+    font-weight: 600;
     color: $black;
     
 }
@@ -236,7 +237,7 @@ pre {
 }
 .HomePage {
     #container {
-        background-color: $white;
+        background-image: linear-gradient(-225deg, #20E2D7 0%, #F9FEA5 100%);
     }
 }
 #container {
@@ -268,26 +269,30 @@ pre {
         }
     }
     &.info-palette {
-        background-color: $mint;
+        background-image: linear-gradient(-225deg, #B7F8DB 0%, #50A7C2 100%);
         color: #000;
         a {
             color: #1A1A1A;
+            /*
             background: linear-gradient($pink,$pink),linear-gradient($pink,$pink),linear-gradient($black,$black);
             background-size: .05em 1px,.05em 1px,1px 1px;
             background-repeat: no-repeat,no-repeat,repeat-x;
             text-shadow: .03em 0 $pink,-.03em 0 $pink,0 .03em $pink,0 -.03em $pink,.06em 0 $pink,-.06em 0 $pink,.09em 0 $pink,-.09em 0 $pink,.12em 0 $pink,-.12em 0 $pink,.15em 0 $pink,-.15em 0 $pink;
-            background-position: 0 95%,100% 95%,0 95%;        
+            background-position: 0 95%,100% 95%,0 95%;
+            */
         }
     }
     &.about-palette {
-        background-color: #333;
-        color: $white;
+        background-image: linear-gradient(-20deg, #d558c8 0%, #24d292 100%);
         #info-panel {
             border: 6px solid $purple !important;
+            h1 {
+                color: $darkred !important;
+            }
         }
     }
     &.work-palette {
-        background-color: $pink;
+        background-image: linear-gradient(45deg, #8baaaa 0%, #ae8b9c 100%);
         color: $black;
         #info-panel {
             border: none;
@@ -553,7 +558,7 @@ pre {
         .panel {
             padding-left: 20px;
             padding-right: 20px;
-            min-height: 20vh;
+            min-height: 83vh;
             background-color: transparent;
             @media only screen and (min-width: 480px) {
                 padding: 0 80px 80px 80px;
