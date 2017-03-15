@@ -204,7 +204,12 @@ pre {
     padding-bottom: 430px;
     z-index: 0;
 }
-
+.SiteVideo {
+    margin: -1px -20px;
+    @media only screen and (min-width: 480px) {
+        margin: -1px -80px;
+    }
+}
 .ArticleHolder, .HomePage {
     #container {
         background-color: $pink;
@@ -272,10 +277,10 @@ pre {
         color: #000;
         a {
             color: #1A1A1A;
-            background: linear-gradient($pink,$pink),linear-gradient($pink,$pink),linear-gradient($black,$black);
+            background: linear-gradient($yellow,$yellow),linear-gradient($yellow,$yellow),linear-gradient($black,$black);
             background-size: .05em 1px,.05em 1px,1px 1px;
             background-repeat: no-repeat,no-repeat,repeat-x;
-            text-shadow: .03em 0 $pink,-.03em 0 $pink,0 .03em $pink,0 -.03em $pink,.06em 0 $pink,-.06em 0 $pink,.09em 0 $pink,-.09em 0 $pink,.12em 0 $pink,-.12em 0 $pink,.15em 0 $pink,-.15em 0 $pink;
+            text-shadow: .03em 0 $yellow,-.03em 0 $yellow,0 .03em $yellow,0 -.03em $yellow,.06em 0 $yellow,-.06em 0 $yellow,.09em 0 $yellow,-.09em 0 $yellow,.12em 0 $yellow,-.12em 0 $yellow,.15em 0 $yellow,-.15em 0 $yellow;
             background-position: 0 95%,100% 95%,0 95%;        
         }
     }
@@ -287,10 +292,10 @@ pre {
         }
     }
     &.work-palette {
-        background-color: $pink;
+        background-color: $yellow;
         color: $black;
         #info-panel {
-            border: none;
+            border: $green;
         }
     }       
     .project-info {
@@ -553,6 +558,7 @@ pre {
         .panel {
             padding-left: 20px;
             padding-right: 20px;
+            padding-top: 0;
             min-height: 20vh;
             background-color: transparent;
             @media only screen and (min-width: 480px) {

@@ -7,6 +7,8 @@ class ArticlePage extends Page {
 		'Teaser' => 'Text',
 		'GIF' => 'HTMLtext',
 		'URL' => 'Varchar'
+		'SiteVideo' => 'HTMLtext',
+		'SiteURL' => 'HTMLtext',
 	);
 
 	private static $has_one = array (
@@ -33,7 +35,8 @@ class ArticlePage extends Page {
 		$fields->addFieldToTab('Root.Main', TextareaField::create('Teaser'), 'Content');
 		$fields->addFieldToTab('Root.Main', TextField::create('URL'), 'Content');
 		$fields->addFieldToTab('Root.Main', TextField::create('GIF', 'Animated GIF Embed Link'), 'Content');
-        
+		$fields->addFieldToTab('Root.Main', TextField::create('SiteVideo', 'Site demo Video Embed Link'), 'Content');
+		$fields->addFieldToTab('Root.Main', TextField::create('SiteURL', 'URL'), 'Content');
         $fields->addFieldToTab('Root.Main', $Thumbnail = UploadField::create('Thumbnail', 'Thumbnail'), 'Content');
         $Thumbnail->getValidator()->setAllowedExtensions(array('png','gif','jpg','jpeg', 'mp4'));
         $Thumbnail->setFolderName('Thumbnails');    

@@ -5,12 +5,22 @@
 						<% if $URL %>
 						<p><span>URL</span><br /><a href="http://$URL" target="_blank">$URL</a></p>
 						<% end_if %>
+						<% if $Categories %>
 						<p><span>Tags</span><br /><% loop $Categories %>$Title<% if not $Last %>, <% end_if %><% end_loop %></p>
+						<% end_if %>
+						<% if $SiteURL %>
+						<p><span>URL</span><br /><a href="http://$SiteURL" target="_blank">$SiteURL</a></p>
+						<% end_if %>
 					</div>
 				</div>
 				<div class="medium-9 columns">
 					<div class="main-panel">
 						<div class="panel" id="info-panel">
+							<% if $SiteVideo %>
+							<div class="SiteVideo">
+								<div style="position:relative;padding-bottom:75%"><iframe src='$SiteVideo' frameborder="0" scrolling="no" width="100%" height="100%" style="position:absolute;top:0;left:0;" allowfullscreen></iframe></div>
+							</div>
+							<% end_if %>
 							<div class="header section-header info-header">
 								<h1>$Title</h1>
 							</div>

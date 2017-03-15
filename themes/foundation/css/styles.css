@@ -143,6 +143,12 @@ pre {
   padding-bottom: 430px;
   z-index: 0; }
 
+.SiteVideo {
+  margin: -1px -20px; }
+  @media only screen and (min-width: 480px) {
+    .SiteVideo {
+      margin: -1px -80px; } }
+
 .ArticleHolder #container, .HomePage #container {
   background-color: #ffc8b8;
   transition: .15s ease; }
@@ -192,10 +198,10 @@ pre {
     color: #000; }
     #container.info-palette a {
       color: #1A1A1A;
-      background: linear-gradient(#ffc8b8, #ffc8b8), linear-gradient(#ffc8b8, #ffc8b8), linear-gradient(#3d3d3d, #3d3d3d);
+      background: linear-gradient(#ffd900, #ffd900), linear-gradient(#ffd900, #ffd900), linear-gradient(#3d3d3d, #3d3d3d);
       background-size: .05em 1px,.05em 1px,1px 1px;
       background-repeat: no-repeat,no-repeat,repeat-x;
-      text-shadow: 0.03em 0 #ffc8b8, -0.03em 0 #ffc8b8, 0 0.03em #ffc8b8, 0 -0.03em #ffc8b8, 0.06em 0 #ffc8b8, -0.06em 0 #ffc8b8, 0.09em 0 #ffc8b8, -0.09em 0 #ffc8b8, 0.12em 0 #ffc8b8, -0.12em 0 #ffc8b8, 0.15em 0 #ffc8b8, -0.15em 0 #ffc8b8;
+      text-shadow: 0.03em 0 #ffd900, -0.03em 0 #ffd900, 0 0.03em #ffd900, 0 -0.03em #ffd900, 0.06em 0 #ffd900, -0.06em 0 #ffd900, 0.09em 0 #ffd900, -0.09em 0 #ffd900, 0.12em 0 #ffd900, -0.12em 0 #ffd900, 0.15em 0 #ffd900, -0.15em 0 #ffd900;
       background-position: 0 95%,100% 95%,0 95%; }
   #container.about-palette {
     background-color: #333;
@@ -203,10 +209,10 @@ pre {
     #container.about-palette #info-panel {
       border: 6px solid #7B63F1 !important; }
   #container.work-palette {
-    background-color: #ffc8b8;
+    background-color: #ffd900;
     color: #3d3d3d; }
     #container.work-palette #info-panel {
-      border: none; }
+      border: #27f22c; }
   #container .project-info {
     display: none; }
     @media only screen and (min-width: 641px) {
@@ -395,6 +401,7 @@ pre {
     #container .main-panel .panel {
       padding-left: 20px;
       padding-right: 20px;
+      padding-top: 0;
       min-height: 20vh;
       background-color: transparent; }
       @media only screen and (min-width: 480px) {

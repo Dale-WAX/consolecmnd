@@ -15,7 +15,7 @@
                         <ul class="langSelect">
                             <% loop $Locales %>
                                 <li class="$LinkingMode">
-                                    <a href="$Link.ATT" <% if $LinkingMode != 'invalid' %>rel="alternate" hreflang="$Language"<% end_if %>><% if $Locale = 'en_CA' %>En <% else %> 日本語<% end_if %></a>
+                                    <!--<a href="$Link.ATT" <% if $LinkingMode != 'invalid' %>rel="alternate" hreflang="$Language"<% end_if %>><% if $Locale = 'en_CA' %>En <% else %> 日本語<% end_if %></a>-->
                                 </li>
                             <% end_loop %>
                         </ul>
