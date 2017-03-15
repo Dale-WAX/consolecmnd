@@ -9,12 +9,17 @@ class HomePage extends Page {
 	public function getCMSFields() {
 		$fields = parent::getCMSFields();
 
-		$fields->addFieldToTab('Root.HomeSlides', GridField::create(
-			'HomeSlides',
-			'Header Slides',
-			$this->HomeSlides(),
-			GridFieldConfig_RecordEditor::create()
-		));
+		// $fields->addFieldToTab('Root.HomeSlides', GridField::create(
+		// 	'HomeSlides',
+		// 	'Header Slides',
+		// 	$this->HomeSlides(),
+		// 	GridFieldConfig_RecordEditor::create()
+		// ));
+
+		$conf=GridFieldConfig_RelationEditor::create(10);
+        $conf->addComponent(new GridFieldSortableRows('SortOrder'));
+
+        $fields->addFieldToTab('Root.HomeSlides', new GridField('HomeSlides', 'HomeSlides', $this->HomeSlides(), $conf));
 
 		return $fields;
 	}	
