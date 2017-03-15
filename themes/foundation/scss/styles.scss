@@ -213,7 +213,7 @@ pre {
 }
 .ArticleHolder, .HomePage {
     #container {
-        background-color: $pink;
+//        background-color: $pink;
         transition: .15s ease;
         .main-panel {
             .panel {
@@ -566,6 +566,7 @@ pre {
             min-height: 83vh;
             padding-top: 0;
             background-color: transparent;
+            border: 1px solid red;
             @media only screen and (min-width: 480px) {
                 padding: 0 80px 80px 80px;
             }            
