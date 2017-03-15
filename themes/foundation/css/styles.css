@@ -405,8 +405,7 @@ pre {
       padding-right: 20px;
       min-height: 83vh;
       padding-top: 0;
-      background-color: transparent;
-      border: 1px solid red; }
+      background-color: transparent; }
       @media only screen and (min-width: 480px) {
         #container .main-panel .panel {
           padding: 0 80px 80px 80px; } }
