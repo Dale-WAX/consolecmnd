@@ -6,7 +6,7 @@ class ArticlePage extends Page {
 		'Date' => 'Date',
 		'Teaser' => 'Text',
 		'GIF' => 'HTMLtext',
-		'URL' => 'Varchar'
+		'URL' => 'Varchar',
 		'SiteVideo' => 'HTMLtext',
 		'SiteURL' => 'HTMLtext',
 	);
