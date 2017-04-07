@@ -1,8 +1,6 @@
 $(document).foundation();
 
-
 // LANGUAGE ID
-
 var theLanguage = $('html').attr('lang');
 
 if (theLanguage == 'ja-JP') {
@@ -11,30 +9,6 @@ if (theLanguage == 'ja-JP') {
 	$('body').addClass('en');
 }
 
-
-// NAV
-
-function NavDrop() {
-    document.getElementById("myDropdown").classList.toggle("show");
-}
-
-
-// Close the dropdown menu if the user clicks outside of it
-window.onclick = function(event) {
-  if (!event.target.matches('.dropbtn')) {
-
-    var dropdowns = document.getElementsByClassName("dropdown-content");
-    var i;
-    for (i = 0; i < dropdowns.length; i++) {
-      var openDropdown = dropdowns[i];
-      if (openDropdown.classList.contains('show')) {
-        openDropdown.classList.remove('show');
-      }
-    }
-  }
-
-}
-    
   // (function (d, t) {
   //     var g = d.createElement(t),
   //         s = d.getElementsByTagName(t)[0];
@@ -43,7 +17,6 @@ window.onclick = function(event) {
   // }(document, 'script'));
 
 // PAGE ID
-
 if ($('body').hasClass('ArticlePage')) {
 	$('#container').addClass('info-palette');
 };
@@ -128,7 +101,26 @@ if (secondLevelLocation == 'work') {
     // };
 });
 
+    // NAV
+    function NavDrop() {
+        document.getElementById("myDropdown").classList.toggle("show");
+    }
 
+    // Close the dropdown menu if the user clicks outside of it
+    window.onclick = function(event) {
+      if (!event.target.matches('.dropbtn')) {
+
+        var dropdowns = document.getElementsByClassName("dropdown-content");
+        var i;
+        for (i = 0; i < dropdowns.length; i++) {
+          var openDropdown = dropdowns[i];
+          if (openDropdown.classList.contains('show')) {
+            openDropdown.classList.remove('show');
+          }
+        }
+      }
+    }
+    
 $(document).ready(function() {
 
     // HAMBURGER ANIMATION
@@ -140,6 +132,7 @@ $(document).ready(function() {
         }
     });
 
+
 });
 
 // REPLAY BUTTON FOR BANNER ADS
@@ -148,29 +141,6 @@ function replay(target) {
         replayTarget = document.getElementById(frameID);
         replayTarget.src = replayTarget.src;
 }
-
-// // MASONRY INITIALIZE
-
-// $('.grid').masonry({
-//     columnWidth: '.grid-sizer',
-//     gutter: '.gutter-sizer',
-//     itemSelector: '.grid-item',
-//     percentPosition: true
-// });
-
-// // IMGS LOADED
-// $('#container').imagesLoaded( function() {
-//   // images have loaded
-// });
-
-// // options
-// $('#container').imagesLoaded( {
-//   // options...
-//   },
-//   function() {
-//     // images have loaded
-//   }
-// );
 
 
 // BG SVG ANIMATIONS

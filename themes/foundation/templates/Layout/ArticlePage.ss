@@ -87,7 +87,7 @@
 					</div>
 					<p class="project-count"><span>Project $CurrentPageNumber / $NumberOfSiblings</span></p>
 					<div class="row" data-equalizer>
-						<div class="small-6 columns">
+						<div class="small-12 medium-6 columns">
 							<% control PrevNextPage(prev) %>
 								<div class="prev-next-link prev" data-equalizer-watch>
 									<a href="$Link" title="Go to $Title">Previous Project<br /><span>$Title</span></a>   
@@ -95,7 +95,7 @@
 							<% end_control %>
 						</div>
 						
-						<div class="small-6 columns">	
+						<div class="small-12 medium-6 columns">	
 							<% control PrevNextPage(next) %> 
 								<div class="prev-next-link next" data-equalizer-watch>
 									<a href="$Link" title="Go to $Title">Next Project<br /><span>$Title</span></a>

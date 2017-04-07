@@ -18,5 +18,5 @@ $(document).ready(function() {
 	    });
 
 		$( '.slick-dots li button' ).empty();
-		
+
 });

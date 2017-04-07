@@ -639,6 +639,7 @@ pre {
         border: 6px solid #000;
         text-transform: uppercase;
         transition: .15s ease;
+        margin-bottom: 10px;
         &:hover {
             border-bottom: 16px solid #000;
             transition: .15s ease;
@@ -647,21 +648,50 @@ pre {
             color: #000;
             font-weight: bold;
             display: block;
-            padding: 70px 10px;
             background: none;
-            @media only screen and (min-width: 480px) {
-                padding: 30px 20px;
-            }
-            @media only screen and (min-width: 1025px) {
-                padding:30px 80px;
-            }             
+            padding: 30px 20px;
             span {
                 font-weight: normal;
             }
         }
         &.next {
             text-align: right;
+////            border:solid 1px black; 
+//            position:relative; 
+//            display:block; 
+////            height:100px; 
+////            width:100px;
+//            margin-left:5px;
+//            a {
+//                :before{
+//                    content:"";
+//                    display:inline-block;
+//                    position:absolute;
+//                    border:10px solid black;
+//                    border-color:transparent transparent transparent black;
+//                    top:40px;
+//                }
+//                :after{
+//                    content:"";
+//                    display:inline-block;
+//                    position:absolute;
+//                    border:9px solid white;
+//                    border-color:transparent transparent transparent white;
+//                    top:41px;
+//                    left:-1px;
+//                }
+//            }
         }
+//        &.previous {
+//            :before{
+//                content:"";
+//                display:inline-block;
+//                position:absolute;
+//                border:10px solid black;
+//                border-color:transparent transparent transparent black;
+//                top:40px;
+//            }
+//        }
     }
 }
 
@@ -1259,8 +1289,63 @@ button, .button {
 }  
 
 
+/*** ANIMATIONS ***/
 
+.inFromLeft {
+    -webkit-animation-duration: .5s;
+    animation-duration: .5s;
+    position: relative;
+    -webkit-animation-name: inFromLeft;
+    animation-name: inFromLeft;
+    -webkit-animation-iteration-count: 1;
+    animation-iteration-count: 1;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+}
+@keyframes inFromLeft {
+    0% {
+        -webkit-transform: translateX(-500px) scale(1);
+        transform: translateX(-500px) scale(1);
+        opacity: 0;
+        -webkit-transition: -webkit-transform 0.8s cubic-bezier( 0.6, 0.2, 0.1, 1 ) 0s, opacity 0.8s cubic-bezier( 0.6, 0.2, 0.1, 1 ) 0s;
+        transition: transform 0.8s cubic-bezier( 0.6, 0.2, 0.1, 1 ) 0s, opacity 0.8s cubic-bezier( 0.6, 0.2, 0.1, 1 ) 0s;
+    }
+    100% {
+        -webkit-transform: translateX(0) scale(1);
+        transform: translateX(0) scale(1);
+        opacity: 1;
+        -webkit-transition: -webkit-transform 0.8s cubic-bezier( 0.6, 0.2, 0.1, 1 ) 0s, opacity 0.8s cubic-bezier( 0.6, 0.2, 0.1, 1 ) 0s;
+        transition: transform 0.8s cubic-bezier( 0.6, 0.2, 0.1, 1 ) 0s, opacity 0.8s cubic-bezier( 0.6, 0.2, 0.1, 1 ) 0s;
+    }
+}
 
+.inFromRight {
+    -webkit-animation-duration: .6s;
+    animation-duration: .6s;
+    position: relative;
+    -webkit-animation-name: inFromRight;
+    animation-name: inFromRight;
+    -webkit-animation-iteration-count: 1;
+    animation-iteration-count: 1;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+}
+@keyframes inFromRight {
+    0% {
+        -webkit-transform: translateX(500px) scale(1);
+        transform: translateX(500px) scale(1);
+        opacity: 0;
+        -webkit-transition: -webkit-transform 0.8s cubic-bezier( 0.6, 0.2, 0.1, 1 ) 0s, opacity 0.8s cubic-bezier( 0.6, 0.2, 0.1, 1 ) 0s;
+        transition: transform 0.8s cubic-bezier( 0.6, 0.2, 0.1, 1 ) 0s, opacity 0.8s cubic-bezier( 0.6, 0.2, 0.1, 1 ) 0s;
+    }
+    100% {
+        -webkit-transform: translateX(0) scale(1);
+        transform: translateX(0) scale(1);
+        opacity: 1;
+        -webkit-transition: -webkit-transform 0.8s cubic-bezier( 0.6, 0.2, 0.1, 1 ) 0s, opacity 0.8s cubic-bezier( 0.6, 0.2, 0.1, 1 ) 0s;
+        transition: transform 0.8s cubic-bezier( 0.6, 0.2, 0.1, 1 ) 0s, opacity 0.8s cubic-bezier( 0.6, 0.2, 0.1, 1 ) 0s;
+    }
+}
 
 /*** HOME ***/
 

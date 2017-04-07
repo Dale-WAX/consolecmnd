@@ -1,6 +1,6 @@
    <div class="row collapse">
 		<div class="medium-10 columns">	
-			<div id="first-panel">
+			<div id="first-panel" class="inFromLeft">
 				<div id="carousel-bg">
 				<% loop $HomeSlides %>
 					<div class="home-slide" <% if $Photo %>style="background-image:url('$Photo.FileName')"<% end_if %> ></div>
@@ -12,7 +12,7 @@
 
 	<div class="slider-panel">
 		<div class="row collapse">
-			<div id="carousel-info-container" class="small-10 medium-6 medium-push-6 large-5 large-push-6 columns">
+			<div id="carousel-info-container" class="small-10 medium-6 medium-push-6 large-5 large-push-6 columns inFromRight">
 				<div id="carousel-info-box" class="">
 					<% loop $HomeSlides %>
 						<div class="carousel-info">
