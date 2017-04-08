@@ -59,7 +59,7 @@ if (secondLevelLocation == 'work') {
         }
 
         if (winScrPos == '0') {
-            $('#shapes').addClass('visible');
+            $('#shapes').addClass('visible').removeClass('gone');
         }        
     });
 
