@@ -277,13 +277,16 @@ pre {
         color: #000;
         a {
             color: #1A1A1A;
-            /*
-            background: linear-gradient($pink,$pink),linear-gradient($pink,$pink),linear-gradient($black,$black);
-            background-size: .05em 1px,.05em 1px,1px 1px;
-            background-repeat: no-repeat,no-repeat,repeat-x;
-            text-shadow: .03em 0 $pink,-.03em 0 $pink,0 .03em $pink,0 -.03em $pink,.06em 0 $pink,-.06em 0 $pink,.09em 0 $pink,-.09em 0 $pink,.12em 0 $pink,-.12em 0 $pink,.15em 0 $pink,-.15em 0 $pink;
-            background-position: 0 95%,100% 95%,0 95%;
-            */
+            display: inline-block;
+            position: relative;
+        }
+        .credits {
+            background-color: $white;
+            padding: 50px 55px 10px 30px;
+            display: inline-block;
+            position: relative;
+            width: 300%;
+            border: 6px double $l-black;
         }
     }
     &.about-palette {
@@ -593,6 +596,39 @@ pre {
                 @media only screen and (min-width: 640px) {
                     width: 80%;
                 }
+                a {
+//                  background-image: linear-gradient(transparent 95%, $l-black 5%);
+//                  background-repeat: repeat-x;
+//                    &:hover {
+//                        color: $white;
+//                        background-image: linear-gradient($white 0%, $mint 100%);
+//                    }
+
+                    text-decoration: none;
+                    color: #333;
+//                    display:inherit;
+                    background-image: linear-gradient(transparent 95%, #333 5%);
+                    background-repeat: repeat-x;
+                    background-position: 0 3.25rem;
+                    background-size: 4px 4px;
+                    &:hover {
+                        color: $red;
+                        background-image: linear-gradient(transparent 95%, $red 5%);
+                    }
+                    
+//                    display: inline-block;
+//                    position: relative;
+//                    &:after {
+//                        content: '';
+//                        position: absolute;
+//                        left: 0;
+//                        display: inline-block;
+//                        height: 1em;
+//                        width: 100%;
+//                        border-bottom: 1px solid;
+//                        margin-top: 5px;
+//                    }
+                }
                 p {
                     orphans: 2;
                 }
@@ -629,8 +665,7 @@ pre {
                 }
             }
             &#info-panel {
-                /* margin-top: 60px; */
-                border: 6px solid #000; 
+                border: 6px solid #000;
             }
         }
     }
