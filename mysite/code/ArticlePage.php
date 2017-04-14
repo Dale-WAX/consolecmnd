@@ -6,7 +6,7 @@ class ArticlePage extends Page {
 		'Date' => 'Date',
 		'Teaser' => 'Text',
 		'GIF' => 'HTMLtext',
-		'URL' => 'Varchar',
+//		'URL' => 'Varchar',
 		'SiteVideo' => 'HTMLtext',
 		'SiteURL' => 'HTMLtext',
 	);
@@ -33,7 +33,7 @@ class ArticlePage extends Page {
 			->setConfig('showcalendar', true)
 		, 'Content');
 		$fields->addFieldToTab('Root.Main', TextareaField::create('Teaser'), 'Content');
-		$fields->addFieldToTab('Root.Main', TextField::create('URL'), 'Content');
+//		$fields->addFieldToTab('Root.Main', TextField::create('URL'), 'Content');
 		$fields->addFieldToTab('Root.Main', TextField::create('GIF', 'Animated GIF Embed Link'), 'Content');
 		$fields->addFieldToTab('Root.Main', TextField::create('SiteVideo', 'Site demo Video Embed Link'), 'Content');
 		$fields->addFieldToTab('Root.Main', TextField::create('SiteURL', 'URL'), 'Content');

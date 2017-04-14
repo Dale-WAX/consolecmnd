@@ -2,9 +2,6 @@
 				<div class="medium-3 columns">
 					<div class="project-info">
 						<p><span>Created</span><br />$Date.Month, $Date.Year</p>
-						<% if $URL %>
-						<p><span>URL</span><br /><a href="http://$URL" target="_blank">$URL</a></p>
-						<% end_if %>
 						<% if $Categories %>
 						<p><span>Tags</span><br /><% loop $Categories %>$Title<% if not $Last %>, <% end_if %><% end_loop %></p>
 						<% end_if %>

@@ -734,7 +734,37 @@ pre {
     }
 }
 
-
+.sideText {
+    display: none;
+    @media only screen and (min-width: 480px) {
+        display: block;
+        color: $white;
+        font-size: 12px;
+        height: 77%;
+        margin-top: -25px;
+        .sideTextChild {
+            position:absolute;
+            top:50%;
+            margin-top: 0;
+            height:12px;
+            font-size:10px;
+            letter-spacing: 4px;
+            margin-left: -56px;
+        }
+        &.left {
+            .sideTextChild {
+                transform: rotate(-90deg);
+                margin-left: -56px;
+            }
+        }
+        &.right {
+            .sideTextChild {
+                margin-left: -71px;
+                transform: rotate(90deg);
+            }
+        }   
+    }
+}
 .visible {
     opacity: 1 !important;
     transition: opacity .5s ease;
