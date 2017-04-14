@@ -11,6 +11,9 @@
             <div class="row">
                 <div class="small-4 columns logo"><a href="/"><img src="$ThemeDir/images/console-cmnd-logo.svg" class="light" /><img src="$ThemeDir/images/console-cmnd-logo-dark.svg" class="dark" /></a></div>
                 <div class="small-8 columns">
+                    <div class="about">
+                        <a href="about.php">About</a>
+                    </div>
                     <% if $Locales %>
                         <ul class="langSelect">
                             <% loop $Locales %>

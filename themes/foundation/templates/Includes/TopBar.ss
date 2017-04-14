@@ -2,13 +2,13 @@
 		<div class="small-1 columns"></div>
 		<div class="small-2 small-offset-9 columns button-position">
 			<span class="dropdown">
-				<button onclick="NavDrop()" id="dropbtn" class="dropbtn right hamburger hamburger--spin" type="button">
+				<button id="dropbtn" class="dropbtn right hamburger hamburger--spin" type="button">
 					<span class="hamburger-box">
 						<span class="hamburger-inner"></span>
 					</span>
 				</button>
 
-				<button onclick="NavDrop()" id="dropbtn" class="dropbtn bottom hamburger hamburger--spin" type="button">
+				<button id="dropbtn" class="dropbtn bottom hamburger hamburger--spin" type="button">
 					<span class="hamburger-box">
 						<span class="hamburger-inner"></span>
 					</span>

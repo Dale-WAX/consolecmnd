@@ -713,6 +713,16 @@ pre {
       width: 160px;
       min-width: 130px; } }
 
+.about {
+  display: none; }
+  @media only screen and (min-width: 641px) {
+    .about {
+      text-align: right;
+      padding-right: 20px;
+      text-transform: uppercase;
+      font-size: 13px;
+      display: block; } }
+
 .dropbtn {
   background-color: transparent;
   color: #3d3d3d;
@@ -822,9 +832,11 @@ pre {
       background-size: 0 !important;
       background-repeat: no-repeat,no-repeat,repeat-x !important;
       text-shadow: none !important;
-      background-position: inherit; }
+      background-position: inherit;
+      line-height: 65px; }
       .dropdown-content ul a:hover {
-        border-bottom: 27px solid #3d3d3d; }
+        border-bottom: 20px solid #81E5C9;
+        line-height: 65px; }
 
 @media only screen and (min-width: 961px) {
   .dropdown-content {
@@ -1314,3 +1326,5 @@ button, .button {
 /****************************
         MEDIA QUERIES
 ****************************/
+
+/*# sourceMappingURL=styles.css.map */
