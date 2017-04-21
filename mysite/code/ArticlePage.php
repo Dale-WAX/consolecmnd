@@ -38,7 +38,7 @@ class ArticlePage extends Page {
 		, 'Content');
 		$fields->addFieldToTab('Root.Main', TextareaField::create('Teaser'), 'Content');
 		$fields->addFieldToTab('Root.Main', TextField::create('GIF', 'Animated GIF Embed Link'), 'Content');
-		$fields->addFieldToTab('Root.Main', TextField::create('SiteVideo', 'Site demo Video Embed Link'), 'Content');
+		$fields->addFieldToTab('Root.Main', TextField::create('SiteVideo', 'Video Embed Link'), 'Content');
 		$fields->addFieldToTab('Root.Main', TextField::create('SiteURL', 'URL'), 'Content');
         $fields->addFieldToTab('Root.Main', $Thumbnail = UploadField::create('Thumbnail', 'Thumbnail'), 'Content');
         $Thumbnail->getValidator()->setAllowedExtensions(array('png','gif','jpg','jpeg', 'mp4'));
