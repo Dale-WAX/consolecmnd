@@ -8,6 +8,10 @@
 						<% if $SiteURL %>
 						<p><span>URL</span><br /><a href="http://$SiteURL" target="_blank">$SiteURL</a></p>
 						<% end_if %>
+						<% if $AwardURL %>
+                            <p><span>Awards</span><br /><a href="http://$AwardURL" target="_blank">$AwardTitle</a></p>
+                            <a href="http://$AwardURL" target="_blank"><img src="$AwardImage.URL" alt="$AwardTitle" /></a>
+						<% end_if %>
 					</div>
 				</div>
 				<div class="medium-9 columns">
@@ -15,14 +19,27 @@
 						<div class="panel" id="info-panel">
 							<% if $SiteVideo %>
 							<div class="SiteVideo">
-								<div style="position:relative;padding-bottom:75%"><iframe src='$SiteVideo' frameborder="0" scrolling="no" width="100%" height="100%" style="position:absolute;top:0;left:0;" allowfullscreen></iframe></div>
+								<div style="position:relative;padding-bottom:57%;margin-bottom: 20px;"><iframe src='$SiteVideo' frameborder="0" scrolling="no" width="100%" height="100%" style="position:absolute;top:0;left:0;" allowfullscreen></iframe></div>
 							</div>
 							<% end_if %>
+                            
+							<% if $GIF %>
+							<div class="SiteVideo">
+                                <div style="position:relative;padding-bottom:62%;"><iframe src='https://gfycat.com/ifr/$GIF' frameborder="0" scrolling="no" width="100%" height="100%" style="position:absolute;top:0;left:0;" allowfullscreen></iframe></div>
+							</div>
+							<% end_if %>
+
 							<div class="header section-header info-header">
 								<h1>$Title</h1>
 							</div>
 							<div class="panel-text">
 								<div>$Content</div>
+                                <div class="awardsMobile">
+                                    <% if $AwardURL %>
+                                        <h4>Awards</h4><a href="http://$AwardURL" target="_blank">$AwardTitle</a></p>
+                                        <a href="http://$AwardURL" target="_blank"><img src="$AwardImage.URL" alt="$AwardTitle" /></a>
+                                    <% end_if %>
+                                </div>
 							</div>
 							<div class="row collapse">
 							

@@ -205,7 +205,7 @@ pre {
     padding-bottom: 430px;
     z-index: 0;
 }
-.SiteVideo {
+.SiteVideo, .GifVideo {
     margin: -1px -20px;
     @media only screen and (min-width: 480px) {
         margin: -1px -80px;
@@ -232,7 +232,7 @@ pre {
                         background-position: center center;
                     }
                 }
-            }        
+            }            
         }
     }
     &:hover {
@@ -639,6 +639,13 @@ pre {
                 .login {
                     width: 100% !important;
                     display: inline-block;
+                }
+                .awardsMobile {
+                    display: block;
+                    margin-top: 10px;
+                    @media only screen and (min-width: 641px) {
+                        display: none;
+                    }
                 }
             }
             .ads {

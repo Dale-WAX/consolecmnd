@@ -143,10 +143,10 @@ pre {
   padding-bottom: 430px;
   z-index: 0; }
 
-.SiteVideo {
+.SiteVideo, .GifVideo {
   margin: -1px -20px; }
   @media only screen and (min-width: 480px) {
-    .SiteVideo {
+    .SiteVideo, .GifVideo {
       margin: -1px -80px; } }
 
 .ArticleHolder #container, .HomePage #container {
@@ -453,6 +453,12 @@ pre {
         #container .main-panel .panel .panel-text .login {
           width: 100% !important;
           display: inline-block; }
+        #container .main-panel .panel .panel-text .awardsMobile {
+          display: block;
+          margin-top: 10px; }
+          @media only screen and (min-width: 641px) {
+            #container .main-panel .panel .panel-text .awardsMobile {
+              display: none; } }
       #container .main-panel .panel .ads {
         display: inline-block;
         margin-bottom: 50px; }

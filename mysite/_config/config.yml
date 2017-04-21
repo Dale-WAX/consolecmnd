@@ -19,6 +19,7 @@ Debug:
 Image:
   extensions:
     - GalleryImage
+    - AwardImage
     - AdFilesExtension
 File:
   allowed_extensions:
