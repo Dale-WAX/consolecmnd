@@ -7,8 +7,8 @@
     <!-- End Google Tag Manager (noscript) -->
     <div id="main" class="main-wrapper">
         <div id="container">
-            <div class="sideText left"><div class="sideTextChild">consolecmnd.com</div></div>
-            <div class="sideText right"><div class="sideTextChild">consolecmnd.com</div></div>
+            <div class="sideText left"><div class="sideTextChild">www.consolecmnd.com</div></div>
+            <div class="sideText right"><div class="sideTextChild">www.consolecmnd.com</div></div>
             <div class="row">
                 <div class="small-4 columns logo"><a href="/"><img src="$ThemeDir/images/console-cmnd-logo.svg" class="light" /><img src="$ThemeDir/images/console-cmnd-logo-dark.svg" class="dark" /></a></div>
                 <div class="small-8 columns">
