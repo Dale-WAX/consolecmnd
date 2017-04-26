@@ -4,7 +4,7 @@
 		<div class="row">
 			<div class="show-for-large-up large-3 columns">
 				<img src="$ThemeDir/images/console-cmnd-bud.svg" />
-                <img src="$ThemeDir/images/smoke.gif" class="smoke" />
+                <img src="$ThemeDir/images/smoke-2.gif" class="smoke" />
 			</div>
 			<div class="large-9 columns">
 				<h1>Other CMND Projects</h1>
