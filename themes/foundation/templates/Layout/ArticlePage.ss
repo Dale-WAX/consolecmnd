@@ -19,13 +19,17 @@
 						<div class="panel" id="info-panel">
 							<% if $SiteVideo %>
 							<div class="SiteVideo">
-								<div style="position:relative;padding-bottom:57%;margin-bottom: 20px;"><iframe src='$SiteVideo' frameborder="0" scrolling="no" width="100%" height="100%" style="position:absolute;top:0;left:0;" allowfullscreen></iframe></div>
+								<div><iframe src='$SiteVideo' frameborder="0" scrolling="no" width="100%" height="100%" style="position:absolute;top:0;left:0;" allowfullscreen></iframe></div>
 							</div>
 							<% end_if %>
                             
 							<% if $GIF %>
 							<div class="GifVideo">
+<<<<<<< Updated upstream
                                 <div style="position:relative;padding-bottom:94%;"><iframe src='https://gfycat.com/ifr/$GIF' frameborder="0" scrolling="no" width="100%" height="100%" style="position:absolute;top:0;left:0;" allowfullscreen></iframe></div>
+=======
+                                <div><iframe src='https://gfycat.com/ifr/$GIF' frameborder="0" scrolling="no" width="100%" height="100%" style="position:absolute;top:0;left:0;" allowfullscreen></iframe></div>
+>>>>>>> Stashed changes
 							</div>
 							<% end_if %>
 

@@ -149,6 +149,15 @@ pre {
     .SiteVideo, .GifVideo {
       margin: -1px -80px; } }
 
+.GifVideo {
+  position: relative;
+  padding-bottom: 125%; }
+
+.SiteVideo {
+  position: relative;
+  padding-bottom: 72%;
+  margin-bottom: 20px; }
+
 .ArticleHolder #container, .HomePage #container {
   transition: .15s ease; }
   .ArticleHolder #container .main-panel .panel, .HomePage #container .main-panel .panel {
