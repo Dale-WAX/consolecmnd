@@ -891,7 +891,7 @@ pre {
     display: none;
     @media only screen and (min-width: 640px) {
         background-image: url(../images/cmnd-bud-bg.png);
-        background-size: 235px auto;
+        background-size: 343px auto;
         animation: veggieAnimatedBackground 3.5s linear infinite;
         will-change: background-position;
         height: 250px;
@@ -909,7 +909,7 @@ pre {
         background-position: 0 0;
     }
     100% {
-        background-position: 235px 235px;
+        background-position: 343px 343px;
     }
 }
 .center-footer {
