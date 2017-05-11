@@ -125,7 +125,7 @@ pre {
 .logo {
   position: absolute;
   left: 0;
-  z-index: 1; }
+  z-index: 4; }
   @media only screen and (min-width: 641px) {
     .logo {
       position: fixed;
@@ -804,6 +804,16 @@ pre {
   display: inline-block;
   z-index: 4;
   width: 100%; }
+  .dropdown .sun {
+    width: 100px;
+    height: 100px;
+    background-color: transparent;
+    padding: 0; }
+    .dropdown .sun:hover {
+      box-shadow: none; }
+    .dropdown .sun img {
+      right: 40px;
+      position: relative; }
   .dropdown button {
     margin: 0;
     border-radius: 70px 70px;
@@ -819,7 +829,7 @@ pre {
     .dropdown button:hover {
       box-shadow: 0 1px 13px -2px black; }
     .dropdown button.right {
-      top: 85px;
+      top: 5px;
       transform: scale(0);
       position: fixed;
       display: block; }

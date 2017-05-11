@@ -94,7 +94,7 @@ if (secondLevelLocation == 'work') {
           if (winScrPos >= 80) {
             $('.dropdown button.right').css({"top": "30px"});
           } else {
-            $('.dropdown button.right').css({"top": "85px"});
+            $('.dropdown button.right').css({"top": "0px"});
           }
           // console.log(winScrPos, winHeight, itemBot, itemTop, itemHeight);
       })
@@ -123,9 +123,10 @@ if (secondLevelLocation == 'work') {
     
 $(document).ready(function() {
 
-//    $( '.menu-btn' ).click(function(){
-//        $('.responsive-menu').toggleClass('expand')
-//    })
+    $('.sun').click(function(){
+        $('#myDropdown').addClass('show');
+        console.log('clicked');
+    })
 
     // HAMBURGER ANIMATION
     $('.hamburger, .hamburger-box, .hamburger-inner, .hamburger-inner:before, .hamburger-inner:after').click(function() {
