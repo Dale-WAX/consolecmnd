@@ -32,7 +32,7 @@
 
 		<div class="center-footer">
 			<div class="row social-copy">
-				<div class="small-6 columns">
+				<div class="medium-6 small-12 columns">
 					<ul>
 						<% with $SiteConfig %>
 							<% if $TwitterLink %>
@@ -40,6 +40,15 @@
 								<a href="$TwitterLink" target="_blank">
 									<i class="fa fa-twitter fa-inverse"></i>
 									@fatwreck
+								</a>
+							</li>
+							<% end_if %>
+                            
+							<% if $InstagramLink %>
+							<li>
+								<a href="$InstagramLink" target="_blank">
+									<i class="fa fa-instagram fa-inverse"></i>
+									consolecmnd
 								</a>
 							</li>
 							<% end_if %>
@@ -55,7 +64,7 @@
 						<% end_with %>
 					</ul>
 				</div>
-				<div class="small-6 columns">
+				<div class="medium-6 small-12 columns">
 					<p class="legal">&copy Copyright $SiteConfig.Title</p>
 				</div>
 			</div>

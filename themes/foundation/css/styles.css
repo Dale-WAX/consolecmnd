@@ -125,7 +125,7 @@ pre {
 .logo {
   position: absolute;
   left: 0;
-  z-index: 4; }
+  z-index: 3; }
   @media only screen and (min-width: 641px) {
     .logo {
       position: fixed;
@@ -222,7 +222,10 @@ pre {
     #container.about-palette #info-panel {
       border: 6px solid #7B63F1 !important; }
       #container.about-palette #info-panel h1 {
-        color: #3e3636 !important; }
+        color: #7B63F1 !important; }
+      #container.about-palette #info-panel a {
+        color: #fff;
+        font-weight: 500; }
   #container.work-palette {
     background-image: linear-gradient(45deg, #8baaaa 0%, #ae8b9c 100%);
     color: #3d3d3d; }
@@ -411,7 +414,7 @@ pre {
     display: none !important; }
   #container .main-panel {
     transform: translate3d(0, 0, 0);
-    z-index: 3;
+    z-index: 2;
     position: relative;
     width: 100%; }
     #container .main-panel .panel {
@@ -741,11 +744,16 @@ pre {
       line-height: 1;
       text-align: left; }
       .footer .social-copy ul li {
-        margin: 0 10px;
+        margin: 0 5px 0 0;
         font-size: 10px; }
         @media only screen and (min-width: 641px) {
           .footer .social-copy ul li {
-            font-size: 12px; } }
+            font-size: 10px;
+            margin: 0 6px 0 0; } }
+        @media only screen and (min-width: 1025px) {
+          .footer .social-copy ul li {
+            font-size: 12px;
+            margin: 0 10px; } }
         .footer .social-copy ul li a {
           text-align: right;
           font-weight: normal; }
@@ -754,13 +762,14 @@ pre {
       display: inline-block;
       vertical-align: middle; }
     .footer .social-copy .legal {
-      text-align: right;
+      text-align: left;
       font-size: 10px;
       color: #767676; }
       @media only screen and (min-width: 641px) {
         .footer .social-copy .legal {
           margin-right: 10px;
-          font-size: 12px; } }
+          font-size: 12px;
+          text-align: right; } }
       @media only screen and (min-width: 1025px) {
         .footer .social-copy .legal {
           margin-right: 0; } }
@@ -804,14 +813,14 @@ pre {
   display: inline-block;
   z-index: 4;
   width: 100%; }
-  .dropdown .sun {
+  .dropdown .sun, .dropdown .xxsunxx {
     width: 100px;
     height: 100px;
     background-color: transparent;
     padding: 0; }
-    .dropdown .sun:hover {
+    .dropdown .sun:hover, .dropdown .xxsunxx:hover {
       box-shadow: none; }
-    .dropdown .sun img {
+    .dropdown .sun img, .dropdown .xxsunxx img {
       right: 40px;
       position: relative; }
   .dropdown button {
@@ -872,16 +881,15 @@ pre {
   z-index: 4;
   left: 0; }
   .dropdown-content.show {
-    display: block;
-    height: 100vh;
+    display: block !important;
+    height: 100%;
     position: fixed;
-    margin-top: -130px;
     transition-timing-function: ease-out;
     transition: 0.25s;
-    transform: skew(0deg, -5deg) translateY(0%);
-    -ms-transform: skew(0deg, -5deg) translateY(0%);
-    -webkit-transform: skew(0deg, -5deg) translateY(0%);
-    z-index: 4; }
+    transform: skew(0deg, -5deg) translateY(-30%);
+    -ms-transform: skew(0deg, -5deg) translateY(-30%);
+    -webkit-transform: skew(0deg, -5deg) translateY(-30%);
+    z-index: 3; }
   .dropdown-content ul {
     margin: 0 auto;
     width: 100%;
@@ -905,15 +913,11 @@ pre {
       background-size: 0 !important;
       background-repeat: no-repeat,no-repeat,repeat-x !important;
       text-shadow: none !important;
-      background-position: inherit;
-      line-height: 65px; }
-      .dropdown-content ul a:hover {
-        border-bottom: 20px solid #81E5C9;
-        line-height: 65px; }
+      background-position: inherit; }
 
-@media only screen and (min-width: 961px) {
+@media only screen and (min-width: 641px) {
   .dropdown-content {
-    height: initial; }
+    height: 400px; }
     .dropdown-content.show {
       transform: skew(0deg, -5deg) translateY(18%);
       -ms-transform: skew(0deg, -5deg) translateY(18%);
@@ -927,7 +931,7 @@ pre {
       .dropdown-content ul a {
         padding: 100px 34px; }
         .dropdown-content ul a:hover {
-          border-bottom: 12px solid black; } }
+          color: #81E5C9 !important; } }
 /****************************
     FOUNDATION OVERWRITES
 ****************************/
@@ -1399,5 +1403,3 @@ button, .button {
 /****************************
         MEDIA QUERIES
 ****************************/
-
-/*# sourceMappingURL=styles.css.map */

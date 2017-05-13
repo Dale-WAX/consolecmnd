@@ -31,8 +31,9 @@
 		<div class="medium-11 columns">
 			<div class="main-panel">
 				<div class="panel" id="info-panel">
+
 					<div class="grid">
-						<% loop $LatestArticles(6) %>
+						<% loop $LatestArticles(9) %>
 							<div class="grid-item small-12 medium-6 large-4 columns">
 								<a href="$Link">
 									<div class="dim"></div>
