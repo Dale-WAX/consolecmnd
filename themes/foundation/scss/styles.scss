@@ -182,7 +182,7 @@ pre {
 .logo {
     position: absolute;
     left: 0;
-    z-index: 4;
+    z-index: 3;
     @media only screen and (min-width: 641px) {
         position: fixed;
         left: inherit;
@@ -305,7 +305,11 @@ pre {
         #info-panel {
             border: 6px solid $purple !important;
             h1 {
-                color: $darkred !important;
+                color: $purple !important;
+            }
+            a {
+                color: #fff;
+                font-weight: 500;
             }
         }
     }
@@ -571,7 +575,7 @@ pre {
     }
     .main-panel {
         transform: translate3d(0,0,0);
-        z-index: 3;
+        z-index: 2;
         position: relative;
         width: 100%;
         .panel {
@@ -1030,10 +1034,15 @@ pre {
             line-height: 1;
             text-align: left;           
             li {
-                margin: 0 10px;
+                margin: 0 5px 0 0;
                 font-size: 10px;
                 @media only screen and (min-width: 641px) {
+                    font-size: 10px;
+                    margin: 0 6px 0 0;
+                }
+                @media only screen and (min-width: 1025px) {
                     font-size: 12px;
+                    margin: 0 10px;
                 }
                 a {
                     text-align: right;
@@ -1047,13 +1056,14 @@ pre {
             vertical-align: middle;
         }
         .legal {
-            text-align: right;
+            text-align: left;
             font-size: 10px;
             color: $grey;
 
             @media only screen and (min-width: 641px) {
                 margin-right: 10px;
                 font-size: 12px;
+                text-align: right;
             }
             @media only screen and (min-width: 1025px) {
                 margin-right: 0;
@@ -1107,7 +1117,7 @@ pre {
     display: inline-block;
     z-index: 4;
     width: 100%;
-    .sun {
+    .sun, .xxsunxx {
         width: 100px;
         height: 100px;
         background-color: transparent;
@@ -1198,16 +1208,16 @@ pre {
     z-index: 4;
     left: 0;
     &.show {
-        display: block;
-        height: 100vh;
+        display: block !important;
+        height: 100%;
         position: fixed;
-        margin-top: -130px; 
+//        margin-top: -130px; 
         transition-timing-function: ease-out;
         transition: 0.25s;
-        transform: skew(0deg, -5deg) translateY(0%);
-        -ms-transform: skew(0deg, -5deg) translateY(0%);
-        -webkit-transform: skew(0deg, -5deg) translateY(0%);     
-        z-index: 4;  
+        transform: skew(0deg, -5deg) translateY(-30%);
+        -ms-transform: skew(0deg, -5deg) translateY(-30%);
+        -webkit-transform: skew(0deg, -5deg) translateY(-30%);     
+        z-index: 3;
     }
     ul {
         margin: 0 auto;
@@ -1234,17 +1244,15 @@ pre {
             background-repeat: no-repeat,no-repeat,repeat-x !important;
             text-shadow: none !important;
             background-position: inherit;
-            line-height: 65px;
             &:hover {
-                border-bottom: 20px solid $mint;
-                line-height: 65px;
+//                border-bottom: 20px solid $mint;
             }
         }
     }
 }
-    @media only screen and (min-width: 961px) {
+    @media only screen and (min-width: 641px) {
         .dropdown-content {
-            height: initial;
+            height: 400px;
             &.show {
                 transform: skew(0deg, -5deg) translateY(18%);
                 -ms-transform: skew(0deg, -5deg) translateY(18%);
@@ -1260,7 +1268,7 @@ pre {
                 a {
                     padding: 100px 34px;
                     &:hover {
-                        border-bottom: 12px solid black;
+                        color: $mint !important;
                     }
                 }
             }

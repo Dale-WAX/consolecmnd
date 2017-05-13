@@ -2,25 +2,19 @@
 		<div class="small-1 columns"></div>
 		<div class="small-2 small-offset-9 columns button-position">
 			<span class="dropdown">
-                <button id="" class="sun right" type="button">
+                <button class="sun right" type="button">
                     <img src="$ThemeDir/images/sun-menu.gif" />
                 </button>
-                <button id="" class="sun bottom" type="button">
-                    <img src="$ThemeDir/images/sun-menu.gif" />
+                <button class="xxsunxx right" type="button">
+                    <img src="$ThemeDir/images/xxsunxx.gif" />
                 </button>
-                <!--
-				<button id="dropbtn" class="dropbtn right hamburger hamburger--spin" type="button">
-					<span class="hamburger-box">
-						<span class="hamburger-inner"></span>
-					</span>
-				</button>
 
-				<button id="dropbtn" class="dropbtn bottom hamburger hamburger--spin" type="button">
-					<span class="hamburger-box">
-						<span class="hamburger-inner"></span>
-					</span>
-				</button>
-                -->
+                <button class="sun bottom" type="button">
+                    <img src="$ThemeDir/images/sun-menu.gif" />
+                </button>
+                <button class="xxsunxx bottom" type="button">
+                    <img src="$ThemeDir/images/xxsunxx.gif" />
+                </button>
 			</span>
 		</div>
 	</div>

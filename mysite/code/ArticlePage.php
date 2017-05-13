@@ -24,7 +24,6 @@ class ArticlePage extends Page {
 	private static $many_many = array (
 		'Categories' => 'ArticleCategory',
 		'GalleryImage' => 'Image'
-//        'AwardImage' => 'Image'
 	);
 
 	private static $can_be_root = false;

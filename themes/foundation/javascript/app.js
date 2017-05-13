@@ -78,16 +78,16 @@ if (secondLevelLocation == 'work') {
 
 
     // STOP MOBILE BUTTON AT BOTTOM OF MAIN PANEL
-    // if (screen.width > 640) {
+     if (screen.width > 640) {
       $('.panel').each(function () {
           var itemHeight = $(this).height(),
-              itemTop = $(this).offset().top,
-              itemBot = itemTop + itemHeight - 35;
+              itemTop = $(this).offset().top + 95,
+              itemBot = itemTop + itemHeight - 110;
 
           if (winScrPos + winHeight > itemBot + itemTop) {
-              $('.dropbtn.bottom').addClass('stick').css({'top': itemBot});
+              $('.sun.bottom').addClass('stick').css({'top': itemBot});
           } else if (winScrPos + winHeight < itemBot + itemTop) {
-              $('.dropbtn.bottom').removeClass('stick').css({'top': 'inherit'});
+              $('.sun.bottom').removeClass('stick').css({'top': 'inherit'});
           }
 
           // MOVE BUTTON UP ON SCROLL
@@ -96,88 +96,60 @@ if (secondLevelLocation == 'work') {
           } else {
             $('.dropdown button.right').css({"top": "0px"});
           }
-          // console.log(winScrPos, winHeight, itemBot, itemTop, itemHeight);
+//           console.log(winScrPos, winHeight, itemBot, itemTop, itemHeight);
       })
-    // };
+     };
 });
 
-    // NAV
-//    function NavDrop() {
-//        document.getElementById("myDropdown").classList.toggle("show");
+//// NAV
+//function NavDrop() {
+//    document.getElementById("myDropdown").classList.toggle("show");
+//}
+//
+//// Close the dropdown menu if the user clicks outside of it
+//window.onclick = function(event) {
+//  if (!event.target.matches('.dropbtn')) {
+//
+//    var dropdowns = document.getElementsByClassName("dropdown-content");
+//    var i;
+//    for (i = 0; i < dropdowns.length; i++) {
+//      var openDropdown = dropdowns[i];
+//      if (openDropdown.classList.contains('show')) {
+//        openDropdown.classList.remove('show');
+//      }
 //    }
+//  }
+//}
 
-    // Close the dropdown menu if the user clicks outside of it
-    window.onclick = function(event) {
-      if (!event.target.matches('.dropbtn')) {
 
-        var dropdowns = document.getElementsByClassName("dropdown-content");
-        var i;
-        for (i = 0; i < dropdowns.length; i++) {
-          var openDropdown = dropdowns[i];
-          if (openDropdown.classList.contains('show')) {
-            openDropdown.classList.remove('show');
-          }
-        }
-      }
-    }
-    
+$( ".xxsunxx" ).hide();
+
+$( ".sun" ).click(function() {
+    $( "#myDropdown" ).slideToggle( 300, "linear", function() {
+        $( ".sun" ).hide();
+        $( ".xxsunxx" ).show();
+        $('#myDropdown').addClass('show');
+    });
+});
+
+$( ".xxsunxx" ).click(function() {
+    $( "#myDropdown" ).slideToggle( 300, "linear", function() {
+        $( ".xxsunxx" ).hide();
+        $( ".sun" ).show();
+        $('#myDropdown').removeClass('show');    
+    });
+});
+
 $(document).ready(function() {
 
-//    $('.sun.right').click(function(){
-//        $('#myDropdown').addClass('show');
-//        console.log('clicked');
-//    });
-    
-//$(function(){
-//    $('.sun').click(function(){
-//        $('#myDropdown').toggleClass('show');
-//    });
-//});
-    
-//$(document).on('click', ".sun", function() {
-////    var liId = $(this).parent("li").attr("id");
-//        $('#myDropdown').addClass('show');
-//        console.log('clicked');
-////    alert(liId);        
-//});
-
-//    $('.sun').live("click", function() {
-//        $('#myDropdown').addClass('show');
-//        console.log('clicked');
-//    });
-    
-    $('.sun').click(function(){
-        if ($('#myDropdown').hasClass('show')) {
-            $('#myDropdown').removeClass('show');
-            console.log('clicked1');
-//            $('.hamburger').removeClass('is-active');
-        } else {
-            $('#myDropdown').addClass('show');
-        }
-        
-//        $(this).addClass('show');
-//        console.log('clicked');
-    });
-    
     // HAMBURGER ANIMATION
-    $('.hamburger, .hamburger-box, .hamburger-inner, .hamburger-inner:before, .hamburger-inner:after').click(function() {
-//    $('.dropdown').click(function() {
-//        $('#myDropdown').toggleClass('show');
-        
-        if ($('.hamburger').hasClass('is-active')) {
-            $('#myDropdown').removeClass('show');
-//            $('.hamburger').removeClass('is-active');
-        } else {
-            $('#myDropdown').addClass('show');
-//            $('.hamburger').addClass('is-active');
-        }
-        
-//        if ($('#myDropdown').hasClass('show')) {
+//    $('.hamburger, .hamburger-box, .hamburger-inner, .hamburger-inner:before, .hamburger-inner:after').click(function() {
+//        if ($('.hamburger').hasClass('is-active')) {
 //            $('#myDropdown').removeClass('show');
 //        } else {
 //            $('#myDropdown').addClass('show');
-//        }
-    });
+//        }        
+//    });
 
 });
 
