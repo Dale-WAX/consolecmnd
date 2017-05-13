@@ -123,11 +123,42 @@ if (secondLevelLocation == 'work') {
     
 $(document).ready(function() {
 
-    $('.sun').click(function(){
-        $('#myDropdown').addClass('show');
-        console.log('clicked');
-    })
+//    $('.sun.right').click(function(){
+//        $('#myDropdown').addClass('show');
+//        console.log('clicked');
+//    });
+    
+//$(function(){
+//    $('.sun').click(function(){
+//        $('#myDropdown').toggleClass('show');
+//    });
+//});
+    
+//$(document).on('click', ".sun", function() {
+////    var liId = $(this).parent("li").attr("id");
+//        $('#myDropdown').addClass('show');
+//        console.log('clicked');
+////    alert(liId);        
+//});
 
+//    $('.sun').live("click", function() {
+//        $('#myDropdown').addClass('show');
+//        console.log('clicked');
+//    });
+    
+    $('.sun').click(function(){
+        if ($('#myDropdown').hasClass('show')) {
+            $('#myDropdown').removeClass('show');
+            console.log('clicked1');
+//            $('.hamburger').removeClass('is-active');
+        } else {
+            $('#myDropdown').addClass('show');
+        }
+        
+//        $(this).addClass('show');
+//        console.log('clicked');
+    });
+    
     // HAMBURGER ANIMATION
     $('.hamburger, .hamburger-box, .hamburger-inner, .hamburger-inner:before, .hamburger-inner:after').click(function() {
 //    $('.dropdown').click(function() {
