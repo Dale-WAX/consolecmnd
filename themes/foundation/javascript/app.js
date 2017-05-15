@@ -94,7 +94,7 @@ if (secondLevelLocation == 'work') {
           if (winScrPos >= 80) {
             $('.dropdown button.right').css({"top": "30px"});
           } else {
-            $('.dropdown button.right').css({"top": "0px"});
+            $('.dropdown button.right').css({"top": "5px"});
           }
 //           console.log(winScrPos, winHeight, itemBot, itemTop, itemHeight);
       })

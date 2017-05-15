@@ -3,17 +3,17 @@
 		<div class="small-2 small-offset-9 columns button-position">
 			<span class="dropdown">
                 <button class="sun right" type="button">
-                    <img src="$ThemeDir/images/sun-menu.gif" />
+                    <img src="$ThemeDir/images/menu.svg" />
                 </button>
                 <button class="xxsunxx right" type="button">
-                    <img src="$ThemeDir/images/xxsunxx.gif" />
+                    <img src="$ThemeDir/images/menu-sun.svg" />
                 </button>
 
                 <button class="sun bottom" type="button">
-                    <img src="$ThemeDir/images/sun-menu.gif" />
+                    <img src="$ThemeDir/images/menu.svg" />
                 </button>
                 <button class="xxsunxx bottom" type="button">
-                    <img src="$ThemeDir/images/xxsunxx.gif" />
+                    <img src="$ThemeDir/images/menu-sun.svg" />
                 </button>
 			</span>
 		</div>
