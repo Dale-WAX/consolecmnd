@@ -439,6 +439,10 @@ pre {
                 box-shadow: 0 1px 13px -2px black;
             }
         }
+        .instagram-container a {
+            overflow: hidden;
+            height: 380px;
+        }
     }
     .grid-sizer, .grid-item {
         width: 100%;

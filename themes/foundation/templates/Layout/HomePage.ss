@@ -26,13 +26,15 @@
 
     <div class="row">
 		<div class="medium-1 columns">
-
 		</div>
 		<div class="medium-11 columns">
 			<div class="main-panel">
 				<div class="panel" id="info-panel">
-
 					<div class="grid">
+                    <div class="instagram-wrapper grid-item small-12 medium-6 large-4 columns">
+                        <div id="insta1" class="instagram-container"></div>
+                        <h3>Instagram</h3>
+                    </div>
 						<% loop $LatestArticles(9) %>
 							<div class="grid-item small-12 medium-6 large-4 columns">
 								<a href="$Link">
@@ -52,3 +54,4 @@
 				</div>
 			</div>
 		</div>
+        

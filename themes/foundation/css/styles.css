@@ -322,6 +322,9 @@ pre {
       transition: .15s ease; }
       #container .grid a:hover {
         box-shadow: 0 1px 13px -2px black; }
+    #container .grid .instagram-container a {
+      overflow: hidden;
+      height: 380px; }
   #container .grid-sizer, #container .grid-item {
     width: 100%;
     margin-bottom: 10px; }

@@ -13,11 +13,13 @@
 	</script>
 
 	<!-- Google Tag Manager -->
+    <!--
 	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 	'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 	})(window,document,'script','dataLayer','GTM-KGZ76V6');</script>
+    -->
 	<!-- End Google Tag Manager -->
 	
 	<% base_tag %>
@@ -60,6 +62,7 @@
 	<link rel="stylesheet" href="$ThemeDir/css/hamburger.css" />
 	<link rel="stylesheet" href="$ThemeDir/css/app.css" />
 	<link rel="stylesheet" type="text/css" href="$ThemeDir/javascript/slick/slick.css"/>
+    <script src="$ThemeDir/javascript/instafeed.min.js"></script>
 	<script src="$ThemeDir/bower_components/modernizr/modernizr.js"></script>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
 	<link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet" type="text/css">
