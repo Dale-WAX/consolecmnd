@@ -332,6 +332,8 @@ pre {
     margin-bottom: 50px;
     float: left;
     height: 380px; }
+    #container .grid-item a {
+      background-image: linear-gradient(80deg, #8baaaa 0%, #ae8b9c 100%); }
     #container .grid-item .gfyitem {
       width: 100%;
       height: inherit;

@@ -35,7 +35,7 @@
                         <div id="insta1" class="instagram-container"></div>
                         <h3>Instagram</h3>
                     </div>
-						<% loop $LatestArticles(9) %>
+						<% loop $LatestArticles(8) %>
 							<div class="grid-item small-12 medium-6 large-4 columns">
 								<a href="$Link">
 									<div class="dim"></div>

@@ -105,28 +105,31 @@
             accessToken: '5426141918.0be40c9.12950f08592d413eb93fbf2292224117',
             get: 'user',
             userId: 5426141918,
+            template: '<a href="{{link}}" target="_blank"><img src="{{image}}" width="{{width}}" height="{{height}}" /><p>{{caption}}</p></a>',
             sortBy: 'most-recent',
             limit: 1,
             resolution: 'standard_resolution'
         });      
         feed1.run();
-    
+        
+        /*
         window.onload = function () {
 
-        for (var i = 1; i < document.getElementsByClassName('instagram-container').length + 1; i++) {
+            for (var i = 1; i < document.getElementsByClassName('instagram-container').length + 1; i++) {
 
-        (function (i) {
-          var target = document.getElementById('insta' + i);
-          for (var x = 1; x < i; x++) {
-            (function (i, x) {
-              target.removeChild(target.children[0]);
-            })(i, x);
+            (function (i) {
+              var target = document.getElementById('insta' + i);
+              for (var x = 1; x < i; x++) {
+                (function (i, x) {
+                  target.removeChild(target.children[0]);
+                })(i, x);
+              }
+              target.children[0].setAttribute('target', '_blank');
+              target.removeAttribute('style');
+            })(i);
           }
-          target.children[0].setAttribute('target', '_blank');
-          target.removeAttribute('style');
-        })(i);
-      }
-    }
+        }
+        */
   </script> 
 </body>
 </html>
