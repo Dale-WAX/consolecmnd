@@ -269,7 +269,8 @@ pre {
     text-transform: uppercase;
     text-shadow: none;
     padding: 10px 15px;
-    background: none;
+    background: #3d3d3d;
+    color: #B7F8DB;
     transition: .15s ease;
     font-size: 19px;
     bottom: 0;
@@ -279,7 +280,7 @@ pre {
       #container .bannerAd .replay-btn {
         position: absolute; } }
     #container .bannerAd .replay-btn:hover {
-      color: black;
+      color: #B7F8DB;
       text-shadow: none;
       border-bottom: 6px solid black; }
   #container .bannerAd .bigbox {
@@ -1403,5 +1404,3 @@ button, .button {
 /****************************
         MEDIA QUERIES
 ****************************/
-
-/*# sourceMappingURL=styles.css.map */
