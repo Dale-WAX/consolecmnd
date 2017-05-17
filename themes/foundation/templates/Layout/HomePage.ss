@@ -31,11 +31,11 @@
 			<div class="main-panel">
 				<div class="panel" id="info-panel">
 					<div class="grid">
-                    <div class="instagram-wrapper grid-item small-12 medium-6 large-4 columns">
-                        <div id="insta1" class="instagram-container"></div>
-                        <h3>Instagram</h3>
-                    </div>
-						<% loop $LatestArticles(8) %>
+                        <div class="instagram-wrapper grid-item small-12 medium-6 large-4 columns">
+                            <div id="insta1" class="instagram-container"></div>
+                            <h3>Instagram</h3>
+                        </div>
+						<% loop $LatestArticles(7) %>
 							<div class="grid-item small-12 medium-6 large-4 columns">
 								<a href="$Link">
 									<div class="dim"></div>
@@ -50,6 +50,11 @@
 								</a>
 							</div>
 						<% end_loop %>
+                        <div class="grid-item small-12 medium-6 large-4 columns">
+                            <a href="work.php" class="view-all">
+                                <h2>See everything over here</h2>
+                            </a>
+                        </div>
 					</div>
 				</div>
 			</div>

@@ -106,7 +106,7 @@
                 accessToken: '5426141918.0be40c9.12950f08592d413eb93fbf2292224117',
                 get: 'user',
                 userId: 5426141918,
-                template: '<a href="{{link}}" target="_blank"><img src="{{image}}" width="{{width}}" height="{{height}}" /><p>{{caption}}</p></a>',
+                template: '<a href="{{link}}" target="_blank"><div class="dim"></div><img src="{{image}}" width="{{width}}" height="{{height}}" /><p>{{caption}}</p></a>',
                 sortBy: 'most-recent',
                 limit: 1,
                 resolution: 'standard_resolution'
