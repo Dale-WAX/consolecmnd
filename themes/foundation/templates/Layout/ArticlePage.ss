@@ -1,3 +1,88 @@
+<script>
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "https://assets.gfycat.com/gfycat.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'gfycat-js'));
+</script>
+
+<div class="row image">
+            <div class="gfyitem columns large-12" data-title=false data-autoplay=true data-controls=false preload="auto" data-id="foolishrigidgrunion"></div>
+        </div>
+        <div class="row image">
+            <div class='gfyitem columns large-12' data-title=false data-autoplay=true data-controls=false preload="auto"  data-id=NimbleEarnestCollardlizard></div>
+        </div>
+        
+        
+        <div class="row">
+            <div class="large-12 columns">
+                <section class="devices layout--offscreen v--no-topmargin  v--no-sidepad">
+                    <div class="deviceset">
+                        <div class="device device-browser">
+                            <div class="device-body">
+                                <div class="sproule-home-page img v--scrolling" style=""></div>
+                                <span class="device-controls"></span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+        
+        
+<!--
+        <div class="row">
+            <div class="large-12 columns">
+                <section class="devices layout--3up scheme--darkgrey v--has-bgimage">
+                    <div class="deviceset">
+                        <div class="device device-browser v--fullborder">
+                            <div class="device-body">
+                                <img src="/img/mit.home.1280.width-1600.jpg" width="1280" height="3180" />
+                                <span class="device-controls"></span>
+                                <span class="device-caption caption">Home Page</span>
+                            </div>
+                        </div>
+                        
+                        <div class="device device-browser v--fullborder">
+                            <div class="device-body">
+                                <img src="/img/mit.home.1280.width-1600.jpg" width="1280" height="3180" />
+                                <span class="device-controls"></span>
+                                <span class="device-caption caption">Home Page</span>
+                            </div>
+                        </div>
+                        
+                        <div class="device device-browser v--fullborder">
+                            <div class="device-body">
+                                <img src="/img/mit.home.1280.width-1600.jpg" width="1280" height="3180" />
+                                <span class="device-controls"></span>
+                                <span class="device-caption caption">Home Page</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="large-12 columns">
+                <section class="devices layout--offscreen v--no-topmargin  v--no-sidepad">
+                    <div class="deviceset">
+                        <div class="device device-browser">
+                            <div class="device-body">
+                                <div class="sproule-home-page img v--scrolling" style=""></div>
+                                <span class="device-controls"></span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+-->
+        
+            
+            
             <div class="row">
 				<div class="medium-3 columns">
 					<div class="project-info">

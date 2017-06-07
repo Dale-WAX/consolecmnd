@@ -1104,6 +1104,162 @@ pre {
 
 
 
+/* WORK Devices */
+/***************************************************/
+
+section {
+    margin-top: 10vw;
+    margin-bottom: 10vw;
+    padding-left: 6.25vw;
+    padding-right: 6.25vw;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50%;
+    display: block;
+}
+
+.devices {
+
+}
+.deviceset {
+    padding-left: 3.125vw;
+    padding-right: 3.125vw;
+    display: -webkit-box;
+    display: -moz-box;
+    display: box;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: end;
+    box-align: end;
+    -moz-align-items: flex-end;
+    -ms-align-items: flex-end;
+    -o-align-items: flex-end;
+    align-items: flex-end;
+    -ms-flex-align: end;
+}
+.device {
+    -webkit-align-self: flex-end;
+    align-self: flex-end;
+    -ms-flex-item-align: end;
+    position: relative;
+}
+.device img {
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+
+
+/****************************
+          BROWSERS
+****************************/
+
+section {
+    .device {
+        div.img {
+            background-repeat: no-repeat;
+            background-position: 50% 0;
+            background-size: cover;
+            box-sizing: border-box;
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+        &.device-browser {
+            &:before {
+                content: "";
+                display: block;
+                border-radius: 4px 4px 0 0;
+                height: 20px;
+                margin-left: 3.125vw;
+                margin-right: 3.125vw;
+                border: 1px solid;
+                border-bottom: none;
+            }
+            div.img {
+                height: .625em;
+                border: 1px solid #fff;
+            }
+            .device-controls {
+                top: -14px;
+                left: 6px;
+                &:before {
+                    content: "";
+                    left: 13px;
+                    top: -1px;
+                }
+                &:after {
+                    content: "";
+                    left: 27px;
+                    top: -1px;
+                }
+            }
+        }
+    }
+    .caption {
+        color: #2d4a57;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        margin-top: .75rem;
+        font-size: .75rem;
+        line-height: 1.2;
+        max-width: 30em;
+    }
+    .devices {
+        &.layout--3up .deviceset .device {
+            width: 33.3%;
+            font-size: 31.21875vw;
+        }
+        .layout--offscreen .deviceset .device {
+            width: 80vw;
+            font-size: 80vw;
+        }
+    }
+    .device.device-browser .device-controls, 
+    .device.device-browser .device-controls:after, 
+    .device.device-browser .device-controls:before {
+        position: absolute;
+        z-index: 1;
+        border: 1px solid;
+        width: 8px;
+        height: 8px;
+        border-radius: 8px;
+    }
+    .scheme--darkgrey {
+        .device {
+            &.device-browser:before, section.scheme--darkgrey .device.device-browser:before {
+                background: #121e23;
+            }
+            &.device-browser.v--fullborder img {
+                border: 1px solid #fff8e7;
+            }
+            .device-body, section.scheme--darkgrey .device .device-body {
+                background: #121e23;
+            }
+        }
+    }
+    .v--has-bgimage {
+        margin-top: 0;
+        margin-bottom: 0;
+        padding-top: 10vw;
+        padding-bottom: 10vw;
+        background-image: url(/img/bg-1-blurry.width-2000.png);
+    }
+    .img.v--scrolling { 
+        -webkit-transition: none;
+        transition: none;
+    }
+    .sproule-home-page {
+        background-image: url('/img/tcp.good-funnymarsarticle-shorthero-1440.width-1600.jpg');
+    }
+
+}
+
+
 /****************************
         NAVIGATION
 ****************************/
