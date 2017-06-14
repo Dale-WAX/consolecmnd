@@ -1158,49 +1158,348 @@ section {
 ****************************/
 
 section {
-    .device {
-        div.img {
-            background-repeat: no-repeat;
-            background-position: 50% 0;
-            background-size: cover;
-            box-sizing: border-box;
-            display: block;
-            width: 100%;
-            height: auto;
+    margin-top: 10vw;
+    margin-bottom: 10vw;
+    padding-left: 6.25vw;
+    padding-right: 6.25vw;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50%;
+    a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, body, canvas, caption, center, cite, code, dd, del, details, dfn, div, dl, dt, em, embed, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, html, i, iframe, img, ins, kbd, label, legend, li, mark, menu, nav, object, ol, output, p, pre, q, ruby, s, samp, section, small, span, strike, strong, sub, summary, sup, table, tbody, td, tfoot, th, thead, time, tr, tt, u, ul, var, video {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font: inherit;
+        font-size: 100%;
+        vertical-align: baseline;
+    }
+    .img.v--scrolling { 
+        -webkit-transition: none;
+        transition: none;
+        position: relative;
+        overflow: hidden;
+    }
+    &.v--has-bgimage {
+        margin-top: 0;
+        margin-bottom: 0;
+        padding-top: 10vw;
+        padding-bottom: 10vw;
+        background-image: url(../images/bg-1-blurry-1300.jpg);
+        .layout--3up {
+            margin-top: 6.5vw;
         }
-        &.device-browser {
-            &:before {
-                content: "";
-                display: block;
-                border-radius: 4px 4px 0 0;
-                height: 20px;
-                margin-left: 3.125vw;
-                margin-right: 3.125vw;
-                border: 1px solid;
-                border-bottom: none;
-            }
-            div.img {
-                height: .625em;
-                border: 1px solid #fff;
-            }
-            .device-controls {
-                top: -14px;
-                left: 6px;
-                &:before {
-                    content: "";
-                    left: 13px;
-                    top: -1px;
+    }
+    &.devices {
+        padding-left: 0;
+        padding-right: 0;
+        -webkit-transition: none;
+        transition: none;
+        * {
+            -webkit-transition: none;
+            transition: none;
+        }
+        &.layout--browser .deviceset .device {
+            width: 100%;
+            font-size: 93.75vw;
+        }
+        &.layout--suite .deviceset {
+            position: relative;
+            .device {
+                &:first-child {
+                    width: 100%;
+                    font-size: 93.75vw; 
+                    @media only screen and (min-width: 768px) {
+                        width: 75%;
+                        font-size: 70.3125vw;
+                    }
                 }
-                &:after {
+                &:nth-child(2) {
+                    width: 75%;
+                    font-size: 70.3125vw;
+                    @media only screen and (min-width: 768px) {
+                        width: 33.3%;
+                        font-size: 31.21875vw;
+                        left: 60%;
+                    }
+                }
+                &:nth-child(3) {
+                    width: 37.5%;
+                    font-size: 35.15625vw;
+                    position: absolute;
+                    bottom: 0;
+                    right: 3.125vw;
+                    @media only screen and (min-width: 768px) {
+                        width: 16.65%;
+                        font-size: 15.60937vw;
+                        left: auto;
+                    }
+                }
+                @media only screen and (min-width: 768px) {
+                    &:nth-child(2), &:nth-child(3) {
+                        position: absolute;
+                        bottom: 0;
+                    }
+                }
+            }
+        }
+        .deviceset {
+            padding-left: 3.125vw;
+            padding-right: 3.125vw;
+            @media only screen and (min-width: 768px) {
+                display: -webkit-box;
+                display: -moz-box;
+                display: box;
+                display: -moz-flex;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-align: end;
+                box-align: end;
+                -moz-align-items: flex-end;
+                -ms-align-items: flex-end;
+                -o-align-items: flex-end;
+                align-items: flex-end;
+                -ms-flex-align: end;
+            }
+            .device {
+                position: relative;
+                font-size: 100vw;
+                div.img, img, video {
+                    box-sizing: border-box;
+                    display: block;
+                    width: 100%;
+                    height: auto;
+                }
+                div.img {
+                    background-repeat: no-repeat;
+                    background-position: 50% 0;
+                    background-size: cover;
+                }
+                .device-body {
+                    background: $grey;
+                    .sproule-cae {
+                        border: 0 !important;
+                        position: absolute;
+                        bottom: 0;
+                        right: 0;
+                        max-width: 20%;
+                    }
+                    .video-wrapper {
+                        width: auto;
+                        height: auto;
+                        border: 1px solid #fff;
+                        video {
+                            height: auto !important;
+                        }
+                    }
+                }
+                &.device-tablet {
+                    .device-body {
+                        .sproule-cae {
+                            max-width: 35% !important;
+                        }
+                    }
+                    div.img {
+                        height: 1.04052em;
+                    }
+                }
+                &.device-phone .device-body, &.device-tablet .device-body {
+                    position: relative;
+                    box-sizing: border-box;
+                    border: 1px solid;
+                    margin-left: 3.125vw;
+                    margin-right: 3.125vw;
+                    width: calc(100% - 6.25vw);
+                }
+                &.device-phone:after, &.device-tablet:after {
                     content: "";
-                    left: 27px;
-                    top: -1px;
+                    position: absolute;
+                    z-index: 1;
+                    bottom: .055em;
+                    left: 50%;
+                    border: 1px solid;
+                    width: .1em;
+                    height: .1em;
+                    border-radius: .1em;
+                    margin-left: -.05em;
+                }
+                &.device-phone{
+                    .device-body:after, .device-body:before, .device-controls:after, .device-controls:before {
+                        position: absolute;
+                        z-index: 1;
+                        height: .08em;
+                        width: .005em;
+                        border: 1px solid;
+                        border-right: none;
+                        border-radius: .005em 0 0 .005em;
+                        right: 100%;
+                        margin-right: 1px;
+                        overflow: scroll;
+                    }
+                    .device-body {
+                        padding: .15em .03em .2em;
+                        border-radius: .075em;
+                        &:before {
+                            content: "";
+                            top: .3em;
+                            width: 0;
+                        }
+                        &:after {
+                            content: "";
+                            top: .4em;
+                            width: 0;
+                        }
+                        .sproule-cae {
+                            max-width: 50% !important;
+                        }
+                    }
+                    &:before {
+                        background:$white;
+                        background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='3' height='3'><circle cx='0.5' cy='0.5' r='0.5' fill='#333'/><circle cx='2' cy='2' r='0.5' fill='#333'/></svg>");
+                        content: "";
+                        position: absolute;
+                        z-index: 1;
+                        top: .065em;
+                        left: 50%;
+                        width: .15em;
+                        margin-left: -.075em;
+                        height: .01em;
+                        border-radius: .01em;                        
+                    }
+                    div.img {
+                        height: 1.04052em;
+                    }
+                    .device-controls {
+                        &:before {
+                            content: "";
+                            top: .3em;
+                            left: 100%;
+                            right: auto;
+                            margin-left: 1px;
+                            border-right: 1px solid;
+                            border-left: none;
+                            border-radius: 0 .005em .005em 0;
+                            width: 0;
+                        }
+                        &:after {
+                            content: "";
+                            top: .15em;
+                            height: .06em;
+                            width: 0;
+                        }
+                    }
+                }
+                &.device-tablet {
+                    .device-body {
+                        padding: .1em .05em;
+                        border-radius: .0375em;
+                        @media only screen and (min-width: 768px) {
+//                            padding: .15em .03em .2em;
+//                            border-radius: .075em;
+//                            position: relative;
+//                            box-sizing: border-box;
+//                            border: 1px solid;
+//                            margin-left: 3.125vw;
+//                            margin-right: 3.125vw;
+//                            width: calc(100% - 6.25vw);
+                        }
+                    }
+                    &:before {
+                        background: #2d4a57;
+                        content: "";
+                        position: absolute;
+                        z-index: 1;
+                        top: .0425em;
+                        left: 50%;
+                        width: .01em;
+                        height: .01em;
+                        border-radius: .01em;
+                        margin-left: -.005em;
+                        background: $white;
+                    }
+                    &:after {
+                        bottom: .0275em;
+                        width: .05em;
+                        height: .05em;
+                        border-radius: .05em;
+                        margin-left: -.025em;
+                    }
+                }
+                &.device-tablet div.img, &.device-tablet img, &.device-tablet video {
+                    border-radius: .0075em;
+                }
+                &.device-phone div.img, &.device-phone img, &.device-phone video, &.device-tablet div.img, &.device-tablet img, &.device-tablet video {
+                    border: 1px solid $white;
+                }
+                &.device-browser {
+                    &:before {
+                        content: "";
+                        display: block;
+                        border-radius: 4px 4px 0 0;
+                        height: 20px;
+                        margin-left: 3.125vw;
+                        margin-right: 3.125vw;
+                        border: 1px solid;
+                        border-bottom: none;
+                    }
+                    .device-body {
+                        position: relative;
+                        margin-left: 3.125vw;
+                        margin-right: 3.125vw;
+                        width: calc(100% - 6.25vw);
+                         div video {
+                            height: .625em;
+                        }        
+                    }
+                    .device-controls, .device-controls:after, .device-controls:before {
+                        position: absolute;
+                        z-index: 1;
+                        border: 1px solid;
+                        width: 8px;
+                        height: 8px;
+                        border-radius: 8px;
+                    }
+                    .device-controls {
+                        top: -14px;
+                        left: 6px;
+                        &:before {
+                            content: "";
+                            left: 13px;
+                            top: -1px;
+                        }
+                        &:after {
+                            content: "";
+                            left: 27px;
+                            top: -1px;
+                        }
+                    }
+                    div.img {
+                        height: .625em;
+                    }                    
+                    &.v--fullborder {
+                        div.img, div img, div .gfy-video {
+                            border: 1px solid $white;
+                        }
+                    }
+                    .gfy-video {
+                        .play-button {
+                            border: 1px solid red !important;
+                        }
+                    }
                 }
             }
         }
     }
+    .device+.device {
+        margin-top: 3rem;
+        @media only screen and (min-width: 768px) {
+            margin-top: 0;
+        }
+    }
+    &.titleblock+section {
+        margin-top: 6.5vw;
+    }    
     .caption {
-        color: #2d4a57;
+        color: #f6f6f6;
         position: absolute;
         top: 100%;
         left: 0;
@@ -1209,54 +1508,18 @@ section {
         line-height: 1.2;
         max-width: 30em;
     }
-    .devices {
-        &.layout--3up .deviceset .device {
-            width: 33.3%;
-            font-size: 31.21875vw;
-        }
-        .layout--offscreen .deviceset .device {
-            width: 80vw;
-            font-size: 80vw;
-        }
-    }
-    .device.device-browser .device-controls, 
-    .device.device-browser .device-controls:after, 
-    .device.device-browser .device-controls:before {
-        position: absolute;
-        z-index: 1;
-        border: 1px solid;
-        width: 8px;
-        height: 8px;
-        border-radius: 8px;
-    }
-    .scheme--darkgrey {
-        .device {
-            &.device-browser:before, section.scheme--darkgrey .device.device-browser:before {
-                background: #121e23;
-            }
-            &.device-browser.v--fullborder img {
-                border: 1px solid #fff8e7;
-            }
-            .device-body, section.scheme--darkgrey .device .device-body {
-                background: #121e23;
-            }
-        }
-    }
-    .v--has-bgimage {
-        margin-top: 0;
-        margin-bottom: 0;
-        padding-top: 10vw;
-        padding-bottom: 10vw;
-        background-image: url(/img/bg-1-blurry.width-2000.png);
-    }
-    .img.v--scrolling { 
-        -webkit-transition: none;
-        transition: none;
-    }
     .sproule-home-page {
-        background-image: url('/img/tcp.good-funnymarsarticle-shorthero-1440.width-1600.jpg');
+        background-image: url('../images/sproule-homepage.jpg');
     }
-
+    .device-phone .sproule-home-page {
+        background-image: url('../images/sproule-phone-reservior.jpg');
+    }
+    .device-tablet .sproule-home-page-2 {
+        background-image: url('../images/sproule-tablet-reservior.jpg');
+    }
+    .device-browser .sproule-home-page-3 {
+        background-image: url('../images/sproule-browser-reservior.jpg');
+    }
 }
 
 

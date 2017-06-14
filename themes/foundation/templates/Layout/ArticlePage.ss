@@ -14,75 +14,96 @@
         <div class="row image">
             <div class='gfyitem columns large-12' data-title=false data-autoplay=true data-controls=false preload="auto"  data-id=NimbleEarnestCollardlizard></div>
         </div>
-        
-        
-        <div class="row">
-            <div class="large-12 columns">
-                <section class="devices layout--offscreen v--no-topmargin  v--no-sidepad">
-                    <div class="deviceset">
-                        <div class="device device-browser">
-                            <div class="device-body">
-                                <div class="sproule-home-page img v--scrolling" style=""></div>
-                                <span class="device-controls"></span>
+
+        <section class="v--has-bgimage">
+            <div class="row">
+                <div class="large-12 columns">
+                    <section class="devices layout--browser">
+                        <div class="deviceset">
+                            <div class="device device-browser v--fullborder">
+                                <div class="device-body">
+                                    <div class="sproule-home-page img v--scrolling" style=""><img class="sproule-cae" src="$ThemeDir/images/cae.gif" alt="" /></div>
+                                    <span class="device-controls"></span>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </section>
+                    </section>
+                </div>
             </div>
-        </div>
-        
-        
-<!--
-        <div class="row">
-            <div class="large-12 columns">
-                <section class="devices layout--3up scheme--darkgrey v--has-bgimage">
-                    <div class="deviceset">
-                        <div class="device device-browser v--fullborder">
-                            <div class="device-body">
-                                <img src="/img/mit.home.1280.width-1600.jpg" width="1280" height="3180" />
-                                <span class="device-controls"></span>
-                                <span class="device-caption caption">Home Page</span>
+
+            <div class="row">
+                <div class="large-12 columns">
+                    <section class="devices layout--3up">
+                        <div class="deviceset">
+                            <div class="device device-browser v--fullborder">
+                                <div class="device-body">
+                                    <img src="$ThemeDir/images/sproule-tall-case-studies.jpg" width="1300" height="3130" />
+                                    <span class="device-controls"></span>
+                                    <span class="device-caption caption">Case Studies</span>
+                                </div>
+                            </div>
+
+                            <div class="device device-browser v--fullborder">
+                                <div class="device-body">
+                                    <img src="$ThemeDir/images/sproule-tall-regulatory.jpg" width="1300" height="3130" />
+                                    <span class="device-controls"></span>
+                                    <span class="device-caption caption">Regulatory Strategy &amp; Development</span>
+                                </div>
+                            </div>
+
+                            <div class="device device-browser v--fullborder">
+                                <div class="device-body">
+                                    <img src="$ThemeDir/images/sproule-tall-training.jpg" width="1300" height="3130" />
+                                    <span class="device-controls"></span>
+                                    <span class="device-caption caption">Training</span>
+                                </div>
                             </div>
                         </div>
-                        
-                        <div class="device device-browser v--fullborder">
-                            <div class="device-body">
-                                <img src="/img/mit.home.1280.width-1600.jpg" width="1280" height="3180" />
-                                <span class="device-controls"></span>
-                                <span class="device-caption caption">Home Page</span>
-                            </div>
-                        </div>
-                        
-                        <div class="device device-browser v--fullborder">
-                            <div class="device-body">
-                                <img src="/img/mit.home.1280.width-1600.jpg" width="1280" height="3180" />
-                                <span class="device-controls"></span>
-                                <span class="device-caption caption">Home Page</span>
-                            </div>
-                        </div>
-                    </div>
-                </section>
+                    </section>
+                </div>
             </div>
-        </div>
+        </section>
         
-        <div class="row">
-            <div class="large-12 columns">
-                <section class="devices layout--offscreen v--no-topmargin  v--no-sidepad">
-                    <div class="deviceset">
-                        <div class="device device-browser">
-                            <div class="device-body">
-                                <div class="sproule-home-page img v--scrolling" style=""></div>
-                                <span class="device-controls"></span>
-                            </div>
-                        </div>
+        <section class="devices layout--suite v--has-bgimage">
+            <div class="deviceset">
+                <div class="device device-browser v--fullborder">
+                    <div class="device-body">
+                        <div class="sproule-home-page-3 img v--scrolling" style=""><img class="sproule-cae" src="$ThemeDir/images/cae.gif" alt="" /></div>
+                        <span class="device-controls"></span>
                     </div>
-                </section>
+                </div>
+                <div class="device device-tablet">
+                    <div class="device-body">
+                        <div class="sproule-home-page-2 img v--scrolling" style=""><img class="sproule-cae" src="$ThemeDir/images/cae.gif" alt="" /></div>
+                        <span class="device-controls"></span>
+                    </div>
+                </div>
+                <div class="device device-phone">
+                    <div class="device-body">
+                        <div class="sproule-home-page img v--scrolling" style=""><img class="sproule-cae" src="$ThemeDir/images/cae.gif" alt="" /></div>
+                        <span class="device-controls"></span>
+                    </div>
+                </div>
             </div>
-        </div>
--->
+        </section>
         
-            
-            
+        <section class="devices layout--browser v--has-bgimage">
+            <div class="deviceset">
+                <div class="device device-browser v--fullborder">
+                    <div class="device-body">
+                        <div class="video-wrapper">
+                            <video playsinline="" webkit-playsinline="" poster="https://thumbs.gfycat.com/HonoredBadBluet-poster.jpg" class="i-amphtml-fill-content i-amphtml-replaced-content" loop="" autoplay="" ><source id="webmSource" src="https://fat.gfycat.com/HonoredBadBluet.webm" type="video/webm"><source id="mp4Source" src="https://fat.gfycat.com/HonoredBadBluet.mp4" type="video/mp4"></video>
+                        </div>
+                        <span class="device-controls"></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+
+
             <div class="row">
 				<div class="medium-3 columns">
 					<div class="project-info">

@@ -29,7 +29,7 @@ if ($('body').hasClass('ArticleHolder')) {
 var pathArray = window.location.pathname.split( '/' );
 var firstLevelLocation = pathArray[0];
 var secondLevelLocation = pathArray[1];
-// console.log(pathArray, firstLevelLocation, secondLevelLocation);
+
 
 if (secondLevelLocation == 'about') {
     $('#container').addClass('about-palette dark');
@@ -37,7 +37,6 @@ if (secondLevelLocation == 'about') {
 }
 
 if (secondLevelLocation == 'work') {
-    // $('#container').addClass('work-palette light');
     $(".bg-shapes div svg").attr("class", "icon work-stroke");
 }
 
@@ -75,7 +74,6 @@ if (secondLevelLocation == 'work') {
             $('#shapes').removeClass('gone');
         }
     });
-
 
     // STOP MOBILE BUTTON AT BOTTOM OF MAIN PANEL
      if (screen.width > 640) {
@@ -204,6 +202,44 @@ window.onload = function () {
 
   launchTimer();
 };
+
+// WEBSITE PARALLAX
+$(document).ready(function() {
+    
+    function autoScroll(targetElement) {
+        var winHeight = window.innerHeight;
+        var winScrPos = $(window).scrollTop();
+        var device = $(targetElement);
+        var elementHeight = $(device).height();
+        var elementTop = $(device).offset().top;
+        var elementBottom = elementTop + elementHeight;
+        var bottom_of_screen = winHeight + winScrPos;
+        
+        var padding = elementHeight * .5;
+        
+        var portalTop = winScrPos - padding,
+            portalHeight = winHeight,
+            portalBottom = portalTop + portalHeight;
+        
+        if (elementTop <= portalBottom) {
+            var imgEle = $(targetElement).find(".v--scrolling");
+            var imgEleHeight = $(imgEle[0]).height();
+            var yPos = ((portalBottom - elementTop) / portalHeight <= 1) ? (portalBottom - elementTop) / portalHeight * 100 : 100;
+
+            $(targetElement).find(".v--scrolling").css("background-position-y", yPos + "%");
+        } else {
+            $(targetElement).find(".v--scrolling").css("background-position-y", 0);
+        }
+    }
+
+    $(window).on('load scroll', function() {
+        $('.device').each(function() {
+            if ($(this).find(".v--scrolling").length) {
+                autoScroll(this);
+            }
+        });
+    });
+});
 
 // GFY VIDEOS
 
