@@ -801,16 +801,6 @@ pre {
 
 /* WORK Devices */
 /***************************************************/
-section {
-  margin-top: 10vw;
-  margin-bottom: 10vw;
-  padding-left: 6.25vw;
-  padding-right: 6.25vw;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: 50%;
-  display: block; }
-
 .deviceset {
   padding-left: 3.125vw;
   padding-right: 3.125vw;
@@ -846,8 +836,6 @@ section {
 section {
   margin-top: 10vw;
   margin-bottom: 10vw;
-  padding-left: 6.25vw;
-  padding-right: 6.25vw;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50%; }
@@ -915,8 +903,8 @@ section {
           position: absolute;
           bottom: 0; } }
     section.devices .deviceset {
-      padding-left: 3.125vw;
-      padding-right: 3.125vw; }
+      padding-left: 1px;
+      padding-right: 1px; }
       @media only screen and (min-width: 768px) {
         section.devices .deviceset {
           display: -webkit-box;
@@ -966,9 +954,9 @@ section {
           position: relative;
           box-sizing: border-box;
           border: 1px solid;
-          margin-left: 3.125vw;
-          margin-right: 3.125vw;
-          width: calc(100% - 6.25vw); }
+          margin-left: 1px;
+          margin-right: 1px;
+          width: calc(100% - 0vw); }
         section.devices .deviceset .device.device-phone:after, section.devices .deviceset .device.device-tablet:after {
           content: "";
           position: absolute;

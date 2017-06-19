@@ -8,16 +8,35 @@
    }(document, 'script', 'gfycat-js'));
 </script>
 
-<div class="row image">
+
+            <div class="row">
+				<div class="medium-3 columns">
+					<div class="project-info">
+						<p><span>Created</span><br />$Date.Month, $Date.Year</p>
+						<% if $Categories %>
+						<p><span>Tags</span><br /><% loop $Categories %>$Title<% if not $Last %>, <% end_if %><% end_loop %></p>
+						<% end_if %>
+						<% if $SiteURL %>
+						<p><span>URL</span><br /><a href="http://$SiteURL" target="_blank">$SiteURL</a></p>
+						<% end_if %>
+						<% if $AwardURL %>
+                            <p><span>Awards</span><br /><a href="http://$AwardURL" target="_blank">$AwardTitle</a></p>
+                            <a href="http://$AwardURL" target="_blank"><img src="$AwardImage.URL" alt="$AwardTitle" /></a>
+						<% end_if %>
+					</div>
+				</div>
+				<div class="medium-9 columns">
+					<div class="main-panel">
+						<div class="panel" id="info-panel">
+                        
+                        
+        
             <div class="gfyitem columns large-12" data-title=false data-autoplay=true data-controls=false preload="auto" data-id="foolishrigidgrunion"></div>
-        </div>
-        <div class="row image">
             <div class='gfyitem columns large-12' data-title=false data-autoplay=true data-controls=false preload="auto"  data-id=NimbleEarnestCollardlizard></div>
-        </div>
+        
 
         <section class="v--has-bgimage">
-            <div class="row">
-                <div class="large-12 columns">
+            
                     <section class="devices layout--browser">
                         <div class="deviceset">
                             <div class="device device-browser v--fullborder">
@@ -28,9 +47,7 @@
                             </div>
                         </div>
                     </section>
-                </div>
-            </div>
-
+            
             <div class="row">
                 <div class="large-12 columns">
                     <section class="devices layout--3up">
@@ -99,30 +116,8 @@
                 </div>
             </div>
         </section>
-
-
-
-
-
-            <div class="row">
-				<div class="medium-3 columns">
-					<div class="project-info">
-						<p><span>Created</span><br />$Date.Month, $Date.Year</p>
-						<% if $Categories %>
-						<p><span>Tags</span><br /><% loop $Categories %>$Title<% if not $Last %>, <% end_if %><% end_loop %></p>
-						<% end_if %>
-						<% if $SiteURL %>
-						<p><span>URL</span><br /><a href="http://$SiteURL" target="_blank">$SiteURL</a></p>
-						<% end_if %>
-						<% if $AwardURL %>
-                            <p><span>Awards</span><br /><a href="http://$AwardURL" target="_blank">$AwardTitle</a></p>
-                            <a href="http://$AwardURL" target="_blank"><img src="$AwardImage.URL" alt="$AwardTitle" /></a>
-						<% end_if %>
-					</div>
-				</div>
-				<div class="medium-9 columns">
-					<div class="main-panel">
-						<div class="panel" id="info-panel">
+                        
+                        
 							<% if $SiteVideo %>
 							<div class="SiteVideo">
 								<iframe src='$SiteVideo' frameborder="0" scrolling="no" width="100%" height="100%" style="position:absolute;top:0;left:0;" allowfullscreen></iframe>

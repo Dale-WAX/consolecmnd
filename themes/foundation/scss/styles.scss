@@ -1107,20 +1107,20 @@ pre {
 /* WORK Devices */
 /***************************************************/
 
-section {
-    margin-top: 10vw;
-    margin-bottom: 10vw;
-    padding-left: 6.25vw;
-    padding-right: 6.25vw;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: 50%;
-    display: block;
-}
-
-.devices {
-
-}
+//section {
+//    margin-top: 10vw;
+//    margin-bottom: 10vw;
+////    padding-left: 6.25vw;
+////    padding-right: 6.25vw;
+//    background-repeat: no-repeat;
+//    background-size: cover;
+//    background-position: 50%;
+//    display: block;
+//}
+//
+//.devices {
+//
+//}
 .deviceset {
     padding-left: 3.125vw;
     padding-right: 3.125vw;
@@ -1160,8 +1160,8 @@ section {
 section {
     margin-top: 10vw;
     margin-bottom: 10vw;
-    padding-left: 6.25vw;
-    padding-right: 6.25vw;
+//    padding-left: 6.25vw;
+//    padding-right: 6.25vw;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 50%;
@@ -1243,8 +1243,11 @@ section {
             }
         }
         .deviceset {
-            padding-left: 3.125vw;
-            padding-right: 3.125vw;
+//            padding-left: 3.125vw;
+//            padding-rigt: 3.125vw;
+            
+            padding-left: 1px;
+            padding-right: 1px;
             @media only screen and (min-width: 768px) {
                 display: -webkit-box;
                 display: -moz-box;
@@ -1306,9 +1309,12 @@ section {
                     position: relative;
                     box-sizing: border-box;
                     border: 1px solid;
-                    margin-left: 3.125vw;
-                    margin-right: 3.125vw;
-                    width: calc(100% - 6.25vw);
+                    margin-left: 1px;
+                    margin-right: 1px;
+//                    margin-left: 3.125vw;
+//                    margin-right: 3.125vw;
+//                    width: calc(100% - 6.25vw);
+                    width: calc(100% - 0vw);
                 }
                 &.device-phone:after, &.device-tablet:after {
                     content: "";
