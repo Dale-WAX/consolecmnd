@@ -603,33 +603,39 @@ pre {
             display: none !important;
         }
     }
+    .padding {
+        padding: 0;
+        @media only screen and (min-width: 480px) {
+            padding: 0 20px 36px 20px;
+        }
+        @media only screen and (min-width: 640px) {
+            width: 80%;
+            padding: 0 60px 36px 60px;
+        }
+    }
     .main-panel {
         transform: translate3d(0,0,0);
         z-index: 2;
         position: relative;
         width: 100%;
         .panel {
-            padding-left: 20px;
-            padding-right: 20px;
             min-height: 83vh;
-            padding-top: 0;
+            padding: 40px 20px;
             background-color: transparent;
-            @media only screen and (min-width: 480px) {
-                padding: 0 80px 80px 80px;
+            @media only screen and (min-width: 640px) {
+                padding: 80px 20px;
             }            
             .header {
                 font-size: 34px;
                 line-height: 40px;
                 &.section-header {
                     text-transform: uppercase;
-                    padding-top: 136px;
                     padding-bottom: 60px;
                     &.info-header {
-                        padding-top: 40px;
-                        padding-bottom: 30px;
-                        @media only screen and (min-width: 480px) {
-                            padding-top: 72px;
-                            padding-bottom: 36px;
+                        padding-bottom: 20px;
+                        padding-right: 0;
+                        @media only screen and (min-width: 640px) {
+                            padding-bottom: 30px;
                         }                              
                     }        
                 }            
@@ -638,10 +644,7 @@ pre {
                 width: 100%;
                 columns: 2 200px;
                 column-gap: 2rem;
-                margin-bottom: 50px;
-                @media only screen and (min-width: 640px) {
-                    width: 80%;
-                }
+                padding-bottom: 0;
                 a {
 //                  background-image: linear-gradient(transparent 95%, $l-black 5%);
 //                  background-repeat: repeat-x;
@@ -1103,65 +1106,18 @@ pre {
 }
 
 
-
-/* WORK Devices */
-/***************************************************/
-
-//section {
-//    margin-top: 10vw;
-//    margin-bottom: 10vw;
-////    padding-left: 6.25vw;
-////    padding-right: 6.25vw;
-//    background-repeat: no-repeat;
-//    background-size: cover;
-//    background-position: 50%;
-//    display: block;
-//}
-//
-//.devices {
-//
-//}
-.deviceset {
-    padding-left: 3.125vw;
-    padding-right: 3.125vw;
-    display: -webkit-box;
-    display: -moz-box;
-    display: box;
-    display: -moz-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: end;
-    box-align: end;
-    -moz-align-items: flex-end;
-    -ms-align-items: flex-end;
-    -o-align-items: flex-end;
-    align-items: flex-end;
-    -ms-flex-align: end;
-}
-.device {
-    -webkit-align-self: flex-end;
-    align-self: flex-end;
-    -ms-flex-item-align: end;
-    position: relative;
-}
-.device img {
-    box-sizing: border-box;
-    display: block;
-    width: 100%;
-    height: auto;
-}
-
-
-
 /****************************
           BROWSERS
 ****************************/
 
+/* WORK Devices */
+/***************************************************/
+
 section {
-    margin-top: 10vw;
-    margin-bottom: 10vw;
-//    padding-left: 6.25vw;
-//    padding-right: 6.25vw;
+    margin-top: 5vw;
+    margin-bottom: 5vw;
+    padding-left: 6.25vw;
+    padding-right: 6.25vw;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 50%;
@@ -1244,10 +1200,9 @@ section {
         }
         .deviceset {
 //            padding-left: 3.125vw;
-//            padding-rigt: 3.125vw;
-            
-            padding-left: 1px;
-            padding-right: 1px;
+//            padding-right: 3.125vw;
+            padding-left: 1.125vw;
+            padding-right: 1.125vw;
             @media only screen and (min-width: 768px) {
                 display: -webkit-box;
                 display: -moz-box;
@@ -1289,7 +1244,7 @@ section {
                     .video-wrapper {
                         width: auto;
                         height: auto;
-                        border: 1px solid #fff;
+                        border: 1px solid $black;
                         video {
                             height: auto !important;
                         }
@@ -1309,12 +1264,12 @@ section {
                     position: relative;
                     box-sizing: border-box;
                     border: 1px solid;
-                    margin-left: 1px;
-                    margin-right: 1px;
 //                    margin-left: 3.125vw;
 //                    margin-right: 3.125vw;
 //                    width: calc(100% - 6.25vw);
-                    width: calc(100% - 0vw);
+                    margin-left: 1.125vw;
+                    margin-right: 1.125vw;
+                    width: calc(100% - 2.25vw);                    
                 }
                 &.device-phone:after, &.device-tablet:after {
                     content: "";
@@ -1434,7 +1389,7 @@ section {
                     border-radius: .0075em;
                 }
                 &.device-phone div.img, &.device-phone img, &.device-phone video, &.device-tablet div.img, &.device-tablet img, &.device-tablet video {
-                    border: 1px solid $white;
+                    border: 1px solid $black;
                 }
                 &.device-browser {
                     &:before {
@@ -1442,16 +1397,21 @@ section {
                         display: block;
                         border-radius: 4px 4px 0 0;
                         height: 20px;
-                        margin-left: 3.125vw;
-                        margin-right: 3.125vw;
+//                        margin-left: 3.125vw;
+//                        margin-right: 3.125vw;
+                        margin-left: 1.125vw;
+                        margin-right: 1.125vw;
                         border: 1px solid;
                         border-bottom: none;
                     }
                     .device-body {
                         position: relative;
-                        margin-left: 3.125vw;
-                        margin-right: 3.125vw;
-                        width: calc(100% - 6.25vw);
+//                        margin-left: 3.125vw;
+//                        margin-right: 3.125vw;
+//                        width: calc(100% - 6.25vw);
+                        margin-left: 1.125vw;
+                        margin-right: 1.125vw;
+                        width: calc(100% - 2.25vw);
                          div video {
                             height: .625em;
                         }        
@@ -1480,10 +1440,11 @@ section {
                     }
                     div.img {
                         height: .625em;
+//                        height: .425em;
                     }                    
                     &.v--fullborder {
                         div.img, div img, div .gfy-video {
-                            border: 1px solid $white;
+                            border: 1px solid $black;
                         }
                     }
                     .gfy-video {
@@ -1527,7 +1488,6 @@ section {
         background-image: url('../images/sproule-browser-reservior.jpg');
     }
 }
-
 
 /****************************
         NAVIGATION

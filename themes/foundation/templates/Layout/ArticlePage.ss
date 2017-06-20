@@ -8,35 +8,54 @@
    }(document, 'script', 'gfycat-js'));
 </script>
 
+<!--
+        <div class="row">
+            <div class="large-12 columns">
+                <section class="devices layout--suite v--has-bgimage">
+                    <div class="deviceset">
+                        <div class="device device-browser v--fullborder">
+                            <div class="device-body">
+                                <div class="sproule-home-page-3 img v--scrolling" style=""><img class="sproule-cae" src="$ThemeDir/images/cae.gif" alt="" /></div>
+                                <span class="device-controls"></span>
+                            </div>
+                        </div>
+                        <div class="device device-tablet">
+                            <div class="device-body">
+                                <div class="sproule-home-page-2 img v--scrolling" style=""><img class="sproule-cae" src="$ThemeDir/images/cae.gif" alt="" /></div>
+                                <span class="device-controls"></span>
+                            </div>
+                        </div>
+                        <div class="device device-phone">
+                            <div class="device-body">
+                                <div class="sproule-home-page img v--scrolling" style=""><img class="sproule-cae" src="$ThemeDir/images/cae.gif" alt="" /></div>
+                                <span class="device-controls"></span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
 
-            <div class="row">
-				<div class="medium-3 columns">
-					<div class="project-info">
-						<p><span>Created</span><br />$Date.Month, $Date.Year</p>
-						<% if $Categories %>
-						<p><span>Tags</span><br /><% loop $Categories %>$Title<% if not $Last %>, <% end_if %><% end_loop %></p>
-						<% end_if %>
-						<% if $SiteURL %>
-						<p><span>URL</span><br /><a href="http://$SiteURL" target="_blank">$SiteURL</a></p>
-						<% end_if %>
-						<% if $AwardURL %>
-                            <p><span>Awards</span><br /><a href="http://$AwardURL" target="_blank">$AwardTitle</a></p>
-                            <a href="http://$AwardURL" target="_blank"><img src="$AwardImage.URL" alt="$AwardTitle" /></a>
-						<% end_if %>
-					</div>
-				</div>
-				<div class="medium-9 columns">
-					<div class="main-panel">
-						<div class="panel" id="info-panel">
-                        
-                        
-        
-            <div class="gfyitem columns large-12" data-title=false data-autoplay=true data-controls=false preload="auto" data-id="foolishrigidgrunion"></div>
-            <div class='gfyitem columns large-12' data-title=false data-autoplay=true data-controls=false preload="auto"  data-id=NimbleEarnestCollardlizard></div>
-        
+        <div class="row">
+            <div class="large-12 columns">
+                <section class="devices layout--browser v--has-bgimage">
+                    <div class="deviceset">
+                        <div class="device device-browser v--fullborder">
+                            <div class="device-body">
+                                <div class="video-wrapper">
+                                    <video playsinline="" webkit-playsinline="" poster="https://thumbs.gfycat.com/HonoredBadBluet-poster.jpg" class="i-amphtml-fill-content i-amphtml-replaced-content" loop="" autoplay="" ><source id="webmSource" src="https://fat.gfycat.com/HonoredBadBluet.webm" type="video/webm"><source id="mp4Source" src="https://fat.gfycat.com/HonoredBadBluet.mp4" type="video/mp4"></video>
+                                </div>
+                                <span class="device-controls"></span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
 
         <section class="v--has-bgimage">
-            
+            <div class="row">
+                <div class="large-12 columns">
                     <section class="devices layout--browser">
                         <div class="deviceset">
                             <div class="device device-browser v--fullborder">
@@ -47,7 +66,9 @@
                             </div>
                         </div>
                     </section>
-            
+                </div>
+            </div>
+
             <div class="row">
                 <div class="large-12 columns">
                     <section class="devices layout--3up">
@@ -80,8 +101,81 @@
                 </div>
             </div>
         </section>
+-->
         
-        <section class="devices layout--suite v--has-bgimage">
+            <div class="row">
+				<div class="medium-3 columns">
+					<div class="project-info">
+						<p><span>Created</span><br />$Date.Month, $Date.Year</p>
+						<% if $Categories %>
+						<p><span>Tags</span><br /><% loop $Categories %>$Title<% if not $Last %>, <% end_if %><% end_loop %></p>
+						<% end_if %>
+						<% if $SiteURL %>
+						<p><span>URL</span><br /><a href="http://$SiteURL" target="_blank">$SiteURL</a></p>
+						<% end_if %>
+						<% if $AwardURL %>
+                            <p><span>Awards</span><br /><a href="http://$AwardURL" target="_blank">$AwardTitle</a></p>
+                            <a href="http://$AwardURL" target="_blank"><img src="$AwardImage.URL" alt="$AwardTitle" /></a>
+						<% end_if %>
+					</div>
+				</div>
+				<div class="medium-9 columns">
+					<div class="main-panel">
+						<div class="panel" id="info-panel">
+    
+    				        <div class="header section-header info-header padding">
+								<h1>$Title</h1>
+							</div>
+							<div class="panel-text padding">
+								<div>$Content</div>
+                                <div class="awardsMobile">
+                                    <% if $AwardURL %>
+                                        <h4>Awards</h4><a href="http://$AwardURL" target="_blank">$AwardTitle</a></p>
+                                        <a href="http://$AwardURL" target="_blank"><img src="$AwardImage.URL" alt="$AwardTitle" /></a>
+                                    <% end_if %>
+                                </div>
+							</div>
+            
+        <section class="devices layout--browser">
+            <div class="deviceset">
+                <div class="device device-browser v--fullborder">
+                    <div class="device-body">
+                        <div class="sproule-home-page img v--scrolling" style=""><img class="sproule-cae" src="$ThemeDir/images/cae.gif" alt="" /></div>
+                        <span class="device-controls"></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="devices layout--3up">
+            <div class="deviceset">
+                <div class="device device-browser v--fullborder">
+                    <div class="device-body">
+                        <img src="$ThemeDir/images/sproule-tall-case-studies.jpg" width="1300" height="3130" />
+                        <span class="device-controls"></span>
+                        <span class="device-caption caption">Case Studies</span>
+                    </div>
+                </div>
+
+                <div class="device device-browser v--fullborder">
+                    <div class="device-body">
+                        <img src="$ThemeDir/images/sproule-tall-regulatory.jpg" width="1300" height="3130" />
+                        <span class="device-controls"></span>
+                        <span class="device-caption caption">Regulatory Strategy &amp; Development</span>
+                    </div>
+                </div>
+
+                <div class="device device-browser v--fullborder">
+                    <div class="device-body">
+                        <img src="$ThemeDir/images/sproule-tall-training.jpg" width="1300" height="3130" />
+                        <span class="device-controls"></span>
+                        <span class="device-caption caption">Training</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="devices layout--suite">
             <div class="deviceset">
                 <div class="device device-browser v--fullborder">
                     <div class="device-body">
@@ -104,7 +198,7 @@
             </div>
         </section>
         
-        <section class="devices layout--browser v--has-bgimage">
+        <section class="devices layout--browser">
             <div class="deviceset">
                 <div class="device device-browser v--fullborder">
                     <div class="device-body">
@@ -131,22 +225,11 @@
 							</div>
 							<% end_if %>
 
-							<div class="header section-header info-header">
-								<h1>$Title</h1>
-							</div>
-							<div class="panel-text">
-								<div>$Content</div>
-                                <div class="awardsMobile">
-                                    <% if $AwardURL %>
-                                        <h4>Awards</h4><a href="http://$AwardURL" target="_blank">$AwardTitle</a></p>
-                                        <a href="http://$AwardURL" target="_blank"><img src="$AwardImage.URL" alt="$AwardTitle" /></a>
-                                    <% end_if %>
-                                </div>
-							</div>
+
 							<div class="row collapse">
 							
 							<% if $Ads %>
-								<div class="ads">
+								<div class="ads padding">
 								<% loop $Ads.Sort(Date, DESC) %>
 								<%if $AdWidth <= 700 %>
 									<div class="medium-12 columns">
@@ -166,7 +249,7 @@
 										</div>
 									</div>
 									<% else %>
-									<div class="medium-12 columns">
+									<div class="medium-12 columns padding">
 										<div class="bannerAd">
 											<h3>$Name</h3>
 											<div class="row collapse">
@@ -192,7 +275,7 @@
 							<% end_if %>
 
 							<% if $GalleryImage %>
-								<div class="gallery">
+								<div class="gallery padding">
 									<% loop $GalleryImage %>
 										<h3>$Title</h3>
 										<img src="$URL" alt="$Title" />
