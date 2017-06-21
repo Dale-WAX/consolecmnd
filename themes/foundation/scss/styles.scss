@@ -37,7 +37,7 @@ $primary-color: #333;
 $p-font-sizes: (
     null  : 15px,
     //  480px : 16px,
-    640px : 17px,
+    641px : 17px,
     1024px: 19px,
     1440px: 20px, 
     1920px: 21px
@@ -608,7 +608,7 @@ pre {
         @media only screen and (min-width: 480px) {
             padding: 0 20px 36px 20px;
         }
-        @media only screen and (min-width: 640px) {
+        @media only screen and (min-width: 641px) {
             width: 80%;
             padding: 0 60px 36px 60px;
         }
@@ -622,7 +622,7 @@ pre {
             min-height: 83vh;
             padding: 40px 20px;
             background-color: transparent;
-            @media only screen and (min-width: 640px) {
+            @media only screen and (min-width: 641px) {
                 padding: 80px 20px;
             }            
             .header {
@@ -634,7 +634,7 @@ pre {
                     &.info-header {
                         padding-bottom: 20px;
                         padding-right: 0;
-                        @media only screen and (min-width: 640px) {
+                        @media only screen and (min-width: 641px) {
                             padding-bottom: 30px;
                         }                              
                     }        
@@ -702,7 +702,7 @@ pre {
             .gallery {
                 margin-top: 0;
                 display: inline-block;
-                @media only screen and (min-width: 640px) {
+                @media only screen and (min-width: 641px) {
                     /*margin-top: 80px;*/
                 }
                 img {
@@ -883,7 +883,7 @@ pre {
         overflow: hidden;
         left: 0;
         margin: 0 auto;
-        @media only screen and (min-width: 640px) {
+        @media only screen and (min-width: 641px) {
             left: 127px;
             margin: 0 15%;
         }
@@ -926,7 +926,7 @@ pre {
 */
 .ani-wallpaper {
     display: none;
-    @media only screen and (min-width: 640px) {
+    @media only screen and (min-width: 641px) {
         background-image: url(../images/cmnd-bud-bg.png);
         background-size: 338px auto;
         animation: veggieAnimatedBackground 3.5s linear infinite;
@@ -1233,7 +1233,7 @@ section {
                     background-size: cover;
                 }
                 .device-body {
-                    background: $grey;
+                    background: #1d1f2d;
                     .sproule-cae {
                         border: 0 !important;
                         position: absolute;
@@ -1258,6 +1258,9 @@ section {
                     }
                     div.img {
                         height: 1.04052em;
+                        @media only screen and (min-width: 641px) {
+                            height: 0.80em;
+                        }
                     }
                 }
                 &.device-phone .device-body, &.device-tablet .device-body {
@@ -1267,9 +1270,9 @@ section {
 //                    margin-left: 3.125vw;
 //                    margin-right: 3.125vw;
 //                    width: calc(100% - 6.25vw);
-                    margin-left: 1.125vw;
-                    margin-right: 1.125vw;
-                    width: calc(100% - 2.25vw);                    
+                    margin-left: 0.125vw;
+                    margin-right: 0.125vw;
+                    width: calc(100% - 0vw);                    
                 }
                 &.device-phone:after, &.device-tablet:after {
                     content: "";
@@ -1327,7 +1330,10 @@ section {
                         border-radius: .01em;                        
                     }
                     div.img {
-                        height: 1.04052em;
+                        height: 1.4em;                        
+                        @media only screen and (min-width: 641px) {
+                            height: 0.99052em;
+                        }
                     }
                     .device-controls {
                         &:before {
@@ -1399,8 +1405,8 @@ section {
                         height: 20px;
 //                        margin-left: 3.125vw;
 //                        margin-right: 3.125vw;
-                        margin-left: 1.125vw;
-                        margin-right: 1.125vw;
+                        margin-left: 1.15vw;
+                        margin-right: 1.15vw;
                         border: 1px solid;
                         border-bottom: none;
                     }
@@ -1439,8 +1445,10 @@ section {
                         }
                     }
                     div.img {
-                        height: .625em;
-//                        height: .425em;
+                        height: .655em;
+                        @media only screen and (min-width: 641px) {
+                            height: .455em;
+                        }
                     }                    
                     &.v--fullborder {
                         div.img, div img, div .gfy-video {

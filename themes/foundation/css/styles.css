@@ -442,7 +442,7 @@ pre {
     @media only screen and (min-width: 480px) {
       #container .padding {
         padding: 0 20px 36px 20px; } }
-    @media only screen and (min-width: 640px) {
+    @media only screen and (min-width: 641px) {
       #container .padding {
         width: 80%;
         padding: 0 60px 36px 60px; } }
@@ -455,7 +455,7 @@ pre {
       min-height: 83vh;
       padding: 40px 20px;
       background-color: transparent; }
-      @media only screen and (min-width: 640px) {
+      @media only screen and (min-width: 641px) {
         #container .main-panel .panel {
           padding: 80px 20px; } }
       #container .main-panel .panel .header {
@@ -467,7 +467,7 @@ pre {
           #container .main-panel .panel .header.section-header.info-header {
             padding-bottom: 20px;
             padding-right: 0; }
-            @media only screen and (min-width: 640px) {
+            @media only screen and (min-width: 641px) {
               #container .main-panel .panel .header.section-header.info-header {
                 padding-bottom: 30px; } }
       #container .main-panel .panel .panel-text {
@@ -505,7 +505,7 @@ pre {
       #container .main-panel .panel .gallery {
         margin-top: 0;
         display: inline-block; }
-        @media only screen and (min-width: 640px) {
+        @media only screen and (min-width: 641px) {
           #container .main-panel .panel .gallery {
             /*margin-top: 80px;*/ } }
         #container .main-panel .panel .gallery img {
@@ -606,7 +606,7 @@ pre {
     overflow: hidden;
     left: 0;
     margin: 0 auto; }
-    @media only screen and (min-width: 640px) {
+    @media only screen and (min-width: 641px) {
       .bg-shapes div[class*=shape-mask-] {
         left: 127px;
         margin: 0 15%; } }
@@ -644,7 +644,7 @@ pre {
 */
 .ani-wallpaper {
   display: none; }
-  @media only screen and (min-width: 640px) {
+  @media only screen and (min-width: 641px) {
     .ani-wallpaper {
       background-image: url(../images/cmnd-bud-bg.png);
       background-size: 338px auto;
@@ -908,7 +908,7 @@ section {
           background-position: 50% 0;
           background-size: cover; }
         section.devices .deviceset .device .device-body {
-          background: #767676; }
+          background: #1d1f2d; }
           section.devices .deviceset .device .device-body .sproule-cae {
             border: 0 !important;
             position: absolute;
@@ -925,13 +925,16 @@ section {
           max-width: 35% !important; }
         section.devices .deviceset .device.device-tablet div.img {
           height: 1.04052em; }
+          @media only screen and (min-width: 641px) {
+            section.devices .deviceset .device.device-tablet div.img {
+              height: 0.80em; } }
         section.devices .deviceset .device.device-phone .device-body, section.devices .deviceset .device.device-tablet .device-body {
           position: relative;
           box-sizing: border-box;
           border: 1px solid;
-          margin-left: 1.125vw;
-          margin-right: 1.125vw;
-          width: calc(100% - 2.25vw); }
+          margin-left: 0.125vw;
+          margin-right: 0.125vw;
+          width: calc(100% - 0vw); }
         section.devices .deviceset .device.device-phone:after, section.devices .deviceset .device.device-tablet:after {
           content: "";
           position: absolute;
@@ -980,7 +983,10 @@ section {
           height: .01em;
           border-radius: .01em; }
         section.devices .deviceset .device.device-phone div.img {
-          height: 1.04052em; }
+          height: 1.4em; }
+          @media only screen and (min-width: 641px) {
+            section.devices .deviceset .device.device-phone div.img {
+              height: 0.99052em; } }
         section.devices .deviceset .device.device-phone .device-controls:before {
           content: "";
           top: .3em;
@@ -1026,8 +1032,8 @@ section {
           display: block;
           border-radius: 4px 4px 0 0;
           height: 20px;
-          margin-left: 1.125vw;
-          margin-right: 1.125vw;
+          margin-left: 1.15vw;
+          margin-right: 1.15vw;
           border: 1px solid;
           border-bottom: none; }
         section.devices .deviceset .device.device-browser .device-body {
@@ -1056,7 +1062,10 @@ section {
             left: 27px;
             top: -1px; }
         section.devices .deviceset .device.device-browser div.img {
-          height: .625em; }
+          height: .655em; }
+          @media only screen and (min-width: 641px) {
+            section.devices .deviceset .device.device-browser div.img {
+              height: .455em; } }
         section.devices .deviceset .device.device-browser.v--fullborder div.img, section.devices .deviceset .device.device-browser.v--fullborder div img, section.devices .deviceset .device.device-browser.v--fullborder div .gfy-video {
           border: 1px solid #3d3d3d; }
         section.devices .deviceset .device.device-browser .gfy-video .play-button {
