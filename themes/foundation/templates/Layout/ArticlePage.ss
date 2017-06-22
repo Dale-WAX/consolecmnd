@@ -113,118 +113,124 @@
 						<% if $SiteURL %>
 						<p><span>URL</span><br /><a href="http://$SiteURL" target="_blank">$SiteURL</a></p>
 						<% end_if %>
-						<% if $AwardURL %>
-                            <p><span>Awards</span><br /><a href="http://$AwardURL" target="_blank">$AwardTitle</a></p>
-                            <a href="http://$AwardURL" target="_blank"><img src="$AwardImage.URL" alt="$AwardTitle" /></a>
-						<% end_if %>
+                        <% if $Awards %>
+                            <p class="awards"><span>Awards</span><br />
+                            <% loop $Awards %>
+                                <a href="http://$AwardURL" target="_blank"><span>$AwardTitle<br /><em>$AwardDescription</em></span>
+                                <img src="$AwardImage.URL" alt="$AwardTitle" /></a>     
+                            <% end_loop %>
+                            </p>
+                        <% end_if %>
 					</div>
 				</div>
 				<div class="medium-9 columns">
 					<div class="main-panel">
 						<div class="panel" id="info-panel">
-    
     				        <div class="header section-header info-header padding">
 								<h1>$Title</h1>
 							</div>
 							<div class="panel-text padding">
-								<div>$Content</div>
-                                <div class="awardsMobile">
-                                    <% if $AwardURL %>
-                                        <h4>Awards</h4><a href="http://$AwardURL" target="_blank">$AwardTitle</a></p>
-                                        <a href="http://$AwardURL" target="_blank"><img src="$AwardImage.URL" alt="$AwardTitle" /></a>
-                                    <% end_if %>
-                                </div>
+								$Content
+                                <% if $Awards %>
+                                    <div class="awardsMobile">
+                                        <h4>Awards</h4>
+                                        <% loop $Awards %>
+                                            <a href="http://$AwardURL" target="_blank"><span>$AwardTitle<br /><em>$AwardDescription</em></span>
+                                            <img src="$AwardImage.URL" alt="$AwardTitle" /></a>    
+                                        <% end_loop %>
+                                    </div>
+                                <% end_if %>
 							</div>
             
-        <section class="devices layout--browser">
-            <div class="deviceset">
-                <div class="device device-browser v--fullborder">
-                    <div class="device-body">
-                        <div class="sproule-home-page img v--scrolling" style=""><img class="sproule-cae" src="$ThemeDir/images/cae.gif" alt="" /></div>
-                        <span class="device-controls"></span>
-                    </div>
-                </div>
-            </div>
-        </section>
+                            <section class="devices layout--browser">
+                                <div class="deviceset">
+                                    <div class="device device-browser v--fullborder">
+                                        <div class="device-body">
+                                            <div class="sproule-home-page img v--scrolling" style=""><img class="sproule-cae" src="$ThemeDir/images/cae.gif" alt="" /></div>
+                                            <span class="device-controls"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
 
-        <section class="devices layout--3up">
-            <div class="deviceset">
-                <div class="device device-browser v--fullborder">
-                    <div class="device-body">
-                        <img src="$ThemeDir/images/sproule-tall-case-studies.jpg" width="1300" height="3130" />
-                        <span class="device-controls"></span>
-                        <span class="device-caption caption">Case Studies</span>
-                    </div>
-                </div>
+                            <section class="devices layout--3up">
+                                <div class="deviceset">
+                                    <div class="device device-browser v--fullborder">
+                                        <div class="device-body">
+                                            <img src="$ThemeDir/images/sproule-tall-case-studies.jpg" width="1300" height="3130" />
+                                            <span class="device-controls"></span>
+                                            <span class="device-caption caption">Case Studies</span>
+                                        </div>
+                                    </div>
 
-                <div class="device device-browser v--fullborder">
-                    <div class="device-body">
-                        <img src="$ThemeDir/images/sproule-tall-regulatory.jpg" width="1300" height="3130" />
-                        <span class="device-controls"></span>
-                        <span class="device-caption caption">Regulatory Strategy &amp; Development</span>
-                    </div>
-                </div>
+                                    <div class="device device-browser v--fullborder">
+                                        <div class="device-body">
+                                            <img src="$ThemeDir/images/sproule-tall-regulatory.jpg" width="1300" height="3130" />
+                                            <span class="device-controls"></span>
+                                            <span class="device-caption caption">Regulatory Strategy &amp; Development</span>
+                                        </div>
+                                    </div>
 
-                <div class="device device-browser v--fullborder">
-                    <div class="device-body">
-                        <img src="$ThemeDir/images/sproule-tall-training.jpg" width="1300" height="3130" />
-                        <span class="device-controls"></span>
-                        <span class="device-caption caption">Training</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <section class="devices layout--suite">
-            <div class="deviceset">
-                <div class="device device-browser v--fullborder">
-                    <div class="device-body">
-                        <div class="sproule-home-page-3 img v--scrolling" style=""><img class="sproule-cae" src="$ThemeDir/images/cae.gif" alt="" /></div>
-                        <span class="device-controls"></span>
-                    </div>
-                </div>
-                <div class="device device-tablet">
-                    <div class="device-body">
-                        <div class="sproule-home-page-2 img v--scrolling" style=""><img class="sproule-cae" src="$ThemeDir/images/cae.gif" alt="" /></div>
-                        <span class="device-controls"></span>
-                    </div>
-                </div>
-                <div class="device device-phone">
-                    <div class="device-body">
-                        <div class="sproule-home-page img v--scrolling" style=""><img class="sproule-cae" src="$ThemeDir/images/cae.gif" alt="" /></div>
-                        <span class="device-controls"></span>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <section class="devices layout--browser">
-            <div class="deviceset">
-                <div class="device device-browser v--fullborder">
-                    <div class="device-body">
-                        <div class="video-wrapper">
-                            <video playsinline="" webkit-playsinline="" poster="https://thumbs.gfycat.com/HonoredBadBluet-poster.jpg" class="i-amphtml-fill-content i-amphtml-replaced-content" loop="" autoplay="" ><source id="webmSource" src="https://fat.gfycat.com/HonoredBadBluet.webm" type="video/webm"><source id="mp4Source" src="https://fat.gfycat.com/HonoredBadBluet.mp4" type="video/mp4"></video>
-                        </div>
-                        <span class="device-controls"></span>
-                    </div>
-                </div>
-            </div>
-        </section>
-                        
-                        
-							<% if $SiteVideo %>
-							<div class="SiteVideo">
-								<iframe src='$SiteVideo' frameborder="0" scrolling="no" width="100%" height="100%" style="position:absolute;top:0;left:0;" allowfullscreen></iframe>
-							</div>
-							<% end_if %>
+                                    <div class="device device-browser v--fullborder">
+                                        <div class="device-body">
+                                            <img src="$ThemeDir/images/sproule-tall-training.jpg" width="1300" height="3130" />
+                                            <span class="device-controls"></span>
+                                            <span class="device-caption caption">Training</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
                             
-							<% if $GIF %>
-							<div class="GifVideo">
-                                <!--<div style="position:relative;padding-bottom:94%;"><iframe src='https://gfycat.com/ifr/$GIF' frameborder="0" scrolling="no" width="100%" height="100%" style="position:absolute;top:0;left:0;" allowfullscreen></iframe></div>-->
-                                <iframe src='https://gfycat.com/ifr/$GIF' frameborder="0" scrolling="no" width="100%" height="100%" style="position:absolute;top:0;left:0;" allowfullscreen></iframe>
-							</div>
-							<% end_if %>
+                            <section class="devices layout--suite">
+                                <div class="deviceset">
+                                    <div class="device device-browser v--fullborder">
+                                        <div class="device-body">
+                                            <div class="sproule-home-page-3 img v--scrolling" style=""><img class="sproule-cae" src="$ThemeDir/images/cae.gif" alt="" /></div>
+                                            <span class="device-controls"></span>
+                                        </div>
+                                    </div>
+                                    <div class="device device-tablet">
+                                        <div class="device-body">
+                                            <div class="sproule-home-page-2 img v--scrolling" style=""><img class="sproule-cae" src="$ThemeDir/images/cae.gif" alt="" /></div>
+                                            <span class="device-controls"></span>
+                                        </div>
+                                    </div>
+                                    <div class="device device-phone">
+                                        <div class="device-body">
+                                            <div class="sproule-home-page img v--scrolling" style=""><img class="sproule-cae" src="$ThemeDir/images/cae.gif" alt="" /></div>
+                                            <span class="device-controls"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                            
+                            <% if $GIF %>
+                            <div class="GifVideo">
+                            <section class="devices layout--browser">
+                                <div class="deviceset">
+                                    <div class="device device-browser v--fullborder">
+                                        <div class="device-body">
+                                            <div class="video-wrapper">
+                                                <video playsinline="" webkit-playsinline="" poster="https://thumbs.gfycat.com/HonoredBadBluet-poster.jpg" class="i-amphtml-fill-content i-amphtml-replaced-content" loop="" autoplay="">
+                                                    <source id="webmSource" src="https://fat.gfycat.com/{$GIF}.webm" type="video/webm">
+                                                    <source id="mp4Source" src="https://fat.gfycat.com/{$GIF}.mp4" type="video/mp4">
+                                                </video>
+                                            </div>
+                                            <span class="device-controls"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                            </div>
+                            <% end_if %>
 
+                            
+
+                            <% if $Content2 %>
+                                <div class="panel-text padding">
+                                    $Content2
+                                </div>
+                            <% end_if %>
 
 							<div class="row collapse">
 							
@@ -275,13 +281,19 @@
 							<% end_if %>
 
 							<% if $GalleryImage %>
-								<div class="gallery padding">
+								<div class="gallery">
 									<% loop $GalleryImage %>
 										<h3>$Title</h3>
 										<img src="$URL" alt="$Title" />
 									<% end_loop %>
 								</div>
 							<% end_if %>
+
+                            <% if $Content3 %>
+                                <div class="panel-text padding">
+                                    $Content3
+                                </div>
+                            <% end_if %>
 						</div>
 					</div>
 					<p class="project-count"><span>Project $CurrentPageNumber / $NumberOfSiblings</span></p>

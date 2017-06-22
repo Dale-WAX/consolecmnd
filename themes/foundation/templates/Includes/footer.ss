@@ -91,11 +91,6 @@
 	
 	<script src="$ThemeDir/bower_components/jquery/dist/jquery.min.js"></script>
 	<script src="$ThemeDir/bower_components/foundation/js/foundation.min.js"></script>
-	
-	<!--
-	<script src="$ThemeDir/javascript/gs/jquery.gsap.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
-	-->
 	<script src="$ThemeDir/javascript/svg-morpheus.js"></script>
     
     <% if $URLSegment == 'home' %>

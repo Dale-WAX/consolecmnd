@@ -143,21 +143,23 @@ pre {
   padding-bottom: 430px;
   z-index: 0; }
 
+/*
 .SiteVideo, .GifVideo {
-  margin: -1px -20px; }
-  @media only screen and (min-width: 480px) {
-    .SiteVideo, .GifVideo {
-      margin: -1px -80px; } }
-
+    margin: -1px -20px;
+    @media only screen and (min-width: 480px) {
+        margin: -1px -80px;
+    }
+}
 .GifVideo {
-  position: relative;
-  padding-bottom: 125%; }
-
+    position: relative;
+    padding-bottom: 125%;
+}
 .SiteVideo {
-  position: relative;
-  padding-bottom: 72%;
-  margin-bottom: 20px; }
-
+    position: relative;
+    padding-bottom: 72%;
+    margin-bottom: 20px;
+}
+*/
 .ArticleHolder #container, .HomePage #container {
   transition: .15s ease; }
   .ArticleHolder #container .main-panel .panel, .HomePage #container .main-panel .panel {
@@ -241,7 +243,12 @@ pre {
           text-transform: uppercase;
           font-family: formata-condensed, sans-serif;
           font-size: 13px;
-          letter-spacing: 1px; } }
+          letter-spacing: 1px; }
+        #container .project-info .awards {
+          width: 80%; }
+          #container .project-info .awards a span {
+            margin-bottom: 15px;
+            display: block; } }
   #container .project-count {
     font-family: formata-condensed, sans-serif;
     color: #000;
@@ -495,10 +502,15 @@ pre {
           display: inline-block; }
         #container .main-panel .panel .panel-text .awardsMobile {
           display: block;
-          margin-top: 10px; }
+          margin-top: 40px; }
           @media only screen and (min-width: 641px) {
             #container .main-panel .panel .panel-text .awardsMobile {
               display: none; } }
+          #container .main-panel .panel .panel-text .awardsMobile a {
+            background-image: none; }
+          #container .main-panel .panel .panel-text .awardsMobile span {
+            margin-bottom: 15px;
+            display: block; }
       #container .main-panel .panel .ads {
         display: inline-block;
         margin-bottom: 50px; }
@@ -507,7 +519,7 @@ pre {
         display: inline-block; }
         @media only screen and (min-width: 641px) {
           #container .main-panel .panel .gallery {
-            /*margin-top: 80px;*/ } }
+            padding: 0 60px; } }
         #container .main-panel .panel .gallery img {
           margin: 10px 0;
           width: 100%; }
@@ -1078,7 +1090,7 @@ section {
   section.titleblock + section {
     margin-top: 6.5vw; }
   section .caption {
-    color: #f6f6f6;
+    color: #3d3d3d;
     position: absolute;
     top: 100%;
     left: 0;

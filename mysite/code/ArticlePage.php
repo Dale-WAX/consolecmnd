@@ -8,17 +8,17 @@ class ArticlePage extends Page {
 		'GIF' => 'HTMLtext',
 		'SiteVideo' => 'HTMLtext',
 		'SiteURL' => 'HTMLtext',
-        'AwardURL' => 'HTMLtext',
-        'AwardTitle' => 'Text',
+		'Content2' => 'HTMLText',
+		'Content3' => 'HTMLText',
 	);
 
 	private static $has_one = array (
-		'Thumbnail' => 'Image',
-        'AwardImage' => 'Image'
+		'Thumbnail' => 'Image'
 	);
 
 	private static $has_many = array (
 		'Ads' => 'Ad',
+		'Awards' => 'Award',
 	);
 
 	private static $many_many = array (
@@ -36,12 +36,14 @@ class ArticlePage extends Page {
 			->setConfig('showcalendar', true)
 		, 'Content');
 		$fields->addFieldToTab('Root.Main', TextareaField::create('Teaser'), 'Content');
-		$fields->addFieldToTab('Root.Main', TextField::create('GIF', 'Animated GIF Embed Link'), 'Content');
-		$fields->addFieldToTab('Root.Main', TextField::create('SiteVideo', 'Video Embed Link'), 'Content');
+		$fields->addFieldToTab('Root.Main', TextField::create('GIF', 'GFYCAT Slug'), 'Content');
+		$fields->addFieldToTab('Root.Main', TextField::create('SiteVideo', 'Video Embed'), 'Content');
 		$fields->addFieldToTab('Root.Main', TextField::create('SiteURL', 'URL'), 'Content');
         $fields->addFieldToTab('Root.Main', $Thumbnail = UploadField::create('Thumbnail', 'Thumbnail'), 'Content');
         $Thumbnail->getValidator()->setAllowedExtensions(array('png','gif','jpg','jpeg', 'mp4'));
         $Thumbnail->setFolderName('Thumbnails');    
+        $fields->addFieldToTab('Root.Main', HtmlEditorField::create('Content2', 'Content Middle'));
+        $fields->addFieldToTab('Root.Main', HtmlEditorField::create('Content3', 'Content Bottom'));
 
         //GALLERY
 		$fields->addFieldToTab('Root.Gallery',
@@ -56,30 +58,26 @@ class ArticlePage extends Page {
 		$uploadField->setPreviewMaxWidth(100);
 		$uploadField->setPreviewMaxHeight(100);
         
-        //AWARDS
-        $fields->addFieldToTab('Root.Awards', TextField::create('AwardTitle', 'Award Title'));
-		$fields->addFieldToTab('Root.Awards', TextField::create('AwardURL', 'URL'));
-        $fields->addFieldToTab('Root.Awards', $AwardImage = UploadField::create('AwardImage', 'Award Image'));
-        $AwardImage->getValidator()->setAllowedExtensions(array('png','gif','jpg','jpeg', 'mp4'));
-        $AwardImage->setFolderName('AwardImages');
+        //AWARDS - Single
+  //       $fields->addFieldToTab('Root.Awards', TextField::create('AwardTitle', 'Award Title'));
+  // 	   $fields->addFieldToTab('Root.Awards', TextField::create('AwardURL', 'URL'));
+  //       $fields->addFieldToTab('Root.Awards', $AwardImage = UploadField::create('AwardImage', 'Award Image'));
+  //       $AwardImage->getValidator()->setAllowedExtensions(array('png','gif','jpg','jpeg', 'mp4'));
+  //       $AwardImage->setFolderName('AwardImages');
         
-//		$fields->addFieldToTab('Root.Awards',
-//			$uploadField = new UploadField(
-//				$name = 'AwardImage',
-//				$title = 'Upload one or more images (max 10 in total)'
-//			)
-//		);
-//		$uploadField->setAllowedMaxFileNumber(10);
-//		$uploadField->setFolderName('AwardImages');
-//		$uploadField->setAllowedExtensions(array('jpg', 'jpeg', 'png', 'gif', 'svg'));
-//		$uploadField->setPreviewMaxWidth(100);
-//		$uploadField->setPreviewMaxHeight(100);
-
         //ADS
 		$fields->addFieldToTab('Root.Ads', GridField::create(
 			'Ads',
 			'Ads on this page',
 			$this->Ads(),
+			GridFieldConfig_RecordEditor::create()
+		));
+
+        //AWARDS
+		$fields->addFieldToTab('Root.Awards', GridField::create(
+			'Awards',
+			'Awards on this page',
+			$this->Awards(),
 			GridFieldConfig_RecordEditor::create()
 		));
 
