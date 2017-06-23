@@ -694,13 +694,17 @@ pre {
                 p {
                     orphans: 2;
                 }
+                &.content3 {
+                    margin-top: 40px;
+                }
                 .login {
                     width: 100% !important;
                     display: inline-block;
                 }
                 .awardsMobile {
                     display: block;
-                    margin-top: 40px;
+                        width: 80%;
+                        margin: 40px auto;
                     @media only screen and (min-width: 641px) {
                         display: none;
                     }
@@ -1172,6 +1176,18 @@ section {
             -webkit-transition: none;
             transition: none;
         }
+        &.layout--1up {
+            display: block;
+            .deviceset {
+                display: block;
+                .device {
+                    margin: 0 0 60px;
+                    @media only screen and (min-width: 768px) {
+                        margin: 0 40px 60px;
+                    }
+                }
+            }
+        }
         &.layout--browser .deviceset .device {
             width: 100%;
             font-size: 93.75vw;
@@ -1502,7 +1518,7 @@ section {
         max-width: 30em;
     }
     .sproule-home-page {
-        background-image: url('../images/sproule-homepage.jpg');
+        
     }
     .device-phone .sproule-home-page {
         background-image: url('../images/sproule-phone-reservior.jpg');

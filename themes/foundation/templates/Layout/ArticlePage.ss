@@ -142,67 +142,61 @@
                                 <% end_if %>
 							</div>
             
-                            <section class="devices layout--browser">
-                                <div class="deviceset">
-                                    <div class="device device-browser v--fullborder">
-                                        <div class="device-body">
-                                            <div class="sproule-home-page img v--scrolling" style=""><img class="sproule-cae" src="$ThemeDir/images/cae.gif" alt="" /></div>
-                                            <span class="device-controls"></span>
+                            <% if $WebScrollerImage %>
+                                <% loop $WebScrollerImage %>
+                                    <section class="devices layout--browser">
+                                        <div class="deviceset">
+                                            <div class="device device-browser v--fullborder">
+                                                <div class="device-body">
+                                                    <div class="img v--scrolling" style="background-image: url('$URL')"></div>
+                                                    <span class="device-controls"></span>
+                                                </div>
+                                            </div>
                                         </div>
-                                    </div>
-                                </div>
-                            </section>
+                                    </section>
+                                <% end_loop %>
+                            <% end_if %>
 
-                            <section class="devices layout--3up">
-                                <div class="deviceset">
-                                    <div class="device device-browser v--fullborder">
-                                        <div class="device-body">
-                                            <img src="$ThemeDir/images/sproule-tall-case-studies.jpg" width="1300" height="3130" />
-                                            <span class="device-controls"></span>
-                                            <span class="device-caption caption">Case Studies</span>
-                                        </div>
+                            <% if $WebLayoutImage %>
+                                <section class="devices layout--3up">
+                                    <div class="deviceset">
+                                        <% loop $WebLayoutImage %>
+                                            <div class="device device-browser v--fullborder">
+                                                <div class="device-body">
+                                                    <img src="$URL" width="1300" height="3130" />
+                                                    <span class="device-controls"></span>
+                                                    <span class="device-caption caption">$Title</span>
+                                                </div>
+                                            </div>
+                                        <% end_loop %>
                                     </div>
-
-                                    <div class="device device-browser v--fullborder">
-                                        <div class="device-body">
-                                            <img src="$ThemeDir/images/sproule-tall-regulatory.jpg" width="1300" height="3130" />
-                                            <span class="device-controls"></span>
-                                            <span class="device-caption caption">Regulatory Strategy &amp; Development</span>
-                                        </div>
-                                    </div>
-
-                                    <div class="device device-browser v--fullborder">
-                                        <div class="device-body">
-                                            <img src="$ThemeDir/images/sproule-tall-training.jpg" width="1300" height="3130" />
-                                            <span class="device-controls"></span>
-                                            <span class="device-caption caption">Training</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </section>
+                                </section>
+                            <% end_if %>
                             
-                            <section class="devices layout--suite">
-                                <div class="deviceset">
-                                    <div class="device device-browser v--fullborder">
-                                        <div class="device-body">
-                                            <div class="sproule-home-page-3 img v--scrolling" style=""><img class="sproule-cae" src="$ThemeDir/images/cae.gif" alt="" /></div>
-                                            <span class="device-controls"></span>
+                            <% if $WebDevicesBrowser %>
+                                <section class="devices layout--suite">
+                                    <div class="deviceset">
+                                        <div class="device device-browser v--fullborder">
+                                            <div class="device-body">
+                                                <div class="img v--scrolling" style="background-image: url('$WebDevicesBrowser.URL')"></div>
+                                                <span class="device-controls"></span>
+                                            </div>
+                                        </div>
+                                        <div class="device device-tablet">
+                                            <div class="device-body">
+                                                <div class="img v--scrolling" style="background-image: url('$WebDevicesTablet.URL')"></div>
+                                                <span class="device-controls"></span>
+                                            </div>
+                                        </div>
+                                        <div class="device device-phone">
+                                            <div class="device-body">
+                                                <div class="img v--scrolling" style="background-image: url('$WebDevicesPhone.URL')"></div>
+                                                <span class="device-controls"></span>
+                                            </div>
                                         </div>
                                     </div>
-                                    <div class="device device-tablet">
-                                        <div class="device-body">
-                                            <div class="sproule-home-page-2 img v--scrolling" style=""><img class="sproule-cae" src="$ThemeDir/images/cae.gif" alt="" /></div>
-                                            <span class="device-controls"></span>
-                                        </div>
-                                    </div>
-                                    <div class="device device-phone">
-                                        <div class="device-body">
-                                            <div class="sproule-home-page img v--scrolling" style=""><img class="sproule-cae" src="$ThemeDir/images/cae.gif" alt="" /></div>
-                                            <span class="device-controls"></span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </section>
+                                </section>
+                            <% end_if %>
                             
                             <% if $GIF %>
                             <div class="GifVideo">
@@ -223,8 +217,6 @@
                             </section>
                             </div>
                             <% end_if %>
-
-                            
 
                             <% if $Content2 %>
                                 <div class="panel-text padding">
@@ -280,6 +272,26 @@
 								</div>
 							<% end_if %>
 
+                            <% if $WebGalleryImage %>
+                                <section class="devices layout--1up">
+                                    <div class="deviceset">
+                                        <% loop $WebGalleryImage %>
+                                            <div class="device device-browser v--fullborder">
+                                                <div class="device-body">
+                                                    <img src="$URL" width="1300" height="3130" />
+                                                    <span class="device-controls"></span>
+                                                    <span class="device-caption caption">$Title</span>
+                                                </div>
+                                            </div>
+                                        <% end_loop %>
+                                    </div>
+                                </section>
+                            <% end_if %>
+
+                            <% if $WebLayoutImage %>
+                                
+                            <% end_if %>
+
 							<% if $GalleryImage %>
 								<div class="gallery">
 									<% loop $GalleryImage %>
@@ -290,7 +302,7 @@
 							<% end_if %>
 
                             <% if $Content3 %>
-                                <div class="panel-text padding">
+                                <div class="panel-text padding content3">
                                     $Content3
                                 </div>
                             <% end_if %>

@@ -497,12 +497,15 @@ pre {
             background-size: 1px 4px; }
         #container .main-panel .panel .panel-text p {
           orphans: 2; }
+        #container .main-panel .panel .panel-text.content3 {
+          margin-top: 40px; }
         #container .main-panel .panel .panel-text .login {
           width: 100% !important;
           display: inline-block; }
         #container .main-panel .panel .panel-text .awardsMobile {
           display: block;
-          margin-top: 40px; }
+          width: 80%;
+          margin: 40px auto; }
           @media only screen and (min-width: 641px) {
             #container .main-panel .panel .panel-text .awardsMobile {
               display: none; } }
@@ -854,6 +857,15 @@ section {
     section.devices * {
       -webkit-transition: none;
       transition: none; }
+    section.devices.layout--1up {
+      display: block; }
+      section.devices.layout--1up .deviceset {
+        display: block; }
+        section.devices.layout--1up .deviceset .device {
+          margin: 0 0 60px; }
+          @media only screen and (min-width: 768px) {
+            section.devices.layout--1up .deviceset .device {
+              margin: 0 40px 60px; } }
     section.devices.layout--browser .deviceset .device {
       width: 100%;
       font-size: 93.75vw; }
@@ -1098,8 +1110,6 @@ section {
     font-size: .75rem;
     line-height: 1.2;
     max-width: 30em; }
-  section .sproule-home-page {
-    background-image: url("../images/sproule-homepage.jpg"); }
   section .device-phone .sproule-home-page {
     background-image: url("../images/sproule-phone-reservior.jpg"); }
   section .device-tablet .sproule-home-page-2 {
