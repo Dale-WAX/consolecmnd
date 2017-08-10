@@ -239,16 +239,25 @@ pre {
       #container .project-info {
         margin-top: 90px;
         display: block; }
-        #container .project-info p {
+        #container .project-info p, #container .project-info a {
           text-transform: uppercase;
           font-family: formata-condensed, sans-serif;
-          font-size: 13px;
+          font-size: 12px;
           letter-spacing: 1px; }
+          #container .project-info p span, #container .project-info a span {
+            font-weight: bold; }
         #container .project-info .awards {
           width: 80%; }
-          #container .project-info .awards a span {
-            margin-bottom: 15px;
-            display: block; } }
+          #container .project-info .awards a {
+            margin-bottom: 10px;
+            font-weight: bold; }
+            #container .project-info .awards a em {
+              font-weight: normal;
+              margin-bottom: 10px;
+              display: block; }
+            #container .project-info .awards a span {
+              margin-bottom: 15px;
+              display: block; } }
   #container .project-count {
     font-family: formata-condensed, sans-serif;
     color: #000;
@@ -510,6 +519,7 @@ pre {
             #container .main-panel .panel .panel-text .awardsMobile {
               display: none; } }
           #container .main-panel .panel .panel-text .awardsMobile a {
+            margin-bottom: 10px;
             background-image: none; }
           #container .main-panel .panel .panel-text .awardsMobile span {
             margin-bottom: 15px;

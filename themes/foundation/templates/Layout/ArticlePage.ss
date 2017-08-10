@@ -21,7 +21,7 @@
             <% if $Awards %>
                 <p class="awards"><span>Awards</span><br />
                 <% loop $Awards %>
-                    <a href="http://$AwardURL" target="_blank"><span>$AwardTitle<br /><em>$AwardDescription</em></span>
+                    <a href="http://$AwardURL" target="_blank">$AwardTitle<br /><em>$AwardDescription</em>
                     <img src="$AwardImage.URL" alt="$AwardTitle" /></a>     
                 <% end_loop %>
                 </p>
