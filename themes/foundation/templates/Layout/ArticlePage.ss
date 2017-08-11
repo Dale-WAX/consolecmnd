@@ -1,12 +1,4 @@
-<script>
-  (function(d, s, id){
-     var js, fjs = d.getElementsByTagName(s)[0];
-     if (d.getElementById(id)) {return;}
-     js = d.createElement(s); js.id = id;
-     js.src = "https://assets.gfycat.com/gfycat.js";
-     fjs.parentNode.insertBefore(js, fjs);
-   }(document, 'script', 'gfycat-js'));
-</script>
+
 
 <div class="row">
 	<div class="medium-3 columns">
@@ -54,7 +46,7 @@
                         <div class="device device-browser v--fullborder">
                             <div class="device-body">
                                 <div class="video-wrapper">
-                                    <video playsinline="" webkit-playsinline="" poster="https://thumbs.gfycat.com/HonoredBadBluet-poster.jpg" class="i-amphtml-fill-content i-amphtml-replaced-content" loop="" autoplay="">
+                                    <video playsinline="" webkit-playsinline="" poster="https://thumbs.gfycat.com/{$GIF}-poster.jpg" class="i-amphtml-fill-content i-amphtml-replaced-content" loop="" autoplay="">
                                         <source id="webmSource" src="https://fat.gfycat.com/{$GIF}.webm" type="video/webm">
                                         <source id="mp4Source" src="https://fat.gfycat.com/{$GIF}.mp4" type="video/mp4">
                                     </video>
