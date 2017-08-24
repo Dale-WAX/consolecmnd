@@ -6,6 +6,7 @@ class ArticlePage extends Page {
 		'Date' => 'Date',
 		'Teaser' => 'Text',
 		'GIF' => 'HTMLtext',
+		'YoutubeTour' => 'HTMLtext',
 		'SiteVideo' => 'HTMLtext',
 		'SiteURL' => 'HTMLtext',
 		'Content2' => 'HTMLText',
@@ -43,6 +44,7 @@ class ArticlePage extends Page {
 		, 'Content');
 		$fields->addFieldToTab('Root.Main', TextareaField::create('Teaser'), 'Content');
 		$fields->addFieldToTab('Root.Main', TextField::create('GIF', 'GFYCAT Slug'), 'Content');
+		$fields->addFieldToTab('Root.Main', TextField::create('YoutubeTour', 'YouTube Video ID'), 'Content');
 		$fields->addFieldToTab('Root.Main', TextField::create('SiteVideo', 'Video Embed'), 'Content');
 		$fields->addFieldToTab('Root.Main', TextField::create('SiteURL', 'URL'), 'Content');
         $fields->addFieldToTab('Root.Main', $Thumbnail = UploadField::create('Thumbnail', 'Thumbnail'), 'Content');

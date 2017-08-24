@@ -39,6 +39,22 @@
                     <% end_if %>
 				</div>
 
+                <% if $SiteVideo %>
+                <div class="GifVideo">
+                    <section class="devices layout--browser video">
+                        <div class="deviceset">
+                            <div class="device">
+                                <div class="device-body">
+                                    <div class="video-wrapper">
+                                        <iframe class="video-youtube" src="{$SiteVideo}" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                <% end_if %>
+
                 <% if $GIF %>
                 <div class="GifVideo">
                 <section class="devices layout--browser">
@@ -57,6 +73,25 @@
                     </div>
                 </section>
                 </div>
+                <% end_if %>
+
+                <% if $YoutubeTour %>
+                    <div class="row image">
+                        <section class="devices layout--browser v--fullborder">
+                            <div class="deviceset">
+                                <div class="device device-browser">
+                                    <div class="device-wrap">
+                                        <div class="device-body">
+                                            <span class="device-controls"></span>
+                                            <div class="video-wrapper">
+                                                <iframe class="video-youtube" width="" height="" src="https://www.youtube.com/embed/{$YoutubeTour}?rel=0&autoplay=1&loop=1&controls=0&showinfo=0&playlist={$YoutubeTour}" frameborder="0" allowfullscreen></iframe>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
                 <% end_if %>
 
                 <% if $Content2 %>
