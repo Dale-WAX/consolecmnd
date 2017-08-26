@@ -874,7 +874,7 @@ section {
           margin: 0 0 60px; }
           @media only screen and (min-width: 768px) {
             section.devices.layout--1up .deviceset .device {
-              margin: 0 40px 60px; } }
+              margin: 0 30px 60px; } }
     section.devices.layout--browser.video {
       margin: 0; }
     section.devices.layout--browser .deviceset .device {

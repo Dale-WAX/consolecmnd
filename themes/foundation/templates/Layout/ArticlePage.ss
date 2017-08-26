@@ -94,12 +94,6 @@
                     </div>
                 <% end_if %>
 
-                <% if $Content2 %>
-                    <div class="panel-text padding">
-                        $Content2
-                    </div>
-                <% end_if %>
-
                 <% if $WebScrollerImage %>
                     <% loop $WebScrollerImage %>
                         <section class="devices layout--browser">
@@ -131,10 +125,10 @@
                     </section>
                 <% end_if %>
 
-                <% if $Content3 %>
-                <div class="panel-text padding content3">
-                    $Content3
-                </div>
+                <% if $Content2 %>
+                    <div class="panel-text padding">
+                        $Content2
+                    </div>
                 <% end_if %>
 
                 <% if $WebDevicesBrowser %>
@@ -186,7 +180,7 @@
 						</div>
 					</div>
 					<% else %>
-					<div class="medium-12 columns padding">
+					<div class="medium-12 columns">
 						<div class="bannerAd">
 							<h3>$Name</h3>
 							<div class="row collapse">
@@ -226,9 +220,11 @@
                     </div>
                 </section>
                 <% end_if %>
-
-                <% if $WebLayoutImage %>
-                    
+                
+                <% if $Content3 %>
+                <div class="panel-text padding content3">
+                    $Content3
+                </div>
                 <% end_if %>
 
 				<% if $GalleryImage %>
