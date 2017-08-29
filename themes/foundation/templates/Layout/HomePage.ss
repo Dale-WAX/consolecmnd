@@ -39,7 +39,7 @@
 							<div class="grid-item small-12 medium-6 large-4 columns">
 								<a href="$Link">
 									<div class="dim"></div>
-									<h2>$Title</h2>
+									<h2 class="left">$Title</h2>
 									<p>$Teaser</p>
 									<h3><% loop $Categories %>$Title<% if not $Last %>, <% end_if %><% end_loop %></h3>
 									<% if $Thumbnail %>

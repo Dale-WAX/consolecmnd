@@ -1,5 +1,16 @@
 $(document).foundation();
 
+// HOME LOAD IN ANIMATION
+$('.grid-item').each(function(i) {
+    $(this).fadeOut(0).delay(100*i).fadeIn(750);
+});
+
+//$(function() {
+//    $('h2').each(function(i) {
+//        $(this).fadeOut(0).delay(100*i).fadeIn(750);
+//    })
+//}, 3000);
+
 // LANGUAGE ID
 var theLanguage = $('html').attr('lang');
 
