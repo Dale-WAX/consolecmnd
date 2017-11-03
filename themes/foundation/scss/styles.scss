@@ -356,7 +356,13 @@ pre {
                     span {
                         margin-bottom: 15px;
                         display: block;
-                    }                
+                    }
+                    img {
+                        max-width: 70%;
+                        max-height: 100px;
+                        width: auto;
+                        min-width: 120px;
+                    }
                 }
             }
         }
@@ -729,6 +735,12 @@ pre {
                     span {
                         margin-bottom: 15px;
                         display: block;
+                    }
+                    img {
+                        max-width: 70%;
+                        max-height: 100px;
+                        width: auto;
+                        min-width: 120px;
                     }
                 }
             }

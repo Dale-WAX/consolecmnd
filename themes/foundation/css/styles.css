@@ -257,7 +257,12 @@ pre {
               display: block; }
             #container .project-info .awards a span {
               margin-bottom: 15px;
-              display: block; } }
+              display: block; }
+            #container .project-info .awards a img {
+              max-width: 70%;
+              max-height: 100px;
+              width: auto;
+              min-width: 120px; } }
   #container .project-count {
     font-family: formata-condensed, sans-serif;
     color: #000;
@@ -523,6 +528,11 @@ pre {
           #container .main-panel .panel .panel-text .awardsMobile span {
             margin-bottom: 15px;
             display: block; }
+          #container .main-panel .panel .panel-text .awardsMobile img {
+            max-width: 70%;
+            max-height: 100px;
+            width: auto;
+            min-width: 120px; }
       #container .main-panel .panel .ads {
         display: inline-block;
         margin-bottom: 50px; }
@@ -1764,3 +1774,5 @@ button, .button {
 /****************************
         MEDIA QUERIES
 ****************************/
+
+/*# sourceMappingURL=styles.css.map */
